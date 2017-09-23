@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: 7-ConversorDeMedidas, Configuration: Debug Any CPU ------
+1>  7-ConversorDeMedidas -> C:\AnaJuliaLP2\2C\7-ConversorDeMedidas\7-ConversorDeMedidas\bin\Debug\7-ConversorDeMedidas.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
