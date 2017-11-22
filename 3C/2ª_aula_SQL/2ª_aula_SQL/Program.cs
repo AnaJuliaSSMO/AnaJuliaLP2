@@ -11,16 +11,10 @@ namespace _2ª_aula_SQL
     {
         static void Main(string[] args)
         {
-            SqlConnection conexao = new SqlConnection("Data Source=localhost; Initial Catalog=AJIN209; Integrated Security=SSPI;");
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao;
+            string modelo, cor, placa, resp;
+            int pot, ano;
 
-            string marca, modelo, cor, placa;
-            int pot;
-
-            Console.WriteLine("Digite o/a:Marca");
-            marca = Console.ReadLine();
-            Console.WriteLine("\nModelo:");
+            Console.WriteLine("Digite o/a:\nModelo:");
             modelo = Console.ReadLine();
             Console.WriteLine("\nCor:");
             cor = Console.ReadLine();
@@ -28,14 +22,32 @@ namespace _2ª_aula_SQL
             placa = Console.ReadLine();
             Console.WriteLine("\nPotência (em horses):");
             pot = int.Parse(Console.ReadLine());
-            
-            cmd.CommandText = @"
-            INSERT
-            INTO carro 
-            VALUES (marca,modelo,cor,placa,pot)";
-            cmd.Connection.Open();
-            cmd.Connection.Close();
-       
+            Console.WriteLine("\nAno:");
+            ano = int.Parse(Console.ReadLine());
+
+            SqlCommand cmd = new SqlCommand()
+            {
+
+                Connection = new SqlConnection("Data Source=localhost; Initial Catalog=AJIN209; Integrated Security=SSPI;"),
+
+
+                CommandText = string.Format(@"INSERT
+                                              INTO CARRO
+                                              VALUES ('{0}','{1}','{2}',{3},{4});", modelo, cor, placa, pot, ano)
+            };
+
+            try
+            {
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close(); 
+            }
+
+            catch(Exception e)
+            {
+                Console.Write("No not today\n");
+            }
+
         }
     }
 }
