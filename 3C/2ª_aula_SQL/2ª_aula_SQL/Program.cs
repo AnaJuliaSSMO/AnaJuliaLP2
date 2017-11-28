@@ -11,7 +11,7 @@ namespace _2ª_aula_SQL
     {
         static void Main(string[] args)
         {
-            string modelo, cor, placa, resp;
+           /* string modelo, cor, placa, resp;
             int pot, ano;
 
             Console.WriteLine("Digite o/a:\nModelo:");
@@ -23,25 +23,31 @@ namespace _2ª_aula_SQL
             Console.WriteLine("\nPotência (em horses):");
             pot = int.Parse(Console.ReadLine());
             Console.WriteLine("\nAno:");
-            ano = int.Parse(Console.ReadLine());
+            ano = int.Parse(Console.ReadLine());*/
 
             SqlCommand cmd = new SqlCommand()
             {
 
                 Connection = new SqlConnection("Data Source=localhost; Initial Catalog=AJIN209; Integrated Security=SSPI;"),
 
+                //CommandText = @"DELETE
+                            //  FROM CARRO
+                            //  WHERE Id = 2",
+                
+                CommandText = @"SELECT Id,cor,ano
+                              FROM CARRO"
 
-                CommandText = string.Format(@"INSERT
+              /*  CommandText = string.Format(@"INSERT
                                               INTO CARRO
-                                              VALUES ('{0}','{1}','{2}',{3},{4});", modelo, cor, placa, pot, ano)
+                                              VALUES ('{0}','{1}','{2}',{3},{4});", modelo, cor, placa, pot, ano)*/
             };
 
             try
             {
                 cmd.Connection.Open();
-                cmd.ExecuteNonQuery();
+                SqlDataReader reader = cmd.ExecuteReader();
                 cmd.Connection.Close(); 
-            }
+            } 
 
             catch(Exception e)
             {
