@@ -50,14 +50,82 @@ namespace TheFarmOfUs
 
         private void entrar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            //ó,isso aqui vai registrar o login da pessoa, n esquece d criar a 
-            //string d conecção, o bd eu tenho aqui, é uma tabela só
+            string user = usuario.Text;
+            string confu;
+            int pass = int.Parse(senha.Text);
+            int conpass;
 
-            Agrupamento_Setores gp = new Agrupamento_Setores();
-            gp.Show();
+            string stringcon = @"Data Source=localhost; Initial Catalog=LOGINUSER; Integrated Security=SSPI;";
+            SqlConnection conect = new SqlConnection(stringcon);
+            try
+            {
+                conect.Open();
+            }
+
+            catch(SqlException)
+            {
+                MessageBox.Show("Não foi possível efeutar a conecção, tente mais tarde");
+            }
+
+
+            SqlCommand cmd = new SqlCommand(String.Format(@"SELECT *
+                                              FROM Login
+                                              WHERE Usuario = {0} AND Senha = {1});", user, pass));
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while(reader.Read())
+            {
+                MessageBox.Show("Tudo ok,seja bem vindo!");
+                Agrupamento_Setores gp = new Agrupamento_Setores();
+                gp.Show();
+            }
+
+            MessageBox.Show("Usuário ou senha errados, por favor, verifique as informações");
+
+            /*
+                    
+            SqlConnection cone = new SqlConnection("Data Source=localhost; Initial Catalog=LOGINUSER; Integrated Security=SSPI;");
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = String.Format(@"SELECT *
+                                              FROM Login
+                                              WHERE Usuario = {0} AND Senha = {1});", user,pass);
+
+            SqlParameter parametroUsuario = new SqlParameter("@Usuario", SqlDbType.VarChar, 20);
+            parametroUsuario.Value = usuario;
+            confu = usuario.Text;
+            cmd.Parameters.Add(parametroUsuario);
+
+            SqlParameter parametroSenha = new SqlParameter("@Senha", SqlDbType.VarChar, 6);
+            parametroSenha.Value = senha;
+            conpass = int.Parse(senha.Text);
+            cmd.Parameters.Add(parametroSenha);
+
+            cmd.Connection.Open();
+            if (user == confu)
+            {
+                MessageBox.Show("Bem vindo!");
+            }
+
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos");
+            }
+            cmd.Connection.Close();
+
+            TENTEI FZR UMA PARADA, DEU ERRADO, TENTEI DNV, CONTINUOU DANDO ERRADO, ITS LIFE 
+            */
+
         }
 
+        private void usuario_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void senha_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }
     

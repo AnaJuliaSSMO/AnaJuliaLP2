@@ -37,7 +37,7 @@
             this.nomelog = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.senhalog = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.confirmsen = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -119,15 +119,18 @@
             this.senhalog.Name = "senhalog";
             this.senhalog.Size = new System.Drawing.Size(320, 34);
             this.senhalog.TabIndex = 7;
+            this.senhalog.TextChanged += new System.EventHandler(this.senhalog_TextChanged);
             // 
-            // textBox1
+            // confirmsen
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(280, 256);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 37);
-            this.textBox1.TabIndex = 8;
+            this.confirmsen.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmsen.Location = new System.Drawing.Point(280, 256);
+            this.confirmsen.Multiline = true;
+            this.confirmsen.Name = "confirmsen";
+            this.confirmsen.PasswordChar = '*';
+            this.confirmsen.Size = new System.Drawing.Size(320, 37);
+            this.confirmsen.TabIndex = 8;
+            this.confirmsen.TextChanged += new System.EventHandler(this.confirmsen_TextChanged);
             // 
             // button1
             // 
@@ -146,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 371);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.confirmsen);
             this.Controls.Add(this.senhalog);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.nomelog);
@@ -157,6 +160,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "CadastrarLogin";
             this.Text = "CadastrarLogin";
+            this.Load += new System.EventHandler(this.CadastrarLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,7 +177,7 @@
         private System.Windows.Forms.TextBox nomelog;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox senhalog;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox confirmsen;
         private System.Windows.Forms.Button button1;
     }
 }

@@ -109,20 +109,24 @@
             // 
             // senha
             // 
+            this.senha.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.senha.Location = new System.Drawing.Point(295, 316);
             this.senha.Multiline = true;
             this.senha.Name = "senha";
             this.senha.PasswordChar = '*';
             this.senha.Size = new System.Drawing.Size(183, 28);
             this.senha.TabIndex = 7;
+            this.senha.TextChanged += new System.EventHandler(this.senha_TextChanged);
             // 
             // usuario
             // 
+            this.usuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuario.Location = new System.Drawing.Point(295, 256);
             this.usuario.Multiline = true;
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(183, 27);
             this.usuario.TabIndex = 8;
+            this.usuario.TextChanged += new System.EventHandler(this.usuario_TextChanged);
             // 
             // entrar
             // 

@@ -44,6 +44,8 @@ namespace TheFarmOfUs
                 Contabilidade cont = new Contabilidade();
                 cont.Show();
             }
+
+            this.Close();
         }
     }
 }
