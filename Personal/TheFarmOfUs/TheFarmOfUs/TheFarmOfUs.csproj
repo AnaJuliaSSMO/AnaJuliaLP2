@@ -88,18 +88,6 @@
     <Compile Include="Gado.Designer.cs">
       <DependentUpon>Gado.cs</DependentUpon>
     </Compile>
-    <Compile Include="logintela.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="logintela.Designer.cs">
-      <DependentUpon>logintela.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pecuaria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pecuaria.Designer.cs">
-      <DependentUpon>Pecuaria.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Agricultura.resx">
@@ -122,9 +110,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gado.resx">
       <DependentUpon>Gado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="logintela.resx">
-      <DependentUpon>logintela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

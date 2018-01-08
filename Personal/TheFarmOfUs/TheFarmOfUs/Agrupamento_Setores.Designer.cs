@@ -36,7 +36,7 @@
             // 
             this.qualset.AutoSize = true;
             this.qualset.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qualset.Location = new System.Drawing.Point(104, 16);
+            this.qualset.Location = new System.Drawing.Point(90, 18);
             this.qualset.Name = "qualset";
             this.qualset.Size = new System.Drawing.Size(225, 22);
             this.qualset.TabIndex = 0;

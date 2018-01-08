@@ -50,73 +50,55 @@ namespace TheFarmOfUs
 
         private void entrar_Click(object sender, EventArgs e)
         {
-            string user = usuario.Text;
-            string confu;
-            int pass = int.Parse(senha.Text);
-            int conpass;
+            string user = usuario.Text;        
+            string pass = senha.Text;
+            string nomeconf = "",userconf = "",setor = "",senhaconf = "";
 
-            string stringcon = @"Data Source=localhost; Initial Catalog=LOGINUSER; Integrated Security=SSPI;";
-            SqlConnection conect = new SqlConnection(stringcon);
+            SqlCommand cmd = new SqlCommand()
+            {
+                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+            };
+
             try
             {
-                conect.Open();
+                cmd.Connection.Open();
             }
 
             catch(SqlException)
             {
-                MessageBox.Show("Não foi possível efeutar a conecção, tente mais tarde");
+                MessageBox.Show("Não foi possível efeutar a conexão, tente mais tarde");
             }
 
 
-            SqlCommand cmd = new SqlCommand(String.Format(@"SELECT *
+            cmd.CommandText = String.Format(@"SELECT usuario, senha, nome,setor
                                               FROM Login
-                                              WHERE Usuario = {0} AND Senha = {1});", user, pass));
+                                              WHERE Usuario = '{0}' AND Senha = '{1}';", user, pass);
+
+            try
+            {
+                nomeconf = cmd.ExecuteScalar().ToString();
+                userconf = cmd.ExecuteScalar().ToString();
+                senhaconf = cmd.ExecuteScalar().ToString();
+                setor = cmd.ExecuteScalar().ToString();
+            }
+            
+            catch
+            {
+                MessageBox.Show("User inválido");
+                usuario.Clear();
+                senha.Clear();
+            }
+
+            cmd.Parameters.AddWithValue("@Nome",nomeconf);
+            cmd.Parameters.AddWithValue("@Usuario",userconf);
+            cmd.Parameters.AddWithValue("@Setor", setor);
+            cmd.Parameters.AddWithValue("@Senha", senhaconf);
 
             SqlDataReader reader = cmd.ExecuteReader();
-
-            while(reader.Read())
-            {
-                MessageBox.Show("Tudo ok,seja bem vindo!");
+            
+                MessageBox.Show("Tudo ok,bem vindo Sr/Sra " + nomeconf);
                 Agrupamento_Setores gp = new Agrupamento_Setores();
                 gp.Show();
-            }
-
-            MessageBox.Show("Usuário ou senha errados, por favor, verifique as informações");
-
-            /*
-                    
-            SqlConnection cone = new SqlConnection("Data Source=localhost; Initial Catalog=LOGINUSER; Integrated Security=SSPI;");
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.CommandText = String.Format(@"SELECT *
-                                              FROM Login
-                                              WHERE Usuario = {0} AND Senha = {1});", user,pass);
-
-            SqlParameter parametroUsuario = new SqlParameter("@Usuario", SqlDbType.VarChar, 20);
-            parametroUsuario.Value = usuario;
-            confu = usuario.Text;
-            cmd.Parameters.Add(parametroUsuario);
-
-            SqlParameter parametroSenha = new SqlParameter("@Senha", SqlDbType.VarChar, 6);
-            parametroSenha.Value = senha;
-            conpass = int.Parse(senha.Text);
-            cmd.Parameters.Add(parametroSenha);
-
-            cmd.Connection.Open();
-            if (user == confu)
-            {
-                MessageBox.Show("Bem vindo!");
-            }
-
-            else
-            {
-                MessageBox.Show("Usuário ou senha inválidos");
-            }
-            cmd.Connection.Close();
-
-            TENTEI FZR UMA PARADA, DEU ERRADO, TENTEI DNV, CONTINUOU DANDO ERRADO, ITS LIFE 
-            */
-
         }
 
         private void usuario_TextChanged(object sender, EventArgs e)

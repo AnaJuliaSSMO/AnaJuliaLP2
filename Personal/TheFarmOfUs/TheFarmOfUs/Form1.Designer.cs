@@ -57,7 +57,7 @@
             // formal
             // 
             this.formal.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formal.Location = new System.Drawing.Point(224, 12);
+            this.formal.Location = new System.Drawing.Point(212, 12);
             this.formal.Name = "formal";
             this.formal.Size = new System.Drawing.Size(321, 29);
             this.formal.TabIndex = 1;
@@ -81,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(176, 219);
+            this.label1.Location = new System.Drawing.Point(153, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(363, 22);
             this.label1.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(218, 261);
+            this.label2.Location = new System.Drawing.Point(195, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 22);
             this.label2.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(220, 316);
+            this.label3.Location = new System.Drawing.Point(197, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 22);
             this.label3.TabIndex = 6;
@@ -110,7 +110,7 @@
             // senha
             // 
             this.senha.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.senha.Location = new System.Drawing.Point(295, 316);
+            this.senha.Location = new System.Drawing.Point(272, 303);
             this.senha.Multiline = true;
             this.senha.Name = "senha";
             this.senha.PasswordChar = '*';
@@ -121,7 +121,7 @@
             // usuario
             // 
             this.usuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuario.Location = new System.Drawing.Point(295, 256);
+            this.usuario.Location = new System.Drawing.Point(272, 243);
             this.usuario.Multiline = true;
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(183, 27);
@@ -131,7 +131,7 @@
             // entrar
             // 
             this.entrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entrar.Location = new System.Drawing.Point(295, 364);
+            this.entrar.Location = new System.Drawing.Point(272, 351);
             this.entrar.Name = "entrar";
             this.entrar.Size = new System.Drawing.Size(82, 42);
             this.entrar.TabIndex = 9;
@@ -142,7 +142,7 @@
             // sair
             // 
             this.sair.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sair.Location = new System.Drawing.Point(399, 364);
+            this.sair.Location = new System.Drawing.Point(376, 351);
             this.sair.Name = "sair";
             this.sair.Size = new System.Drawing.Size(79, 42);
             this.sair.TabIndex = 10;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 419);
+            this.ClientSize = new System.Drawing.Size(710, 419);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.entrar);
             this.Controls.Add(this.usuario);
