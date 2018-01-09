@@ -88,6 +88,7 @@
     <Compile Include="Gado.Designer.cs">
       <DependentUpon>Gado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Agricultura.resx">

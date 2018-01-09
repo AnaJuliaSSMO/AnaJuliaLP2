@@ -50,55 +50,31 @@ namespace TheFarmOfUs
 
         private void entrar_Click(object sender, EventArgs e)
         {
-            string user = usuario.Text;        
+            string user = usuario.Text;
             string pass = senha.Text;
-            string nomeconf = "",userconf = "",setor = "",senhaconf = "";
 
-            SqlCommand cmd = new SqlCommand()
+            Logar.RealizarLogin(user,pass);
+
+            if(Logar.cone == "")
             {
-                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
-            };
-
-            try
-            {
-                cmd.Connection.Open();
-            }
-
-            catch(SqlException)
-            {
-                MessageBox.Show("Não foi possível efeutar a conexão, tente mais tarde");
-            }
-
-
-            cmd.CommandText = String.Format(@"SELECT usuario, senha, nome,setor
-                                              FROM Login
-                                              WHERE Usuario = '{0}' AND Senha = '{1}';", user, pass);
-
-            try
-            {
-                nomeconf = cmd.ExecuteScalar().ToString();
-                userconf = cmd.ExecuteScalar().ToString();
-                senhaconf = cmd.ExecuteScalar().ToString();
-                setor = cmd.ExecuteScalar().ToString();
-            }
-            
-            catch
-            {
-                MessageBox.Show("User inválido");
                 usuario.Clear();
                 senha.Clear();
+
+                if (Logar.entrou == "n")
+                {
+                    MessageBox.Show("Tudo ok,bem vindo Sr/Sra " + Logar.senhaconf);
+                    Agrupamento_Setores gp = new Agrupamento_Setores();
+                    gp.Show();
+                }
+
+                else
+                {
+                    MessageBox.Show("Usuário ou senha inválidos");
+                }
+            
             }
 
-            cmd.Parameters.AddWithValue("@Nome",nomeconf);
-            cmd.Parameters.AddWithValue("@Usuario",userconf);
-            cmd.Parameters.AddWithValue("@Setor", setor);
-            cmd.Parameters.AddWithValue("@Senha", senhaconf);
-
-            SqlDataReader reader = cmd.ExecuteReader();
-            
-                MessageBox.Show("Tudo ok,bem vindo Sr/Sra " + nomeconf);
-                Agrupamento_Setores gp = new Agrupamento_Setores();
-                gp.Show();
+            else { MessageBox.Show(Logar.cone); }
         }
 
         private void usuario_TextChanged(object sender, EventArgs e)

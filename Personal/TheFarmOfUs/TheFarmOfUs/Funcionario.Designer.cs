@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Funcionario));
             this.Qst = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.funcoesfuncionario = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // Qst
@@ -43,30 +43,32 @@
             this.Qst.TabIndex = 2;
             this.Qst.Text = "O que deseja fazer?\r\n";
             // 
-            // checkedListBox1
+            // funcoesfuncionario
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.checkedListBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.funcoesfuncionario.BackColor = System.Drawing.SystemColors.Control;
+            this.funcoesfuncionario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.funcoesfuncionario.FormattingEnabled = true;
+            this.funcoesfuncionario.Items.AddRange(new object[] {
             "Adicionar um novo funcionário;",
             "Retirar o registro de um funcionário;",
             "Atualizar informações de um funcionário;",
             "Cálculo de multa rescisória de acordo com o salário do funcionário e registro da " +
                 "mesma;",
             "Consulta de registros;"});
-            this.checkedListBox1.Location = new System.Drawing.Point(97, 50);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(462, 124);
-            this.checkedListBox1.TabIndex = 3;
+            this.funcoesfuncionario.Location = new System.Drawing.Point(97, 50);
+            this.funcoesfuncionario.Name = "funcoesfuncionario";
+            this.funcoesfuncionario.Size = new System.Drawing.Size(462, 124);
+            this.funcoesfuncionario.TabIndex = 3;
+            this.funcoesfuncionario.SelectedIndexChanged += new System.EventHandler(this.funcoesfuncionario_SelectedIndexChanged);
             // 
             // Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(638, 299);
-            this.Controls.Add(this.checkedListBox1);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(652, 313);
+            this.Controls.Add(this.funcoesfuncionario);
             this.Controls.Add(this.Qst);
             this.Name = "Funcionario";
             this.Text = "Funcionario";
@@ -78,6 +80,6 @@
         #endregion
 
         private System.Windows.Forms.Label Qst;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox funcoesfuncionario;
     }
 }

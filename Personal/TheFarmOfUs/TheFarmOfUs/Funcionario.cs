@@ -16,5 +16,15 @@ namespace TheFarmOfUs
         {
             InitializeComponent();
         }
+
+        private void funcoesfuncionario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int marc = funcoesfuncionario.SelectedIndex;
+
+            if (marc == 0)
+            {
+
+            }
+        }
     }
 }

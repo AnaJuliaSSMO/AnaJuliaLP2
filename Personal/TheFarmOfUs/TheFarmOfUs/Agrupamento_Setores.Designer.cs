@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agrupamento_Setores));
             this.qualset = new System.Windows.Forms.Label();
             this.choosesetor = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
@@ -36,7 +37,7 @@
             // 
             this.qualset.AutoSize = true;
             this.qualset.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qualset.Location = new System.Drawing.Point(90, 18);
+            this.qualset.Location = new System.Drawing.Point(108, 71);
             this.qualset.Name = "qualset";
             this.qualset.Size = new System.Drawing.Size(225, 22);
             this.qualset.TabIndex = 0;
@@ -52,7 +53,7 @@
             "Administração da agricultura;",
             "Administração de funcionários;",
             "Contabilidade;"});
-            this.choosesetor.Location = new System.Drawing.Point(54, 58);
+            this.choosesetor.Location = new System.Drawing.Point(69, 96);
             this.choosesetor.Name = "choosesetor";
             this.choosesetor.Size = new System.Drawing.Size(309, 100);
             this.choosesetor.TabIndex = 2;
@@ -62,9 +63,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 178);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(453, 333);
             this.Controls.Add(this.choosesetor);
             this.Controls.Add(this.qualset);
+            this.DoubleBuffered = true;
             this.Name = "Agrupamento_Setores";
             this.Text = "Agrupamento_Setores";
             this.ResumeLayout(false);
