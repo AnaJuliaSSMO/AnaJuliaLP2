@@ -64,11 +64,18 @@
     <Compile Include="CadastrarLogin.Designer.cs">
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarNovoLogin.cs" />
     <Compile Include="Contabilidade.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Contabilidade.Designer.cs">
       <DependentUpon>Contabilidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dono.Designer.cs">
+      <DependentUpon>Dono.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -102,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidade.resx">
       <DependentUpon>Contabilidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dono.resx">
+      <DependentUpon>Dono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

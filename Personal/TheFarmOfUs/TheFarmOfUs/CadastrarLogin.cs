@@ -20,39 +20,22 @@ namespace TheFarmOfUs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CadastrarLogin cad = new CadastrarLogin();
-
             string conf = confirmsen.Text;
             string senha1 = senhalog.Text;
             string usuario = username.Text;
             string nome = nomelog.Text;
             string seto = String.Format(setor.Text);
 
+            CadastrarNovoLogin.CadastroLogin(conf, senha1, usuario, nome, seto);
 
-            SqlCommand cmd = new SqlCommand()
-
+            if(CadastrarNovoLogin.ok == "s")
             {
-                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")            
-            };
-
-            if (senha1 == conf)
-            {
+                MessageBox.Show("Cadastro realizado com sucesso");
                 senhalog.Clear();
                 confirmsen.Clear();
                 username.Clear();
                 nomelog.Clear();
                 setor.ResetText();
-
-                cmd.CommandText = String.Format(@"INSERT 
-                                stringO Login
-                                VALUES('{0}','{1}',{2},'{3}')", nome, usuario,senha1,seto);
-
-                MessageBox.Show("Cadastro realizado com sucesso");
-
-                cmd.Connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                cmd.Connection.Close();
-              
             }
 
             else

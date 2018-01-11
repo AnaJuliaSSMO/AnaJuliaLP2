@@ -49,12 +49,13 @@ namespace TheFarmOfUs
                 entrou = "s";
             }
 
+            SqlDataReader reader = cmd.ExecuteReader();
             cmd.Parameters.AddWithValue("@Usuario", userconf);
             cmd.Parameters.AddWithValue("@Senha", senhaconf);
             cmd.Parameters.AddWithValue("@Nome", nomeconf);
             cmd.Parameters.AddWithValue("@Setor", setor);
 
-            SqlDataReader reader = cmd.ExecuteReader();           
+
             cmd.Connection.Close();
 
             return nomeconf;

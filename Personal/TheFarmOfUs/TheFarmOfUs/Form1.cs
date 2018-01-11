@@ -39,6 +39,7 @@ namespace TheFarmOfUs
 
         private void cadastrarlogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
             CadastrarLogin cad = new CadastrarLogin();
             cad.Show();
         }
