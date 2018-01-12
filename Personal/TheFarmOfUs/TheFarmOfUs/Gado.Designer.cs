@@ -47,6 +47,7 @@
             this.opitions.Name = "opitions";
             this.opitions.Size = new System.Drawing.Size(540, 100);
             this.opitions.TabIndex = 0;
+            this.opitions.SelectedIndexChanged += new System.EventHandler(this.opitions_SelectedIndexChanged);
             // 
             // Qst
             // 

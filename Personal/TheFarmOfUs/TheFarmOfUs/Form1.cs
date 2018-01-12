@@ -39,9 +39,9 @@ namespace TheFarmOfUs
 
         private void cadastrarlogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            CadastrarLogin cad = new CadastrarLogin();
-            cad.Show();
+            string ko;
+            seg1 ident = new seg1();
+            ident.Show();
         }
 
         private void sair_Click(object sender, EventArgs e)

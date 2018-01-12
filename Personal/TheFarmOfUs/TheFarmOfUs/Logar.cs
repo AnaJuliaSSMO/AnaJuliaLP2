@@ -55,7 +55,6 @@ namespace TheFarmOfUs
             cmd.Parameters.AddWithValue("@Nome", nomeconf);
             cmd.Parameters.AddWithValue("@Setor", setor);
 
-
             cmd.Connection.Close();
 
             return nomeconf;
