@@ -39,7 +39,6 @@ namespace TheFarmOfUs
 
         private void cadastrarlogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string ko;
             seg1 ident = new seg1();
             ident.Show();
         }
@@ -51,6 +50,8 @@ namespace TheFarmOfUs
 
         private void entrar_Click(object sender, EventArgs e)
         {
+            Agrupamento_Setores gp = new Agrupamento_Setores();
+
             string user = usuario.Text;
             string pass = senha.Text;
 
@@ -63,28 +64,21 @@ namespace TheFarmOfUs
 
                 if (Logar.entrou == "n")
                 {
-                    MessageBox.Show("Tudo ok,bem vindo Sr/Sra " + Logar.senhaconf);
-                    Agrupamento_Setores gp = new Agrupamento_Setores();
+                    MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     gp.Show();
+                    Hide();
+                    
                 }
 
                 else
                 {
-                    MessageBox.Show("Usuário ou senha inválidos");
+                    MessageBox.Show("Usuário ou senha inválidos","Opa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             
             }
-
+            
             else { MessageBox.Show(Logar.cone); }
-        }
-
-        private void usuario_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void senha_TextChanged(object sender, EventArgs e)
-        {
-        }
+        }       
     }
 }
     

@@ -28,8 +28,7 @@ namespace TheFarmOfUs
                 MessageBox.Show("Acesso permitido");
                 CadastrarLogin cad = new CadastrarLogin();
                 cad.Show();
-                seg1 seg = new seg1();
-                seg.Close();
+                Close();
             }
         }
 

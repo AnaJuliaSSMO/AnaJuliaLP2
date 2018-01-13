@@ -52,10 +52,11 @@
             "Administração de gado;",
             "Administração da agricultura;",
             "Administração de funcionários;",
-            "Contabilidade;"});
+            "Contabilidade;",
+            "Retornar ao menu inicial;"});
             this.choosesetor.Location = new System.Drawing.Point(69, 96);
             this.choosesetor.Name = "choosesetor";
-            this.choosesetor.Size = new System.Drawing.Size(309, 100);
+            this.choosesetor.Size = new System.Drawing.Size(309, 124);
             this.choosesetor.TabIndex = 2;
             this.choosesetor.SelectedIndexChanged += new System.EventHandler(this.choosesetor_SelectedIndexChanged);
             // 

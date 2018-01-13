@@ -37,7 +37,7 @@
             // 
             this.Qst.AutoSize = true;
             this.Qst.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qst.Location = new System.Drawing.Point(236, 19);
+            this.Qst.Location = new System.Drawing.Point(229, 19);
             this.Qst.Name = "Qst";
             this.Qst.Size = new System.Drawing.Size(182, 22);
             this.Qst.TabIndex = 2;
@@ -53,11 +53,13 @@
             "Registrar compra de agrotóxicos;",
             "Atualizar informações sobre quantidade de sacas produzidas;",
             "Comprar, vender ou atualizar máquinas agrícolas;",
-            "Consulta do estoque;"});
-            this.agri.Location = new System.Drawing.Point(24, 94);
+            "Consulta do estoque;",
+            "Retornar à sessão anterior;"});
+            this.agri.Location = new System.Drawing.Point(23, 61);
             this.agri.Name = "agri";
-            this.agri.Size = new System.Drawing.Size(593, 100);
+            this.agri.Size = new System.Drawing.Size(593, 148);
             this.agri.TabIndex = 3;
+            this.agri.SelectedIndexChanged += new System.EventHandler(this.agri_SelectedIndexChanged);
             // 
             // Agricultura
             // 

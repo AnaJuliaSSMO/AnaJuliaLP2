@@ -36,13 +36,17 @@ namespace TheFarmOfUs
                 // msm coisa do de cima só q cm plantinhas 
             }
 
-            else
+            else if(resp == 3)
             {
                 //demitir ou admitir novos caras, eh isso
-                seg1 onlyfunc = new seg1();
-                onlyfunc.Show();
-
             }
+
+            else
+            {
+                Agrupamento_Setores set = new Agrupamento_Setores();
+                set.Show();
+            }
+            Close();
         }
     }
 }

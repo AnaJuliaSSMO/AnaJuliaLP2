@@ -39,12 +39,18 @@ namespace TheFarmOfUs
                 func.Show();
             }
 
-            else
+            else if(resp == 3)
             {
                 Contabilidade cont = new Contabilidade();
                 cont.Show();
             }
-            this.Close();
+
+            else
+            {
+                Form1 menu = new Form1();
+                menu.ShowDialog();
+            }
+            Close();
         }
     }
 }

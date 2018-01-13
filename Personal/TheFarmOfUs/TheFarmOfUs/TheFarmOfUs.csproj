@@ -65,6 +65,12 @@
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastrarNovoLogin.cs" />
+    <Compile Include="CompraVendadeGadocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompraVendadeGadocs.Designer.cs">
+      <DependentUpon>CompraVendadeGadocs.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompraVendaGado.cs" />
     <Compile Include="Contabilidade.cs">
       <SubType>Form</SubType>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarLogin.resx">
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompraVendadeGadocs.resx">
+      <DependentUpon>CompraVendadeGadocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidade.resx">
       <DependentUpon>Contabilidade.cs</DependentUpon>

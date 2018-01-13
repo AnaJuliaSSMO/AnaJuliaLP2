@@ -116,7 +116,6 @@
             this.senha.PasswordChar = '*';
             this.senha.Size = new System.Drawing.Size(183, 28);
             this.senha.TabIndex = 7;
-            this.senha.TextChanged += new System.EventHandler(this.senha_TextChanged);
             // 
             // usuario
             // 
@@ -126,7 +125,6 @@
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(183, 27);
             this.usuario.TabIndex = 8;
-            this.usuario.TextChanged += new System.EventHandler(this.usuario_TextChanged);
             // 
             // entrar
             // 

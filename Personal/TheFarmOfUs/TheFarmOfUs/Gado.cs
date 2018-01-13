@@ -25,13 +25,28 @@ namespace TheFarmOfUs
 
             if (resp == 0)  
             {
+                CompraVendadeGadocs a = new CompraVendadeGadocs();
+                a.Show();
                 /* compra e venda de gado
                  * primeiro ele verifica se há dinheiro o suficiente para comprar o gado
                  * na vdd primeiro ele perfgunta qual animal quer comprar ou vender neah
                  * e a qtd de animais tbm
                  * para isso ele acessa a área de contabilidade que tem que ser sempre atualizada
                  * ou seja, se comprar vaquinha, o valor da vaquinha tem que ir pra área de contabilidade
-                 * se vender vaquinha tem que ir tbm*/
+                 * se vender vaquinha tem que ir tbm
+                 Galinha                       
+Porco                         
+Cabra                         
+Cavalo                        
+Cavalo                        
+Porco                         
+Galinha                       
+Cabra                         
+Coelho                        
+Pato                          
+Carneiro                      
+Boi                           
+Vaca*/
             }
 
             else if (resp == 1)
@@ -46,12 +61,18 @@ namespace TheFarmOfUs
                  * e dizer se ele está ou não apto para venda eh isto*/
             }
 
-            else
+            else if(resp == 3)
             {
-                Close();
                 gadocont.Show();
                 //FEITO
             }
+
+            else
+            {
+                Agrupamento_Setores menu = new Agrupamento_Setores();
+                menu.ShowDialog();
+            }
+            this.Close();
         }
     }
 }

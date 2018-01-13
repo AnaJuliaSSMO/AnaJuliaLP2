@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TheFarmOfUs
 {
-    class Logar //É A PRIMEIRA TELA, VC SÓ RECEVE LOGIN E SENHA ;)
+    class Logar //É A PRIMEIRA TELA, VC SÓ RECEBE LOGIN E SENHA ;)
     {
         public static string usuari,passw,nomeconf,userconf,setor, senhaconf, entrou, cone="";
 
-        public static string RealizarLogin(string user,string pass) 
+        public static void RealizarLogin(string user, string pass)
         {
             usuari = user;
             passw = pass;
@@ -32,16 +32,14 @@ namespace TheFarmOfUs
                 cone = "Não foi possível efeutar a conexão, tente mais tarde";
             }
 
-            cmd.CommandText = String.Format(@"SELECT usuario,senha,nome,setor
+            cmd.CommandText = String.Format(@"SELECT nome,usuario,senha,setor
                                               FROM Login
                                               WHERE Usuario = '{0}' AND Senha = '{1}';", user, pass);
 
             try
             {
-                userconf = cmd.ExecuteScalar().ToString();
+                userconf = cmd.ExecuteScalar().ToString();  
                 senhaconf = cmd.ExecuteScalar().ToString();
-                nomeconf = cmd.ExecuteScalar().ToString();
-                setor = cmd.ExecuteScalar().ToString();
             }
 
             catch
@@ -50,14 +48,19 @@ namespace TheFarmOfUs
             }
 
             SqlDataReader reader = cmd.ExecuteReader();
-            cmd.Parameters.AddWithValue("@Usuario", userconf);
-            cmd.Parameters.AddWithValue("@Senha", senhaconf);
-            cmd.Parameters.AddWithValue("@Nome", nomeconf);
-            cmd.Parameters.AddWithValue("@Setor", setor);
 
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    nomeconf = reader.GetString(0);
+                    userconf = reader.GetString(1);
+                    senhaconf = reader.GetString(2);
+                    setor = reader.GetString(3);
+                }
+            }
             cmd.Connection.Close();
-
-            return nomeconf;
         }
-    }
+      }
 }
+    

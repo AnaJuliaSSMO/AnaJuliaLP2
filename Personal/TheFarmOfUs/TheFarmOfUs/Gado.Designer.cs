@@ -42,10 +42,11 @@
             "Registrar compra ou venda de novo gado;",
             "Registrar compra de alimentos, vitaminas e/ou remédios;",
             "Atualizar, acrescentar ou retirar gados do estoque;",
-            "Consulta do estoque;"});
+            "Consulta do estoque;",
+            "Retornar à sessão anterior;"});
             this.opitions.Location = new System.Drawing.Point(27, 50);
             this.opitions.Name = "opitions";
-            this.opitions.Size = new System.Drawing.Size(540, 100);
+            this.opitions.Size = new System.Drawing.Size(540, 124);
             this.opitions.TabIndex = 0;
             this.opitions.SelectedIndexChanged += new System.EventHandler(this.opitions_SelectedIndexChanged);
             // 
