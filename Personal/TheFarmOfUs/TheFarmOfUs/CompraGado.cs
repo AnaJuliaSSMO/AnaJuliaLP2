@@ -28,7 +28,7 @@ namespace TheFarmOfUs
             double precototal = preco * qtdcomprada;//,sobradinheiro,animaisatual;
 
             //por enquanto, já que não tenho setor de contabilidade, vou estabelecer que eu posso gastar até 5000 conto
-            int tenho = 50000;
+            int tenho = 5000;
 
             MessageBox.Show("O animal escolhido foi: " + animal);
             if(MessageBox.Show("O total da sua compra é de R$" + precototal + "\nDeseja continuar?","Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
