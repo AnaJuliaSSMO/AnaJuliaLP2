@@ -11,17 +11,8 @@ namespace aaaaaaaaaaaaaaaa
     {
         static void Main(string[] args)
         {
-            SqlCommand cmd = new SqlCommand()
-            {
-                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave; Initial Catalog=LOGINUSER; Integrated Security=SSPI;"),
-            };
-
-            cmd.CommandText = @"INSERT INTO Login VALUES ('Maria Almira','Almira',12091962)";
-
-            cmd.Connection.Open();
-            cmd.ExecuteNonQuery();
-            cmd.Connection.Close();
-
+            Console.WriteLine("oi");
+            Console.ReadKey();
         }
     }
 }
