@@ -26,11 +26,11 @@ namespace TheFarmOfUs
 
             if (senha1 == conf)
             {
+                cmd.Connection.Open();
                 cmd.CommandText = String.Format(@"INSERT 
                                 INTO Login
                                 VALUES('{0}','{1}',{2},'{3}')", nome, usuario, senha1, seto);
 
-                cmd.Connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 cmd.Connection.Close();
 

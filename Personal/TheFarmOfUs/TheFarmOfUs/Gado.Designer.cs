@@ -41,7 +41,7 @@
             this.opitions.Items.AddRange(new object[] {
             "Registrar compra ou venda de novo gado;",
             "Registrar compra de alimentos, vitaminas e/ou remédios;",
-            "Atualizar, acrescentar ou retirar gados do estoque;",
+            "Acrescentar ou retirar gados do estoque;",
             "Consulta do estoque;",
             "Retornar à sessão anterior;"});
             this.opitions.Location = new System.Drawing.Point(27, 50);

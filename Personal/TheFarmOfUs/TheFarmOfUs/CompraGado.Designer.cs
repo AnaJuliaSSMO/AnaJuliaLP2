@@ -1,6 +1,6 @@
 ﻿namespace TheFarmOfUs
 {
-    partial class CompraVendadeGadocs
+    partial class CompraGado
     {
         /// <summary>
         /// Required designer variable.
@@ -34,24 +34,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.compra = new System.Windows.Forms.Button();
             this.cancela = new System.Windows.Forms.Button();
+            this.qtd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 16);
+            this.label1.Location = new System.Drawing.Point(25, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 22);
+            this.label1.Size = new System.Drawing.Size(402, 44);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Qual animal deseja comprar e qual o seu valor?\r\n";
+            this.label1.Text = "Qual animal deseja comprar, qual a quantidade\r\ne qual o seu valor?\r\n";
             // 
             // animais
             // 
             this.animais.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.animais.FormattingEnabled = true;
             this.animais.Items.AddRange(new object[] {
-            "Total de animais",
             "Vaca",
             "Boi",
             "Galinha",
@@ -69,7 +69,7 @@
             // valor
             // 
             this.valor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valor.Location = new System.Drawing.Point(75, 121);
+            this.valor.Location = new System.Drawing.Point(77, 151);
             this.valor.Name = "valor";
             this.valor.Size = new System.Drawing.Size(310, 29);
             this.valor.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 124);
+            this.label2.Location = new System.Drawing.Point(36, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 22);
             this.label2.TabIndex = 4;
@@ -88,7 +88,7 @@
             // compra
             // 
             this.compra.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.compra.Location = new System.Drawing.Point(93, 173);
+            this.compra.Location = new System.Drawing.Point(95, 200);
             this.compra.Name = "compra";
             this.compra.Size = new System.Drawing.Size(105, 34);
             this.compra.TabIndex = 5;
@@ -99,7 +99,7 @@
             // cancela
             // 
             this.cancela.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancela.Location = new System.Drawing.Point(236, 173);
+            this.cancela.Location = new System.Drawing.Point(238, 200);
             this.cancela.Name = "cancela";
             this.cancela.Size = new System.Drawing.Size(102, 34);
             this.cancela.TabIndex = 6;
@@ -107,11 +107,21 @@
             this.cancela.UseVisualStyleBackColor = true;
             this.cancela.Click += new System.EventHandler(this.cancela_Click);
             // 
+            // qtd
+            // 
+            this.qtd.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qtd.Location = new System.Drawing.Point(77, 105);
+            this.qtd.Name = "qtd";
+            this.qtd.Size = new System.Drawing.Size(310, 29);
+            this.qtd.TabIndex = 7;
+            this.qtd.Text = "Insira a quantidade";
+            // 
             // CompraVendadeGadocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 261);
+            this.Controls.Add(this.qtd);
             this.Controls.Add(this.cancela);
             this.Controls.Add(this.compra);
             this.Controls.Add(this.label2);
@@ -133,5 +143,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button compra;
         private System.Windows.Forms.Button cancela;
+        private System.Windows.Forms.TextBox qtd;
     }
 }

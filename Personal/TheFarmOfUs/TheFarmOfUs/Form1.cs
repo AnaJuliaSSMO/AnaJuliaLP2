@@ -67,14 +67,12 @@ namespace TheFarmOfUs
                     MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     gp.Show();
                     Hide();
-                    
                 }
 
                 else
                 {
                     MessageBox.Show("Usuário ou senha inválidos","Opa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            
             }
             
             else { MessageBox.Show(Logar.cone); }

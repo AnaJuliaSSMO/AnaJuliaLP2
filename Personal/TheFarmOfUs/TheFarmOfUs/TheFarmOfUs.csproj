@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcresouReti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcresouReti.Designer.cs">
+      <DependentUpon>AcresouReti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agricultura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     <Compile Include="Agrupamento_Setores.Designer.cs">
       <DependentUpon>Agrupamento_Setores.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyorSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyorSell.Designer.cs">
+      <DependentUpon>BuyorSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +77,11 @@
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastrarNovoLogin.cs" />
-    <Compile Include="CompraVendadeGadocs.cs">
+    <Compile Include="CompraGado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CompraVendadeGadocs.Designer.cs">
-      <DependentUpon>CompraVendadeGadocs.cs</DependentUpon>
+    <Compile Include="CompraGado.Designer.cs">
+      <DependentUpon>CompraGado.cs</DependentUpon>
     </Compile>
     <Compile Include="CompraVendaGado.cs" />
     <Compile Include="Contabilidade.cs">
@@ -111,17 +123,29 @@
     <Compile Include="QuantidadeGado.Designer.cs">
       <DependentUpon>QuantidadeGado.cs</DependentUpon>
     </Compile>
+    <Compile Include="VendeGado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendeGado.Designer.cs">
+      <DependentUpon>VendeGado.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AcresouReti.resx">
+      <DependentUpon>AcresouReti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agricultura.resx">
       <DependentUpon>Agricultura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agrupamento_Setores.resx">
       <DependentUpon>Agrupamento_Setores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuyorSell.resx">
+      <DependentUpon>BuyorSell.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastrarLogin.resx">
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CompraVendadeGadocs.resx">
-      <DependentUpon>CompraVendadeGadocs.cs</DependentUpon>
+    <EmbeddedResource Include="CompraGado.resx">
+      <DependentUpon>CompraGado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidade.resx">
       <DependentUpon>Contabilidade.cs</DependentUpon>
@@ -149,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="QuantidadeGado.resx">
       <DependentUpon>QuantidadeGado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendeGado.resx">
+      <DependentUpon>VendeGado.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
