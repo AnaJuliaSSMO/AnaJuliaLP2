@@ -84,6 +84,7 @@
             this.cancelar.TabIndex = 24;
             this.cancelar.Text = "Cancelar operação";
             this.cancelar.UseVisualStyleBackColor = true;
+            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
             // 
             // retirar
             // 

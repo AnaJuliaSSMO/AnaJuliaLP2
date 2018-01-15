@@ -26,42 +26,61 @@ namespace TheFarmOfUs
             {
                 BuyorSell bs = new BuyorSell();
                 bs.Show();
-                /* compra e venda de gado
-                 * primeiro ele verifica se há dinheiro o suficiente para comprar o gado
-                 * na vdd primeiro ele perfgunta qual animal quer comprar ou vender neah
-                 * e a qtd de animais tbm
-                 * para isso ele acessa a área de contabilidade que tem que ser sempre atualizada
-                 * ou seja, se comprar vaquinha, o valor da vaquinha tem que ir pra área de contabilidade
-                 * se vender vaquinha tem que ir tbm
-                 Galinha              
-                 Porco                         
-                 Cabra                         
-                 Cavalo                        
-                 Cavalo                        
-                 Porco                         
-                 Galinha                       
-                 Cabra                         
-                 Coelho                        
-                 Pato                          
-                 Carneiro                      
-                 Boi                           
-                 Vaca*/
+                /*AINDA FALTA:       
+                 * 
+                 * COMPRA:
+                 * ACESSAR O SETOR DE CONTABILIDADE PARA SABER QUAL O VALOR QUE TEM PARA SER USADO;
+                 * ASSOCIAR O VALOR DO SETOR À VARIÁVEL "TENHO"
+                 * 
+                 * VENDA:
+                 * ACESSAR O SETOR DE CONTABILIDADE PARA ADICIONAR O VALOR DA VENDA;
+                 * 
+                 * GERAL:
+                 * QUANDO ALTERAR O VALOR NA COMPRA, ALTERAR O VALOR DO SETOR DE CONTABILIDADE
+                 * MESMA COISA COM A VENDA
+                 * 
+                 * EX
+                 * COMPREI 2 VACAS A 50,00
+                 * TENHO_NO_SETOR = 5000
+                 * 
+                 * ENVIO O VALOR DA COMPRA PARA O SETOR
+                 * NOVO_TENHO_NO_SETOR = 4900
+                 * 
+                 * COMPREI 2 VACAS A 50,00 
+                 * ENVIO O VALOR DA VENDA PARA O SETOR
+                 * NOVO_TENHO_NO_SETOR = 5000*/
 
             }
 
             else if (resp == 1)
             {
-                /*compra de alimentos, remédios
-                 * isso tbm tem que ir pro setor de vaquinhas da área de contabilidade*/
+                AlimentoRemedioEtc avr = new AlimentoRemedioEtc();
+                avr.Show();
+                /*AINDA FALTA:     
+                 * USAR O VALOR DISPONÍVEL NO SETOR GADO
+                 * ESSE VALOR TERIA QUE VIR DA CONTABILIDADE
+                 * NÃO ESQUECER QUE
+                 * 
+                 * SE USAR O VALOR DO GADO EM QUALQUER LUGAR, SEJA NA COMPRA DE REMÉDIOS,DE GADO OU VENDA
+                 * TEM QUE ATUALIZAR NA CONTABILIDADE*/
+
             }
 
             else if (resp == 2)
             {
                 AcresouReti acrt = new AcresouReti();
                 acrt.Show();
+                //FEITO
             }
 
-            else if(resp == 3)
+            else if (resp == 3)
+            {
+                AcrescentaRetiraVitAliRem acr = new AcrescentaRetiraVitAliRem();
+                acr.Show();
+                //acrescentar ou retirar remedios do estoque 
+            }
+
+            else if(resp == 4)
             {
                 QuantidadeGado gadocont = new QuantidadeGado();
                 gadocont.Show();

@@ -42,11 +42,12 @@
             "Registrar compra ou venda de novo gado;",
             "Registrar compra de alimentos, vitaminas e/ou remédios;",
             "Acrescentar ou retirar gados do estoque;",
+            "Alterar quantidade de alimentos, vitaminas e/ou remédios do estoque;",
             "Consulta do estoque;",
             "Retornar à sessão anterior;"});
-            this.opitions.Location = new System.Drawing.Point(27, 50);
+            this.opitions.Location = new System.Drawing.Point(12, 46);
             this.opitions.Name = "opitions";
-            this.opitions.Size = new System.Drawing.Size(540, 124);
+            this.opitions.Size = new System.Drawing.Size(613, 148);
             this.opitions.TabIndex = 0;
             this.opitions.SelectedIndexChanged += new System.EventHandler(this.opitions_SelectedIndexChanged);
             // 
@@ -54,7 +55,7 @@
             // 
             this.Qst.AutoSize = true;
             this.Qst.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qst.Location = new System.Drawing.Point(219, 9);
+            this.Qst.Location = new System.Drawing.Point(234, 9);
             this.Qst.Name = "Qst";
             this.Qst.Size = new System.Drawing.Size(182, 22);
             this.Qst.TabIndex = 1;

@@ -18,6 +18,12 @@ namespace TheFarmOfUs
             InitializeComponent();
         }
 
+        SqlCommand cmd = new SqlCommand()
+        {
+            Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+        };
+
+
         private void quercomprar_Click(object sender, EventArgs e)
         {//variáveis vindas da form
             int qtdcomprada = int.Parse(qtd.Text), qtdatual;
@@ -25,15 +31,10 @@ namespace TheFarmOfUs
             string animal = animais.SelectedItem.ToString();
 
             //variáveis "auxiliares"
-            double precototal = preco * qtdcomprada;//,sobradinheiro,animaisatual;
+            double precototal = preco * qtdcomprada;
 
             //por enquanto, já que não tenho setor de contabilidade, vou estabelecer que eu posso gastar até 5000 conto
-            int tenho = 5000;
-
-            SqlCommand cmd = new SqlCommand()
-            {
-                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
-            };
+            double tenho = 5000;
 
             try
             {
@@ -50,7 +51,6 @@ namespace TheFarmOfUs
                                                WHERE Animal = '{0}';", animal);
 
             qtdatual = (Int32)cmd.ExecuteScalar();
-            int qtdtot = qtdatual + qtdcomprada;
 
             MessageBox.Show("O animal escolhido foi: " + animal);
 
@@ -63,56 +63,31 @@ namespace TheFarmOfUs
             {
                 if (MessageBox.Show("O total da sua compra é de R$" + precototal + "\nDeseja continuar?", "Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    double sobrou = tenho - precototal;
+                    tenho = tenho - precototal;
+                    qtdatual = qtdatual + qtdcomprada;
 
                     cmd.CommandText = String.Format(@"UPDATE Gado 
                                                     SET Quantidade = {0}
-                                                    WHERE Animal = '{1}'", qtdtot, animal);
+                                                    WHERE Animal = '{1}'", qtdatual, animal);
 
-                    MessageBox.Show("compra efetuada com sucesso, o saldo atual para uso do setor Gado é de R$" + sobrou);
-                    MessageBox.Show("Efetuado com sucesso!\nVocê possui " + qtdtot + "" + animal + "(s) agora.");
-                }
-
-                else
-                {
-                    MessageBox.Show("ok");
+                    MessageBox.Show("compra efetuada com sucesso, o saldo atual para uso do setor Gado é de R$" + tenho);
+                    MessageBox.Show("Efetuado com sucesso!\nVocê possui " + qtdatual + " " + animal + "(s) agora.");
                 }
             }
-            
-            /* ele vai ter que acessar o setor de contabilidade pra saber qto tem pra gastar na área do gado
-            * se tiver dinheiros o suficiente
-            * ele vai dar um insert into tabela gado wherre animal == animalescolhido: a quantidade de animais
-            * 
-            * if{dinheiros no setor for menor do que o total)
-            * {
-            * MessageBox.Show("Poucos dinheiros, por favor, consulte a área de contabilidade ou insira um novo valor");
-            * }
-            * 
-            * else
-            * {
-            * ele da update
-            * ele vai ter que pegar o valor que tinha pro setor G - o tot da compra = sobrou
-            * MessageBox.Show("compra efetuada com sucesso, o saldo atual para uso do setor "Gado" é de {0}reais.",sobrou);
-            * MessageBox.Show(Você possui qtdantiga+qtdcomprada de [animal] agora);
-            * }
-            */
+
+            cmd.Connection.Close();
         }
 
         private void quervender_Click(object sender, EventArgs e)
         {
             //variáveis vindas da form
             int qtdvendida = int.Parse(qtd.Text), qtdatual;
-            double preco = double.Parse(valor.Text);
+            double preco = double.Parse(valor.Text),tenho = 5000;
             string animal = animais.SelectedItem.ToString();
             //variáveis "auxiliares"
-            double precototal = preco * qtdvendida, totaldinheiro, animaisrestantes;
+            double precototal = preco * qtdvendida;
 
             //COMEÇA O SELECT
-            SqlCommand cmd = new SqlCommand()
-            {
-                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
-            };
-
             try
             {
                 cmd.Connection.Open();
@@ -129,8 +104,6 @@ namespace TheFarmOfUs
             qtdatual = (Int32)cmd.ExecuteScalar();
             //TERMINA O SELECT
 
-            int qtdtot = qtdatual - qtdvendida;
-
             MessageBox.Show("O animal escolhido foi: " + animal);
 
             if (qtdatual < qtdvendida)
@@ -141,6 +114,8 @@ namespace TheFarmOfUs
 
             else
             {
+                tenho = tenho + precototal;
+                qtdatual = qtdatual - qtdvendida;
                 if (MessageBox.Show("O total da sua venda é de R$" + precototal + "\nDeseja continuar?", "Continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     qtd.Clear();
@@ -149,19 +124,16 @@ namespace TheFarmOfUs
 
                     cmd.CommandText = String.Format(@"UPDATE Gado 
                                                     SET Quantidade = {0}
-                                                    WHERE Animal = '{1}'", qtdtot, animal);
+                                                    WHERE Animal = '{1}'", qtdatual, animal);
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show("Efetuado com sucesso!\nVocê possui " + qtdtot + "" + animal + "(s) agora.");
+                    MessageBox.Show("Venda efetuada com sucesso, o saldo atual para uso do setor Gado é de R$" + tenho);
+                    MessageBox.Show("Você possui " + qtdatual + " " + animal + "(s) agora.");
                     cmd.Connection.Close();
-                }
-
-                else
-                {
-                    MessageBox.Show("ok");
                 }
             }
 
+            cmd.Connection.Close();
 
             /* ele vai ter que acessar o setor de contabilidade pra dizer o qto isso vai acrescentar na área do gado
             * ele vai ter que pegar o valor que tinha pro setor G + o tot da compra = novodinheiro

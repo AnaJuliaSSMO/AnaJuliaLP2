@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcrescentaRetiraVitAliRem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcrescentaRetiraVitAliRem.Designer.cs">
+      <DependentUpon>AcrescentaRetiraVitAliRem.cs</DependentUpon>
+    </Compile>
     <Compile Include="AcresouReti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,13 @@
     <Compile Include="Agrupamento_Setores.Designer.cs">
       <DependentUpon>Agrupamento_Setores.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlimentoRemedioEtc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlimentoRemedioEtc.Designer.cs">
+      <DependentUpon>AlimentoRemedioEtc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlimentoRemedioVitamina.cs" />
     <Compile Include="BuyorSell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +90,6 @@
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastrarNovoLogin.cs" />
-    <Compile Include="CompraGado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CompraGado.Designer.cs">
-      <DependentUpon>CompraGado.cs</DependentUpon>
-    </Compile>
     <Compile Include="CompraVendaGado.cs" />
     <Compile Include="Contabilidade.cs">
       <SubType>Form</SubType>
@@ -123,12 +130,9 @@
     <Compile Include="QuantidadeGado.Designer.cs">
       <DependentUpon>QuantidadeGado.cs</DependentUpon>
     </Compile>
-    <Compile Include="VendeGado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VendeGado.Designer.cs">
-      <DependentUpon>VendeGado.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="AcrescentaRetiraVitAliRem.resx">
+      <DependentUpon>AcrescentaRetiraVitAliRem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AcresouReti.resx">
       <DependentUpon>AcresouReti.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,14 +142,14 @@
     <EmbeddedResource Include="Agrupamento_Setores.resx">
       <DependentUpon>Agrupamento_Setores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlimentoRemedioEtc.resx">
+      <DependentUpon>AlimentoRemedioEtc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuyorSell.resx">
       <DependentUpon>BuyorSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarLogin.resx">
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CompraGado.resx">
-      <DependentUpon>CompraGado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidade.resx">
       <DependentUpon>Contabilidade.cs</DependentUpon>
@@ -173,9 +177,6 @@
     </Compile>
     <EmbeddedResource Include="QuantidadeGado.resx">
       <DependentUpon>QuantidadeGado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VendeGado.resx">
-      <DependentUpon>VendeGado.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
