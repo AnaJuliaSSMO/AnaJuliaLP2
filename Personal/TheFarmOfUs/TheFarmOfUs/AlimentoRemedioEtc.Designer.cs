@@ -94,7 +94,7 @@
             // cancelar
             // 
             this.cancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelar.Location = new System.Drawing.Point(181, 288);
+            this.cancelar.Location = new System.Drawing.Point(116, 324);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(186, 33);
             this.cancelar.TabIndex = 22;
@@ -105,7 +105,7 @@
             // quercomprar
             // 
             this.quercomprar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quercomprar.Location = new System.Drawing.Point(57, 288);
+            this.quercomprar.Location = new System.Drawing.Point(157, 285);
             this.quercomprar.Name = "quercomprar";
             this.quercomprar.Size = new System.Drawing.Size(99, 33);
             this.quercomprar.TabIndex = 20;
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 330);
+            this.ClientSize = new System.Drawing.Size(428, 365);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.qtd);
             this.Controls.Add(this.label4);

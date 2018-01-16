@@ -27,6 +27,7 @@ namespace TheFarmOfUs
                 BuyorSell bs = new BuyorSell();
                 bs.Show();
                 /*AINDA FALTA:       
+                 * ALÉM DE POR EM UMA CLASSE
                  * 
                  * COMPRA:
                  * ACESSAR O SETOR DE CONTABILIDADE PARA SABER QUAL O VALOR QUE TEM PARA SER USADO;
@@ -57,6 +58,9 @@ namespace TheFarmOfUs
                 AlimentoRemedioEtc avr = new AlimentoRemedioEtc();
                 avr.Show();
                 /*AINDA FALTA:     
+                 * 
+                 * ALÉM DE POR EM UMA CLASSE
+                 * 
                  * USAR O VALOR DISPONÍVEL NO SETOR GADO
                  * ESSE VALOR TERIA QUE VIR DA CONTABILIDADE
                  * NÃO ESQUECER QUE
@@ -71,13 +75,15 @@ namespace TheFarmOfUs
                 AcresouReti acrt = new AcresouReti();
                 acrt.Show();
                 //FEITO
+                //CONFERIDO
             }
 
             else if (resp == 3)
             {
-                AcrescentaRetiraVitAliRem acr = new AcrescentaRetiraVitAliRem();
+                RetirarVitRemAli acr = new RetirarVitRemAli();
                 acr.Show();
-                //acrescentar ou retirar remedios do estoque 
+                //FEITO
+                //CONFERIDO
             }
 
             else if(resp == 4)
@@ -85,6 +91,7 @@ namespace TheFarmOfUs
                 QuantidadeGado gadocont = new QuantidadeGado();
                 gadocont.Show();
                 //FEITO
+                //CONFERIDO
             }
 
             else

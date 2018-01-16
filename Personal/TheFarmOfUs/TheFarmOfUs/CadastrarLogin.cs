@@ -25,35 +25,48 @@ namespace TheFarmOfUs
             string usuario = username.Text;
             string nome = nomelog.Text;
             string seto = String.Format(setor.Text);
+            string cpf = cpfs.Text;
 
-            CadastrarNovoLogin.CadastroLogin(conf, senha1, usuario, nome, seto);
+            CadastrarNovoLogin.CadastroLogin(conf, senha1, usuario, nome, seto,cpf);
 
-            if(CadastrarNovoLogin.ok == "s")
+            if(CadastrarNovoLogin.cone == "")
             {
-                MessageBox.Show("Cadastro realizado com sucesso");
-                senhalog.Clear();
-                confirmsen.Clear();
-                username.Clear();
-                nomelog.Clear();
-                setor.ResetText();
+                if(CadastrarNovoLogin.possui == "n")
+                {
+                    if (CadastrarNovoLogin.ok == "s")
+                    {
+                        MessageBox.Show("Cadastro realizado com sucesso");
+                        senhalog.Clear();
+                        confirmsen.Clear();
+                        username.Clear();
+                        nomelog.Clear();
+                        setor.ResetText();
+                    }
+
+                    else
+                    {
+                        senhalog.Clear();
+                        confirmsen.Clear();
+                        MessageBox.Show("As senhas não conferem, por favor,insira a senha novamente");
+                    }
+                }
+
+                else
+                {
+                    username.Clear();
+                    MessageBox.Show("Nome de usuário já foi escolhido, por favor insira outro.");
+                }
             }
 
             else
             {
-                senhalog.Clear();
-                confirmsen.Clear();
-                MessageBox.Show("As senhas não conferem, por favor,insira a senha novamente");
+                MessageBox.Show(CadastrarNovoLogin.cone);
             }
         }
 
         private void fechar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void setor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
         }
     }
 }

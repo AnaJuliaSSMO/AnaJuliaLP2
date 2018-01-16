@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcrescentaRetiraVitAliRem.cs">
+    <Compile Include="RetirarVitRemAli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AcrescentaRetiraVitAliRem.Designer.cs">
-      <DependentUpon>AcrescentaRetiraVitAliRem.cs</DependentUpon>
+    <Compile Include="RetirarVitRemAli.Designer.cs">
+      <DependentUpon>RetirarVitRemAli.cs</DependentUpon>
     </Compile>
     <Compile Include="AcresouReti.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
     <Compile Include="QuantidadeGado.Designer.cs">
       <DependentUpon>QuantidadeGado.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AcrescentaRetiraVitAliRem.resx">
-      <DependentUpon>AcrescentaRetiraVitAliRem.cs</DependentUpon>
+    <EmbeddedResource Include="RetirarVitRemAli.resx">
+      <DependentUpon>RetirarVitRemAli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AcresouReti.resx">
       <DependentUpon>AcresouReti.cs</DependentUpon>

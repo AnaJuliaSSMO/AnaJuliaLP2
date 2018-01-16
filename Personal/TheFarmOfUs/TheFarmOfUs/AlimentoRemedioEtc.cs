@@ -26,12 +26,11 @@ namespace TheFarmOfUs
             double valores = double.Parse(valor.Text);
             double disponivel = 5000;
 
-
             valores *= quantidade; 
 
             if(disponivel > valores)
             {
-                AlimentoRemedioVitamina.Negocio(tipo, nome, quantidade, valores, disponivel);
+                AlimentoRemedioVitamina.Compra(tipo, nome, quantidade, valores);
                 disponivel -= valores;
                 if (AlimentoRemedioVitamina.cone == "")
                 {
