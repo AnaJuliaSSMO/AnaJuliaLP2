@@ -37,7 +37,7 @@
             // 
             this.Qst.AutoSize = true;
             this.Qst.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qst.Location = new System.Drawing.Point(230, 9);
+            this.Qst.Location = new System.Drawing.Point(166, 44);
             this.Qst.Name = "Qst";
             this.Qst.Size = new System.Drawing.Size(182, 22);
             this.Qst.TabIndex = 2;
@@ -49,14 +49,13 @@
             this.cont.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cont.FormattingEnabled = true;
             this.cont.Items.AddRange(new object[] {
+            "Ver saldo disponível para o setor de Gado e Agricultura;",
             "Administração do salário de funcionários;",
-            "Administração de compra e venda de gados;",
-            "Administração de compra e venda da agricultura;",
             "Admissão ou demissão de funcionário;",
             "Voltar à sessão anterior;"});
-            this.cont.Location = new System.Drawing.Point(95, 48);
+            this.cont.Location = new System.Drawing.Point(12, 101);
             this.cont.Name = "cont";
-            this.cont.Size = new System.Drawing.Size(458, 124);
+            this.cont.Size = new System.Drawing.Size(501, 100);
             this.cont.TabIndex = 3;
             // 
             // Contabilidade
@@ -64,7 +63,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(651, 192);
+            this.ClientSize = new System.Drawing.Size(524, 254);
             this.Controls.Add(this.cont);
             this.Controls.Add(this.Qst);
             this.Name = "Contabilidade";

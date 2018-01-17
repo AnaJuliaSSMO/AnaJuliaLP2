@@ -23,20 +23,15 @@ namespace TheFarmOfUs
 
             if (resp == 0)
             {
-                //pagamentos,abonos salariais, etc
+                //controlar o quanto ta vendendo, o quanto de dinheiros tem pras vaquinahs muu e plantinhas 
             }
 
             else if (resp == 1)
             {
-                //controlar o quanto ta vendendo, o quanto de dinheiros tem pras vaquinahs muu
+                //pagamentos,abonos salariais (eu nem sei oq k7's é um abono salarial, mas blz), etc
             }
 
-            else if (resp == 2)
-            {
-                // msm coisa do de cima só q cm plantinhas 
-            }
-
-            else if(resp == 3)
+            else if(resp == 2)
             {
                 //demitir ou admitir novos caras, eh isso
             }
