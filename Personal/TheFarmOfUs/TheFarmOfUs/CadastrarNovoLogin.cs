@@ -9,15 +9,15 @@ namespace TheFarmOfUs
 {
     class CadastrarNovoLogin
     {
-        public static string confirmasenha,senha,nick,nomecom,setor,ok,possui = "s",usuariojatem,cpfjatem,cone = "";
+        public static string ok, cone = "",userco,cpfco,msg = "",msg2 = "",tudocerto;// confirmasenha, senha, nick, nomecom, setor,possuiuser = "n",possuicpf = "n"
 
-        public static void CadastroLogin(string conf,string senha1,string usuario, string nome, string seto,string cpf)
+        public static void CadastroLogin(string conf, string senha, string usuario, string nome, string seto,string cpf)
         {
-            confirmasenha = conf;
+            /*confirmasenha = conf;
             senha = senha1;
             nick = usuario;
             nomecom = nome;
-            setor = seto;
+            setor = seto;*/
 
             SqlCommand cmd = new SqlCommand()
             {
@@ -29,35 +29,53 @@ namespace TheFarmOfUs
                 cmd.Connection.Open();
             }
 
-            catch (SqlException)
+            catch(SqlException)
             {
-                cone = "Não foi possível efeutar a conexão, tente mais tarde";
+                cone = "Não foi possível estabelecer conexão no momento. Por favor, tente mais tarde.";
             }
 
+            //VERIFICA SE EXISTE O USUÁRIO NO BD
             try
             {
-                cmd.CommandText = String.Format(@"SELECT Usuario, CPF
-                                               FROM Login
-                                               WHERE Usuario = '{0}'", nick); //AND CPF = '{1}';", nick,cpf);
-
-                usuariojatem = cmd.ExecuteScalar().ToString();
-            //    cmd.Parameters.AddWithValue("@Usuario", usuariojatem);
-               // cmd.Parameters.AddWithValue("@CPF", cpfjatem); // = 
+                cmd.CommandText = String.Format(@"SELECT Usuario
+                                FROM Login
+                                WHERE Usuario = '{0}')",usuario);
+                userco = cmd.ExecuteScalar().ToString();
+               // cmd.Parameters.AddWithValue("@Usuario",usuario);
             }
 
             catch
             {
-                possui = "s";
+                msg = "Nome de usuário já foi escolhido, por favor insira outro.";
             }
 
-            if(possui == "n")
+            //VERIFICA SE EXISTE O CPF NO BD
+            try
             {
-                if (senha1 == conf)
+                cmd.CommandText = String.Format(@"SELECT CPF
+                                FROM Login
+                                WHERE CPF = '{0}')", cpf);
+                cpfco = cmd.ExecuteScalar().ToString();
+            //    cmd.Parameters.AddWithValue("@CPF", cpf);
+            }
+
+            catch
+            {
+                msg2 = "CPF já cadastrado no sistema.";
+            }
+
+           if(msg != "" || msg2 != "")
+            {
+                cmd.Connection.Close();
+            }
+
+            else
+            {
+                if (senha == conf) //ELE SÓ VAI CHEGAR ATÉ AQUI SE NÃO TIVER USUÁRIO CADASTRADO E NEM CPF CADASTRADO
                 {
-                    cmd.Connection.Open();
                     cmd.CommandText = String.Format(@"INSERT 
                                 INTO Login
-                                VALUES('{0}','{1}',{2},'{3}','{4}')", nome, usuario, senha1, seto);
+                                VALUES('{0}','{1}','{2}','{3}','{4}')", nome, usuario, senha, seto, cpf);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -68,8 +86,8 @@ namespace TheFarmOfUs
                 {
                     ok = "n";
                 }
-            }
-            cmd.Connection.Close();
+                cmd.Connection.Close();
+             }
         }
     }
 }

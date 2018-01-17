@@ -20,20 +20,37 @@ namespace TheFarmOfUs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string conf = confirmsen.Text;
-            string senha1 = senhalog.Text;
-            string usuario = username.Text;
             string nome = nomelog.Text;
-            string seto = String.Format(setor.Text);
+            string usuario = username.Text;
             string cpf = cpfs.Text;
+            string seto = setor.SelectedItem.ToString();
+            string senha = senhalog.Text;
+            string conf = confirmsen.Text;
+           // string msg = "",msg2 = "";
 
-            CadastrarNovoLogin.CadastroLogin(conf, senha1, usuario, nome, seto,cpf);
-
-            if(CadastrarNovoLogin.cone == "")
+            CadastrarNovoLogin.CadastroLogin(conf, senha, usuario, nome, seto,cpf);
+            if (CadastrarNovoLogin.cone == "")
             {
-                if(CadastrarNovoLogin.possui == "n")
+                if (CadastrarNovoLogin.msg != "" && CadastrarNovoLogin.msg2 == "")
                 {
-                    if (CadastrarNovoLogin.ok == "s")
+                    username.Clear();
+                    MessageBox.Show(CadastrarNovoLogin.msg);
+                }
+
+                else if (CadastrarNovoLogin.msg == "" && CadastrarNovoLogin.msg2 != "")
+                {
+                    cpfs.Clear();
+                    MessageBox.Show(CadastrarNovoLogin.msg2);
+                }
+
+                else if (CadastrarNovoLogin.msg != "" && CadastrarNovoLogin.msg2 != "")
+                {
+                    MessageBox.Show(CadastrarNovoLogin.msg + "\n" + CadastrarNovoLogin.msg2);
+                }
+                
+                else
+                {
+                    if (CadastrarNovoLogin.ok == "s") // SE MSG E MSG2 ESTIVEREM VAZIAS ELE VEM AQUI
                     {
                         MessageBox.Show("Cadastro realizado com sucesso");
                         senhalog.Clear();
@@ -41,6 +58,7 @@ namespace TheFarmOfUs
                         username.Clear();
                         nomelog.Clear();
                         setor.ResetText();
+                        cpfs.Clear();
                     }
 
                     else
@@ -49,12 +67,6 @@ namespace TheFarmOfUs
                         confirmsen.Clear();
                         MessageBox.Show("As senhas não conferem, por favor,insira a senha novamente");
                     }
-                }
-
-                else
-                {
-                    username.Clear();
-                    MessageBox.Show("Nome de usuário já foi escolhido, por favor insira outro.");
                 }
             }
 
