@@ -9,15 +9,19 @@ namespace TheFarmOfUs
 {
     class CadastrarNovoLogin
     {
-        public static string ok, cone = "",userco,cpfco,msg = "",msg2 = "",tudocerto;// confirmasenha, senha, nick, nomecom, setor,possuiuser = "n",possuicpf = "n"
+        public static string oksenha, cone = "",tudocerto;//confirmasenha, senha, nick, nomecom, setor, 
 
-        public static void CadastroLogin(string conf, string senha, string usuario, string nome, string seto,string cpf)
+        //VARIÁVEIS APENAS PARA CONFERIR SE JÁ EXISTEM NO BD
+        public static string pegauser,existeuser; //USER
+        public static string pegacpf, existecpf; //CPF
+
+
+        public static void CadastroLogin(string conf, string senha, string usuario, string nome,string cpf)
         {
-            /*confirmasenha = conf;
-            senha = senha1;
-            nick = usuario;
-            nomecom = nome;
-            setor = seto;*/
+            pegauser = "";
+            pegacpf = "";
+            existeuser = "";
+            existecpf = "";
 
             SqlCommand cmd = new SqlCommand()
             {
@@ -29,65 +33,82 @@ namespace TheFarmOfUs
                 cmd.Connection.Open();
             }
 
-            catch(SqlException)
+            catch (SqlException)
             {
                 cone = "Não foi possível estabelecer conexão no momento. Por favor, tente mais tarde.";
             }
 
-            //VERIFICA SE EXISTE O USUÁRIO NO BD
+            //1º VERIFICAR SE O NICK JÁ FOI OU NÃO ESCOLHIDO
+
             try
             {
                 cmd.CommandText = String.Format(@"SELECT Usuario
                                 FROM Login
-                                WHERE Usuario = '{0}')",usuario);
-                userco = cmd.ExecuteScalar().ToString();
-               // cmd.Parameters.AddWithValue("@Usuario",usuario);
+                                WHERE Usuario = '{0}'", usuario);
+                pegauser = cmd.ExecuteScalar().ToString();
             }
 
             catch
             {
-                msg = "Nome de usuário já foi escolhido, por favor insira outro.";
+                existeuser = "s";
             }
 
-            //VERIFICA SE EXISTE O CPF NO BD
+            //2 ºVERIFICAR SE O CPF JÁ FOI CADASTRADO 
             try
             {
                 cmd.CommandText = String.Format(@"SELECT CPF
                                 FROM Login
-                                WHERE CPF = '{0}')", cpf);
-                cpfco = cmd.ExecuteScalar().ToString();
-            //    cmd.Parameters.AddWithValue("@CPF", cpf);
+                                WHERE CPF = '{0}'", cpf);
+
+                pegacpf = cmd.ExecuteScalar().ToString();
             }
 
             catch
             {
-                msg2 = "CPF já cadastrado no sistema.";
+                existecpf = "s";
             }
 
-           if(msg != "" || msg2 != "")
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+            /*
+            try
             {
-                cmd.Connection.Close();
+                
+              //  cmd.Parameters.AddWithValue("@Usuario", pegacpf);
+            }
+
+            catch
+            {
+                existecpf = "s";
+            }
+            
+            /*
+
+            //3º APÓS VERIFICAR SE TEM OU N, ELE VEM AQUI E VÊ SE TA TUDO OK*/
+            /*if (pegauser == usuario)//(existecpf == "s" || existeuser == "s")
+            {
+                tudocerto = "n";
             }
 
             else
             {
-                if (senha == conf) //ELE SÓ VAI CHEGAR ATÉ AQUI SE NÃO TIVER USUÁRIO CADASTRADO E NEM CPF CADASTRADO
-                {
-                    cmd.CommandText = String.Format(@"INSERT 
-                                INTO Login
-                                VALUES('{0}','{1}','{2}','{3}','{4}')", nome, usuario, senha, seto, cpf);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    ok = "s";
-                }
-
-                else
-                {
-                    ok = "n";
-                }
-                cmd.Connection.Close();
-             }
+                tudocerto = "s";
+            }*/
         }
     }
 }
+
+/*
+ * CONFERENCIA DE SENHA ESTÁ OK
+ * NÃO TA MAIS
+ * NA VDD TA
+ * QUEM N TA OK SOU EU
+ * HELP
+ * 
+ * cmd.CommandText = String.Format(@"INSERT 
+                                 INTO Login
+                                 VALUES('{0}','{1}','{2}','{3}')", nome, usuario, senha, cpf);
+                
+                SqlDataReader reader = cmd.ExecuteReader();
+                cmd.Connection.Close();
+*/

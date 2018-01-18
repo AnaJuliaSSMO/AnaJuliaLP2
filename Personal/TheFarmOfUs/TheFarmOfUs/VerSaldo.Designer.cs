@@ -65,6 +65,7 @@
             this.consultar.TabIndex = 20;
             this.consultar.Text = "Consultar";
             this.consultar.UseVisualStyleBackColor = true;
+            this.consultar.Click += new System.EventHandler(this.consultar_Click);
             // 
             // escolhegado
             // 

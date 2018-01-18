@@ -91,7 +91,7 @@
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastrarNovoLogin.cs" />
-    <Compile Include="CompraVendaGado.cs" />
+    <Compile Include="CompraEVenda.cs" />
     <Compile Include="Contabilidade.cs">
       <SubType>Form</SubType>
     </Compile>

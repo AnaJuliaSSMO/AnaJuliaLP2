@@ -41,8 +41,8 @@ namespace TheFarmOfUs
 
             else if(resp == 3)
             {
-                Contabilidade cont = new Contabilidade();
-                cont.Show();
+                Contabilidade conta = new Contabilidade();
+                conta.Show();
             }
 
             else

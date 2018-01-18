@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,18 +18,32 @@ namespace TheFarmOfUs
             InitializeComponent();
         }
 
+        SqlCommand cmd = new SqlCommand()
+        {
+            Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+        };
+
+        private void consultar_Click(object sender, EventArgs e)
+        {
+            if (escolhegado.Checked == true)
+            {
+                MessageBox.Show("Há R$" + ControleDinheiro.VerPecuaria() + " reais disponíveis para o setor de Pecuária");
+            }
+
+            if(escolheplanta.Checked == true)
+            {
+                MessageBox.Show("Há R$" + ControleDinheiro.VerAgricultura() + " reais disponíveis para o setor de Agricultura");
+            }
+        }
+
         private void cancelar_Click(object sender, EventArgs e)
         {
-            /*EU PODERIA CRIAR UM BD
-             * PRA SALVAR SÓ ISSO
-             * AÍ TERIA A TABELA LÁ
-             * COM "VALOR" E AGRICULTURA E PECUÁRIA
-             * SEMPRE Q EU MEXESSE NA AGRICULTURA EU DAVA UPDATE EM AGRICULTRA
-             * TOP
-             */
-            Contabilidade cont = new Contabilidade();
-            cont.Show();
-            Close();
+            if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Contabilidade cont = new Contabilidade();
+                cont.Show();
+                Close();
+            }
         }
     }
 }

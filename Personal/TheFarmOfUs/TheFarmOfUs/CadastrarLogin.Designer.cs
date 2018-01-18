@@ -40,8 +40,6 @@
             this.confirmsen = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.fechar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.setor = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cpfs = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(476, 311);
+            this.label3.Location = new System.Drawing.Point(475, 235);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 22);
             this.label3.TabIndex = 3;
@@ -92,7 +90,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(419, 382);
+            this.label4.Location = new System.Drawing.Point(418, 306);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 22);
             this.label4.TabIndex = 4;
@@ -119,7 +117,7 @@
             // senhalog
             // 
             this.senhalog.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.senhalog.Location = new System.Drawing.Point(349, 336);
+            this.senhalog.Location = new System.Drawing.Point(348, 260);
             this.senhalog.Multiline = true;
             this.senhalog.Name = "senhalog";
             this.senhalog.Size = new System.Drawing.Size(320, 34);
@@ -128,7 +126,7 @@
             // confirmsen
             // 
             this.confirmsen.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmsen.Location = new System.Drawing.Point(349, 407);
+            this.confirmsen.Location = new System.Drawing.Point(348, 331);
             this.confirmsen.Multiline = true;
             this.confirmsen.Name = "confirmsen";
             this.confirmsen.PasswordChar = '*';
@@ -138,7 +136,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(398, 454);
+            this.button1.Location = new System.Drawing.Point(397, 378);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 39);
             this.button1.TabIndex = 9;
@@ -149,36 +147,13 @@
             // fechar
             // 
             this.fechar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechar.Location = new System.Drawing.Point(542, 454);
+            this.fechar.Location = new System.Drawing.Point(541, 378);
             this.fechar.Name = "fechar";
             this.fechar.Size = new System.Drawing.Size(116, 39);
             this.fechar.TabIndex = 10;
             this.fechar.Text = "Sair";
             this.fechar.UseVisualStyleBackColor = true;
             this.fechar.Click += new System.EventHandler(this.fechar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(476, 239);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 22);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Setor:";
-            // 
-            // setor
-            // 
-            this.setor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setor.FormattingEnabled = true;
-            this.setor.Items.AddRange(new object[] {
-            "Agricultura",
-            "Pecuária",
-            "Contabilidade"});
-            this.setor.Location = new System.Drawing.Point(349, 264);
-            this.setor.Name = "setor";
-            this.setor.Size = new System.Drawing.Size(320, 30);
-            this.setor.TabIndex = 12;
             // 
             // label5
             // 
@@ -203,11 +178,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 525);
+            this.ClientSize = new System.Drawing.Size(691, 429);
             this.Controls.Add(this.cpfs);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.setor);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.confirmsen);
@@ -240,8 +213,6 @@
         private System.Windows.Forms.TextBox confirmsen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button fechar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox setor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox cpfs;
     }

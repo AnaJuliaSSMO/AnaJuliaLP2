@@ -53,17 +53,18 @@
             "Administração do salário de funcionários;",
             "Admissão ou demissão de funcionário;",
             "Voltar à sessão anterior;"});
-            this.cont.Location = new System.Drawing.Point(12, 101);
+            this.cont.Location = new System.Drawing.Point(11, 90);
             this.cont.Name = "cont";
             this.cont.Size = new System.Drawing.Size(501, 100);
             this.cont.TabIndex = 3;
+            this.cont.SelectedIndexChanged += new System.EventHandler(this.cont_SelectedIndexChanged);
             // 
             // Contabilidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(524, 254);
+            this.ClientSize = new System.Drawing.Size(529, 254);
             this.Controls.Add(this.cont);
             this.Controls.Add(this.Qst);
             this.Name = "Contabilidade";
