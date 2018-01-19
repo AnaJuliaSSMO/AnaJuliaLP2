@@ -32,7 +32,7 @@ namespace TheFarmOfUs
                 cone = "Não foi possível efeutar a conexão, tente mais tarde";
             }
 
-            cmd.CommandText = String.Format(@"SELECT nome,usuario,senha,setor
+            cmd.CommandText = String.Format(@"SELECT nome,usuario,senha
                                               FROM Login
                                               WHERE Usuario = '{0}' AND Senha = '{1}';", user, pass);
 
@@ -56,7 +56,6 @@ namespace TheFarmOfUs
                     nomeconf = reader.GetString(0);
                     userconf = reader.GetString(1);
                     senhaconf = reader.GetString(2);
-                    setor = reader.GetString(3);
                 }
             }
             cmd.Connection.Close();

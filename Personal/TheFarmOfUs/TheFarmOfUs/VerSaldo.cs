@@ -27,12 +27,16 @@ namespace TheFarmOfUs
         {
             if (escolhegado.Checked == true)
             {
-                MessageBox.Show("Há R$" + ControleDinheiro.VerPecuaria() + " reais disponíveis para o setor de Pecuária");
+                string escolha = "gado";
+                CompraEVenda.PegarValorDisponivel(escolha);
+                MessageBox.Show("Há R$" + CompraEVenda.PegarValorDisponivel(escolha) + " reais disponíveis para o setor de Pecuária");
             }
 
             if(escolheplanta.Checked == true)
             {
-                MessageBox.Show("Há R$" + ControleDinheiro.VerAgricultura() + " reais disponíveis para o setor de Agricultura");
+                string escolha = "planta";
+                CompraEVenda.PegarValorDisponivel(escolha);
+                MessageBox.Show("Há R$" + CompraEVenda.PegarValorDisponivel(escolha) + " reais disponíveis para o setor de Agricultura");
             }
         }
 

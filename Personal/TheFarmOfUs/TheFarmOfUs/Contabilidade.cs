@@ -30,11 +30,15 @@ namespace TheFarmOfUs
                 VerSaldo ver = new VerSaldo();
                 ver.Show();
                 //FEITO
+                //CONFERIDO E MDS Q Q EU TAVA FAZENDO
             }
 
             else if (select == 1)
             {
-                //pagamentos,abonos salariais (eu nem sei oq k7's é um abono salarial, mas blz), etc
+                /*pagamentos,abonos salariais (eu nem sei oq k7's é um abono salarial, mas blz), etc
+                 * DESCOBRI OQ É ABONO
+                 * e n sou eu quem controlo isso :p
+                 */
             }
 
             else if (select == 2)
