@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nomes = new System.Windows.Forms.TextBox();
+            this.nomedesejado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.valor = new System.Windows.Forms.TextBox();
             this.desejo = new System.Windows.Forms.ComboBox();
@@ -39,21 +39,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.qtd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.destino = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // nomes
+            // nomedesejado
             // 
-            this.nomes.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomes.Location = new System.Drawing.Point(57, 113);
-            this.nomes.Name = "nomes";
-            this.nomes.Size = new System.Drawing.Size(310, 29);
-            this.nomes.TabIndex = 27;
+            this.nomedesejado.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomedesejado.Location = new System.Drawing.Point(57, 113);
+            this.nomedesejado.Name = "nomedesejado";
+            this.nomedesejado.Size = new System.Drawing.Size(310, 29);
+            this.nomedesejado.TabIndex = 27;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 243);
+            this.label2.Location = new System.Drawing.Point(17, 324);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 22);
             this.label2.TabIndex = 26;
@@ -62,7 +64,7 @@
             // valor
             // 
             this.valor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valor.Location = new System.Drawing.Point(57, 243);
+            this.valor.Location = new System.Drawing.Point(58, 324);
             this.valor.Name = "valor";
             this.valor.Size = new System.Drawing.Size(310, 29);
             this.valor.TabIndex = 25;
@@ -94,7 +96,7 @@
             // cancelar
             // 
             this.cancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelar.Location = new System.Drawing.Point(116, 324);
+            this.cancelar.Location = new System.Drawing.Point(117, 405);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(186, 33);
             this.cancelar.TabIndex = 22;
@@ -105,7 +107,7 @@
             // quercomprar
             // 
             this.quercomprar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quercomprar.Location = new System.Drawing.Point(157, 285);
+            this.quercomprar.Location = new System.Drawing.Point(158, 366);
             this.quercomprar.Name = "quercomprar";
             this.quercomprar.Size = new System.Drawing.Size(99, 33);
             this.quercomprar.TabIndex = 20;
@@ -127,7 +129,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(156, 215);
+            this.label4.Location = new System.Drawing.Point(157, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 22);
             this.label4.TabIndex = 30;
@@ -151,16 +153,47 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Insira a quantidade (kg ou embalagens)\r\n";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(83, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(263, 22);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Para qual animal é destinado?";
+            // 
+            // destino
+            // 
+            this.destino.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.destino.FormattingEnabled = true;
+            this.destino.Items.AddRange(new object[] {
+            "Porco  ",
+            "Boi",
+            "Cabra",
+            "Cavalo ",
+            "Carneiro",
+            "Coelho",
+            "Pat",
+            "Vaca ",
+            "Galinha"});
+            this.destino.Location = new System.Drawing.Point(57, 254);
+            this.destino.Name = "destino";
+            this.destino.Size = new System.Drawing.Size(310, 30);
+            this.destino.TabIndex = 34;
+            // 
             // AlimentoRemedioEtc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 365);
+            this.ClientSize = new System.Drawing.Size(428, 444);
+            this.Controls.Add(this.destino);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.qtd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.nomes);
+            this.Controls.Add(this.nomedesejado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.valor);
             this.Controls.Add(this.desejo);
@@ -176,7 +209,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox nomes;
+        private System.Windows.Forms.TextBox nomedesejado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox valor;
         private System.Windows.Forms.ComboBox desejo;
@@ -187,5 +220,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox qtd;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox destino;
     }
 }

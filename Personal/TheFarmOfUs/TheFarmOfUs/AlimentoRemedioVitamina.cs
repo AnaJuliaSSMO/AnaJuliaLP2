@@ -18,64 +18,6 @@ namespace TheFarmOfUs
         //ISSO AQUI É PARA ACRESCENTA OU RETIRA 
         public static int qtd2 = 0, novaqtd2 = 0;
 
-        public static void Compra(string tipo, string nome, int quantidade,double valores)
-        {
-            SqlCommand cmd = new SqlCommand()
-            {
-                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
-            };
-
-            try
-            {
-                cmd.Connection.Open();
-            }
-
-            catch (SqlException)
-            {
-                cone = "Não foi possível efeutar a conexão, tente mais tarde";
-            }
-            
-            try
-            {
-                cmd.CommandText = String.Format(@"SELECT Nome
-                                               FROM AlRemVa
-                                               WHERE Nome = '{0}';", nome);
-
-                an = cmd.ExecuteScalar().ToString();
-            }
-
-            catch
-            {
-                possui = "s";
-            }
-
-
-            cmd.CommandText = String.Format(@"SELECT Quantidade
-                                               FROM AlRemVa
-                                               WHERE Nome = '{0}';", nome);
-            
-            cmd.Parameters.AddWithValue("@Quantidade", qtd);
-            novaqtd = qtd + quantidade;
-
-            if (possui == "s") // Se o que ele quiser comprar já tiver na tabela ele só vai atualizar a quantidade
-            {
-                cmd.CommandText = String.Format(@"UPDATE AlRemVa 
-                                                  SET Quantidade = {0}
-                                                  WHERE Nome = '{1}'", novaqtd, nome);
-
-            }
-
-            else //se não, ele vai dar um insert
-            {
-                cmd.CommandText = String.Format(@"INSERT  
-                                                  INTO AlRemVa 
-                                                  VALUES ('{0}','{1}',{2})", nome, tipo, novaqtd);
-            }
-
-            SqlDataReader reader = cmd.ExecuteReader(); 
-            cmd.Connection.Close();
-        }
-
         public static void Retirar(string nomedotipo, string tiposelecionado,int quantidade)
         {
             SqlCommand cmd = new SqlCommand()
@@ -122,3 +64,61 @@ namespace TheFarmOfUs
         }
     }
 }
+
+/*
+        public static void Compra(string tipo, string nome, int quantidade,double valores)
+        {
+            SqlCommand cmd = new SqlCommand()
+            {
+                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+            };
+
+            try
+            {
+                cmd.Connection.Open();
+            }
+
+            catch (SqlException)
+            {
+                cone = "Não foi possível efeutar a conexão, tente mais tarde";
+            }
+            
+            try
+            {
+                cmd.CommandText = String.Format(@"SELECT Nome
+                                               FROM AlRemVa
+                                               WHERE Nome = '{0}';", nome);
+            }
+
+            catch
+            {
+                possui = "s";
+            }
+
+
+            cmd.CommandText = String.Format(@"SELECT Quantidade
+                                               FROM AlRemVa
+                                               WHERE Nome = '{0}';", nome);
+            
+           // cmd.Parameters.AddWithValue("@Quantidade", qtd); ISSO AQUI NÃO SERVIA PARA O QUE EU PENSAVA EXATAMENTE :)
+            novaqtd = qtd + quantidade;
+
+            if (possui == "s") // Se o que ele quiser comprar já tiver na tabela ele só vai atualizar a quantidade
+            {
+                cmd.CommandText = String.Format(@"UPDATE AlRemVa 
+                                                  SET Quantidade = {0}
+                                                  WHERE Nome = '{1}'", novaqtd, nome);
+
+            }
+
+            else //se não, ele vai dar um insert
+            {
+                cmd.CommandText = String.Format(@"INSERT  
+                                                  INTO AlRemVa 
+                                                  VALUES ('{0}','{1}',{2})", nome, tipo, novaqtd);
+            }
+
+            SqlDataReader reader = cmd.ExecuteReader(); 
+            cmd.Connection.Close();
+        }
+*/

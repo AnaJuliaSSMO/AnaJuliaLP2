@@ -21,33 +21,16 @@ namespace TheFarmOfUs
         private void quercomprar_Click(object sender, EventArgs e)
         {
             string tipo = desejo.SelectedItem.ToString();
-            string nome = nomes.Text;
+            string nome = nomedesejado.Text;
+            string destinado = destino.SelectedItem.ToString();
             int quantidade = int.Parse(qtd.Text);
-            double valores = double.Parse(valor.Text);
-            double disponivel = 5000;
+            double valorunitario = double.Parse(valor.Text);
+            double valortotal;
 
-            valores *= quantidade; 
-
-            if(disponivel > valores)
+            valortotal = valorunitario * quantidade;
+            if (MessageBox.Show("O Valor se sua compra foi: R$ " + valortotal + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) ;
             {
-                AlimentoRemedioVitamina.Compra(tipo, nome, quantidade, valores);
-                disponivel -= valores;
-                if (AlimentoRemedioVitamina.cone == "")
-                {
-                    MessageBox.Show("Efetuado com sucesso,você possui " + AlimentoRemedioVitamina.qtd + "kg/embalagens de " + nome);
-                    MessageBox.Show("Saldo disponível para o setor de gado: " + disponivel);
-                }
-
-                else
-                {
-                    MessageBox.Show(AlimentoRemedioVitamina.cone);
-                }
-
-            }
-
-            else
-            {
-                MessageBox.Show("Poucos dinheiros.Pode-se gastar até R$" + disponivel + ".Por favor,insira um novo valor");
+                CompraEVenda.CompraeVendaAlimentos(tipo, nome, quantidade, valortotal, destinado);
             }
         }
 

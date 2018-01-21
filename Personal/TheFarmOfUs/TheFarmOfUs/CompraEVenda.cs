@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
@@ -11,7 +12,7 @@ namespace TheFarmOfUs
     {
         public static double tenhodisponivel,valorrestante;
         public static int qtdanimais,novaqtdani;
-        public static string cone = "";
+        public static string cone = "",confirmacaocv;
 
         public static string PegarValorDisponivel(string escolha) //isso aqui vai servir tanto pra agricultura qto pra pecuária
         {
@@ -45,14 +46,23 @@ namespace TheFarmOfUs
                                                 WHERE Setor = 'Agricultura'");
                 tenhodisponivel = (double)cmd.ExecuteScalar();
             }
-
-            SqlDataReader reader = cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
+            // SqlDataReader reader = cmd.ExecuteReader();
             cmd.Connection.Close();
 
             return tenhodisponivel.ToString();
         }
 
-        public static void ComprarGado(string deseja,double valorcompra,string animal,int quantidadeani)
+        /*TAVA MUITO CONFUSO PRA EU ENXERGAR
+         * POR ISSO CASULAMENTE TERÃO ESSAS LINHAS DE COMENT
+         * RIKKA TAKANASHI MELHOR WAIFU
+         * NÃU TOMEM VACINA CONTRA FEBRE AMARELA 
+         * VCS VÃO TER ALERGIA CRIANÇAS
+         * O GOVERNO MENTE
+         * EH ISTO
+         */
+
+        public static string CompraVendaGado(string deseja,double valorcompra,string animal,int quantidadeani)
         {
             SqlCommand cmd = new SqlCommand()
             {
@@ -81,34 +91,165 @@ namespace TheFarmOfUs
 
             if (deseja == "comprar") //r A CONTA MUDA ENT POR ISSO TEM ESSAS COISAS
             {
-                valorrestante = tenhodisponivel + valorcompra;
+                if (tenhodisponivel > valorcompra)
+                {
+                    valorrestante = tenhodisponivel - valorcompra;
+                    novaqtdani = qtdanimais + quantidadeani;
+                    /* txtvalor = valorrestante.ToString("0.00");
+                    valorrestante = double.Parse(txtvalor);*/
 
-                cmd.CommandText = String.Format(@"UPDATE Disponivel 
-                                                 SET Valor_disponivel = {0}
-                                                 WHERE Setor = 'Pecuaria'", valorrestante);
+                    cmd.CommandText = String.Format(@"UPDATE Disponivel 
+                                                     SET Valor_disponivel = @valorfinal
+                                                     WHERE Setor = 'Pecuaria'",valorrestante);
 
-                cmd.CommandText = String.Format(@"UPDATE Gado 
-                                                 SET Quantidade = {0}
-                                                 WHERE Animal = '{1}'", novaqtdani, animal);
+                    cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
+                    cmd.ExecuteNonQuery();
+                    //SqlDataReader reader = cmd.ExecuteReader();
+                    //reader.Close();
 
-                //return String.Format("Venda efetuada com sucesso, o saldo atual para uso do setor Gado é de R$ {0}.\nVocê possui {1} animais agora!" + valorrestante);
+                    cmd.CommandText = String.Format(@"UPDATE Gado 
+                                                      SET Quantidade = {0}
+                                                      WHERE Animal = '{1}'", novaqtdani, animal);
+
+                    confirmacaocv = "Compra efetuada com sucesso, o saldo atual para uso do setor Gado é de R$ " + valorrestante + ".\nVocê possui " + novaqtdani + " " + animal + "(s) agora!";
+                }
+               
+                else
+                {
+                    confirmacaocv = "Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.";
+                }
             }
 
             else //ele só tem que verificar o valor na hr da venda
             {
                 if (qtdanimais > quantidadeani) //se tiver mais no banco do q ele quiser vender 
                 {
-                    if (tenhodisponivel > valorcompra)
-                    {
-                    }
+                    valorrestante = tenhodisponivel + valorcompra;
+                    novaqtdani = qtdanimais - quantidadeani;
+
+
+                    cmd.CommandText = String.Format(@"UPDATE Disponivel 
+                                                     SET Valor_disponivel = @valorfinal
+                                                     WHERE Setor = 'Pecuaria'", valorrestante);
+
+                    cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = String.Format(@"UPDATE Gado 
+                                                 SET Quantidade = {0}
+                                                 WHERE Animal = '{1}'", novaqtdani, animal);
+                    confirmacaocv = "Venda efetuada com sucesso, o saldo atual para uso do setor Gado é de R$ " + valorrestante + ".\nVocê possui " + novaqtdani + " " + animal + "(s) agora!";
                 }
 
                 else
                 {
-                    //vai ter que dar um return maroto dizendo que String.Format("Não há animais suficientes para a venda.Por favor,insira um número até {0}",qtdanimais);
+                    confirmacaocv = "Não há animais suficientes para a venda.Por favor,insira um número até " + qtdanimais;
                 }
             }
 
+            // SqlDataReader readertwo = cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+            return confirmacaocv;
+        }
+
+        /*Eu não sei como as pessoas conseguem enxergar 
+         * tão de boas
+         * talvez eu precise de um novo óculos
+         * ou um novo olho
+         * poderia ter uma funçãoiznha
+         * que me permitisse "esconder uma parte do código"
+         * se´ra que tem?
+         * seria bem util
+         * EXISTE ESSA FUNÇÃOZINHA
+         * :p
+         */
+
+
+        public static string jaecadastrado;
+        public static int quantidadebd,novaqtd;
+
+        public static void CompraeVendaAlimentos(string tipo, string nomedoali, int quantidade, double valorcompra,string animaldestino) //alimento,nomedoalimento,quantidade,valordacompra,animalcorrespondente
+        {
+            jaecadastrado = "";
+            quantidadebd = 0;
+            SqlCommand cmd = new SqlCommand()
+            {
+                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+            };
+
+            try
+            {
+                cmd.Connection.Open();
+            }
+
+            catch (SqlException)
+            {
+                cone = "Não foi possível efeutar a conexão, tente mais tarde";
+            }
+
+            cmd.CommandText = String.Format(@"SELECT Nome 
+                                               FROM AlRemVa
+                                               WHERE Nome = '{0}';", nomedoali);
+
+            //  cmd.Parameters.AddWithValue("@nometeste", jaecadastrado);
+            jaecadastrado = (string)cmd.ExecuteScalar();
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandText = String.Format(@"SELECT Valor_disponivel
+                                                FROM Disponivel
+                                                WHERE Setor = 'Pecuaria'");
+            tenhodisponivel = (double)cmd.ExecuteScalar();
+            cmd.ExecuteNonQuery();
+
+            novaqtd = quantidadebd + quantidade;
+            if (tenhodisponivel > valorcompra)
+            {
+                valorrestante = tenhodisponivel - valorcompra;
+
+                cmd.CommandText = String.Format(@"UPDATE Disponivel 
+                                                     SET Valor_disponivel = @valorfinal
+                                                     WHERE Setor = 'Pecuaria'", valorrestante);
+
+                cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
+                cmd.ExecuteNonQuery();
+
+                if (jaecadastrado == "") // Se o que ele quiser comprar n tiver na tabela ele vai dar insert
+                {
+                    novaqtd = quantidade;
+                    cmd.CommandText = String.Format(@"INSERT  
+                                                  INTO AlRemVa 
+                                                  VALUES ('{0}','{1}',{2},'{3}')", nomedoali, tipo, novaqtd, animaldestino);
+                }
+
+                else //se não, ele vai dar um update
+                {
+                    cmd.CommandText = String.Format(@"SELECT Quantidade 
+                                               FROM AlRemVa
+                                               WHERE Nome = '{0}';", nomedoali);
+
+                     quantidadebd = (Int32)cmd.ExecuteScalar();
+                //    SqlDataReader readerr = cmd.ExecuteReader();
+               //     readerr.Close();
+
+                    novaqtd = quantidadebd + quantidade;
+                    cmd.CommandText = String.Format(@"UPDATE AlRemVa 
+                                                  SET Quantidade = {0}
+                                                  WHERE Nome = '{1}'", novaqtd, nomedoali);
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Efetuado com sucesso,você possui " + novaqtd + "kg/embalagens de " + nomedoali);
+                MessageBox.Show("O saldo atual para uso do setor Gado é de R$ " + valorrestante + ".");
+            }
+
+            else
+            {
+                MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
+            }
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            cmd.Connection.Close();
         }
     }
 }
@@ -181,7 +322,7 @@ public static CompraGado(int qtdcomprada, double preco, string animal)
                                             WHERE Animal = '{1}'", novaqtd, animal);
 
             MessageBox.Show("compra efetuada com sucesso, o saldo atual para uso do setor Gado é de R$" + tenho);
-            MessageBox.Show("Efetuado com sucesso!\nVocê possui " + novaqtd + " " + animal + "(s) agora.");
+            MessageBox.Show("Efetuado com sucesso!\nVocê jaecadastrado " + novaqtd + " " + animal + "(s) agora.");
         }
         SqlDataReader reader = cmd.ExecuteReader();
         cmd.Connection.Close();

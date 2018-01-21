@@ -36,11 +36,11 @@ namespace TheFarmOfUs
             string deseja = "comprar";
             double valorcompra = valorunitario * quantidadeani;
 
-            CompraEVenda.ComprarGado(deseja, valorcompra,animalescolhido,quantidadeani);
             MessageBox.Show("O animal escolhido foi: " + animalescolhido);
-
-            if()
-
+            if(MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?","Valor total foi de:",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                MessageBox.Show(CompraEVenda.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani));
+            }
             //MessageBox.Show(CompraEVenda.PegarValorDisponivel(escolha));
 
         }
@@ -54,8 +54,12 @@ namespace TheFarmOfUs
             string deseja = "vender";
             double valorcompra = valorunitario * quantidadeani;
 
-            CompraEVenda.ComprarGado(deseja,valorcompra,animalescolhido);
             MessageBox.Show("O animal escolhido foi: " + animalescolhido);
+            if (MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) 
+            {
+                MessageBox.Show(CompraEVenda.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani));
+            }
+
             // MessageBox.Show(CompraEVenda.PegarValorDisponivel(escolha));
         }
 
@@ -82,10 +86,10 @@ namespace TheFarmOfUs
      double preco = double.Parse(valor.Text);
      string animal = animais.SelectedItem.ToString();
 
-     CompraEVenda.CompraGado(qtdcomprada, preco, animal);
+     CompraEVenda.CompraVendaGado(qtdcomprada, preco, animal);
 
 
-     if (CompraEVenda.CompraGado(cone) == "")//ele dá erro pq n ta retornando
+     if (CompraEVenda.CompraVendaGado(cone) == "")//ele dá erro pq n ta retornando
      {
 
          MessageBox.Show("O animal escolhido foi: " + animal);
