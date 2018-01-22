@@ -168,14 +168,14 @@
             this.destino.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.destino.FormattingEnabled = true;
             this.destino.Items.AddRange(new object[] {
-            "Porco  ",
+            "Porco",
             "Boi",
             "Cabra",
-            "Cavalo ",
+            "Cavalo",
             "Carneiro",
             "Coelho",
-            "Pat",
-            "Vaca ",
+            "Pato",
+            "Vaca",
             "Galinha"});
             this.destino.Location = new System.Drawing.Point(57, 254);
             this.destino.Name = "destino";

@@ -192,8 +192,8 @@ namespace TheFarmOfUs
                                                FROM AlRemVa
                                                WHERE Nome = '{0}';", nomedoali);
 
-            //  cmd.Parameters.AddWithValue("@nometeste", jaecadastrado);
-            jaecadastrado = (string)cmd.ExecuteScalar();
+          //   cmd.Parameters.AddWithValue("@nometeste", jaecadastrado);
+           jaecadastrado = (string)cmd.ExecuteScalar();
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = String.Format(@"SELECT Valor_disponivel
@@ -220,23 +220,29 @@ namespace TheFarmOfUs
                     cmd.CommandText = String.Format(@"INSERT  
                                                   INTO AlRemVa 
                                                   VALUES ('{0}','{1}',{2},'{3}')", nomedoali, tipo, novaqtd, animaldestino);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    reader.Close();
                 }
 
                 else //se não, ele vai dar um update
                 {
-                    cmd.CommandText = String.Format(@"SELECT Quantidade 
+                    cmd.CommandText = String.Format(@"SELECT Quantidade AS qtd
                                                FROM AlRemVa
                                                WHERE Nome = '{0}';", nomedoali);
 
-                     quantidadebd = (Int32)cmd.ExecuteScalar();
-                //    SqlDataReader readerr = cmd.ExecuteReader();
-               //     readerr.Close();
+                    cmd.Parameters.AddWithValue("@qtd", quantidadebd);
+                  //  MessageBox.Show("QUANTIDADE BD " + quantidadebd);
+                   // cmd.ExecuteNonQuery();
+                    //quantidadebd = (int)cmd.ExecuteScalar();
+                    // cmd.ExecuteNonQuery();
+                    //    SqlDataReader readerr = cmd.ExecuteReader();
+                    //     readerr.Close();
 
                     novaqtd = quantidadebd + quantidade;
                     cmd.CommandText = String.Format(@"UPDATE AlRemVa 
                                                   SET Quantidade = {0}
                                                   WHERE Nome = '{1}'", novaqtd, nomedoali);
-                    cmd.ExecuteNonQuery();
                 }
 
                 MessageBox.Show("Efetuado com sucesso,você possui " + novaqtd + "kg/embalagens de " + nomedoali);
@@ -247,8 +253,7 @@ namespace TheFarmOfUs
             {
                 MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
             }
-
-            SqlDataReader reader = cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
     }
