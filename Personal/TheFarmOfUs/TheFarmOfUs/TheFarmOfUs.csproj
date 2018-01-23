@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agroto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agroto.Designer.cs">
+      <DependentUpon>Agroto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttSaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttSaca.Designer.cs">
+      <DependentUpon>AttSaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuySellplantinhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuySellplantinhas.Designer.cs">
+      <DependentUpon>BuySellplantinhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaquinasCompraAtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaquinasCompraAtt.Designer.cs">
+      <DependentUpon>MaquinasCompraAtt.cs</DependentUpon>
+    </Compile>
     <Compile Include="RetirarVitRemAli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,7 +100,6 @@
     <Compile Include="AlimentoRemedioEtc.Designer.cs">
       <DependentUpon>AlimentoRemedioEtc.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlimentoRemedioVitamina.cs" />
     <Compile Include="BuyorSell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +113,7 @@
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastrarNovoLogin.cs" />
-    <Compile Include="CompraEVenda.cs" />
+    <Compile Include="CompraVendaSaldogeral.cs" />
     <Compile Include="Contabilidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +159,18 @@
     <Compile Include="VerSaldo.Designer.cs">
       <DependentUpon>VerSaldo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agroto.resx">
+      <DependentUpon>Agroto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttSaca.resx">
+      <DependentUpon>AttSaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuySellplantinhas.resx">
+      <DependentUpon>BuySellplantinhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaquinasCompraAtt.resx">
+      <DependentUpon>MaquinasCompraAtt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RetirarVitRemAli.resx">
       <DependentUpon>RetirarVitRemAli.cs</DependentUpon>
     </EmbeddedResource>

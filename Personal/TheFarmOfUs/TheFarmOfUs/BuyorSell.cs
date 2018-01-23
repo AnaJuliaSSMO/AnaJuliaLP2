@@ -39,7 +39,7 @@ namespace TheFarmOfUs
             MessageBox.Show("O animal escolhido foi: " + animalescolhido);
             if(MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?","Valor total foi de:",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                MessageBox.Show(CompraEVenda.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani));
+                CompraVendaSaldogeral.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani);
             }
             //MessageBox.Show(CompraEVenda.PegarValorDisponivel(escolha));
 
@@ -55,9 +55,9 @@ namespace TheFarmOfUs
             double valorcompra = valorunitario * quantidadeani;
 
             MessageBox.Show("O animal escolhido foi: " + animalescolhido);
-            if (MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) 
+            if (MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                MessageBox.Show(CompraEVenda.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani));
+                CompraVendaSaldogeral.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani);
             }
 
             // MessageBox.Show(CompraEVenda.PegarValorDisponivel(escolha));

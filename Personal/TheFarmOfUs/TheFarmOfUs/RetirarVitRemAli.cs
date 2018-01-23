@@ -62,24 +62,15 @@ namespace TheFarmOfUs
             int qtdd = int.Parse(qtd.Text);
             string nome = nomes.SelectedItem.ToString();
             string select = tipo.SelectedItem.ToString();
-
-            AlimentoRemedioVitamina.Retirar(nome, select,qtdd);
-
-            if (AlimentoRemedioVitamina.cone == "")
+            
+            if (CompraVendaSaldogeral.cone == "")
             {
-                if (AlimentoRemedioVitamina.an == "ok")
-                {
-                    qtd.Clear();
-                    nomes.ResetText();
-                    tipo.ResetText();
-                    MessageBox.Show("Efetuado com sucesso,agora você possui " + AlimentoRemedioVitamina.novaqtd2 + "kg/embalagens de " + nome);
-                }
+                CompraVendaSaldogeral.RetirarAlimentos(nome, select, qtdd);
+            }
 
-                else if (AlimentoRemedioVitamina.an == "nop")
-                {
-                    qtd.Clear();
-                    MessageBox.Show(AlimentoRemedioVitamina.msg);
-                }
+            else
+            {
+                MessageBox.Show(CompraVendaSaldogeral.cone);
             }
 
         }

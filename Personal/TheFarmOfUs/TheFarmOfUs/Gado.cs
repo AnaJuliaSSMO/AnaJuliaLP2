@@ -20,10 +20,12 @@ namespace TheFarmOfUs
 
         private void opitions_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //É MT CONFUSO SCRR
             int resp = opitions.SelectedIndex;
 
             if (resp == 0)  
-            {
+            { 
+                //COMPRA E VENDA DE VAQUINHA MU
                 BuyorSell bs = new BuyorSell();
                 bs.Show();
                 //FEITO
@@ -31,6 +33,7 @@ namespace TheFarmOfUs
 
             else if (resp == 1)
             {
+                //COMPRA ALIEMTNO VITAMINA REMÉDIO 
                 AlimentoRemedioEtc avr = new AlimentoRemedioEtc();
                 avr.Show();
                 // FEITO
@@ -38,6 +41,7 @@ namespace TheFarmOfUs
 
             else if (resp == 2)
             {
+                //ACRESCENTA RETIRA GADP
                 AcresouReti acrt = new AcresouReti();
                 acrt.Show();
                 //FEITO
@@ -46,6 +50,7 @@ namespace TheFarmOfUs
 
             else if (resp == 3)
             {
+                // RETIRA QTD D VITAMINA ETC
                 RetirarVitRemAli acr = new RetirarVitRemAli();
                 acr.Show();
                 //FEITO
@@ -54,6 +59,7 @@ namespace TheFarmOfUs
 
             else if(resp == 4)
             {
+                //CONSULTA DE ESTOQUE
                 QuantidadeGado gadocont = new QuantidadeGado();
                 gadocont.Show();
                 //FEITO
@@ -62,6 +68,7 @@ namespace TheFarmOfUs
 
             else
             {
+                //VOLTAR 
                 Agrupamento_Setores menu = new Agrupamento_Setores();
                 menu.ShowDialog();
             }

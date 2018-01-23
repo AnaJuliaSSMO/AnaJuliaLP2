@@ -23,32 +23,38 @@ namespace TheFarmOfUs
 
             if (resp == 0)
             {
-                /* compra e venda de gado
-                 * primeiro ele verifica se há dinheiro o suficiente para comprar o gado
-                 * na vdd primeiro ele perfgunta qual animal quer comprar ou vender neah
-                 * e a qtd de animais tbm
-                 * para isso ele acessa a área de contabilidade que tem que ser sempre atualizada
-                 * ou seja, se comprar vaquinha, o valor da vaquinha tem que ir pra área de contabilidade
-                 * se vender vaquinha tem que ir tbm
-                 
-                imagina isso, mas com planta*/
+                BuySellplantinhas pl = new BuySellplantinhas();
+                pl.Show();
+                //FEITO
             }
 
             else if (resp == 1)
             {
-                /*compra de alimentos, remédios
-                 * isso tbm tem que ir pro setor de vaquinhas da área de contabilidade
-                 msm coisa, imagina isso com plantinhas*/
+                Agroto agro = new Agroto();
+                agro.Show();
+                //FEITO 
             }
 
             else if (resp == 2)
             {
-                /*se plantar ou colher alguma coisa vai aqui eh isto */
+                AttSaca saca = new AttSaca();
+                saca.Show();
+                //FEITO
             }
 
             else if (resp == 3)
             {
-                //´se vender as maquinas comprar maquina vai tudo aqui
+                MaquinasCompraAtt mac = new MaquinasCompraAtt();
+                mac.Show();
+                /* parcialmente feito
+                 * no caso de uma máquina quebrar ela será substituída, 
+                 * mas para isso precisa registrar a "retirada"
+                 * vai ter:
+                 * placa da máquina, que tem q ser única
+                 * motivo da retirada
+                 */
+                 
+                //HALF FEITO
             }
 
             else if(resp == 4)

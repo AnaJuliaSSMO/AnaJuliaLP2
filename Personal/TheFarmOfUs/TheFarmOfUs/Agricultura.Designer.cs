@@ -52,7 +52,7 @@
             "Registrar compra ou venda de sacas; ",
             "Registrar compra de agrotóxicos;",
             "Atualizar informações sobre quantidade de sacas produzidas;",
-            "Comprar, vender ou atualizar máquinas agrícolas;",
+            "Comprar ou retirar máquinas agrícolas do estoque;",
             "Consulta do estoque;",
             "Retornar à sessão anterior;"});
             this.agri.Location = new System.Drawing.Point(23, 61);
