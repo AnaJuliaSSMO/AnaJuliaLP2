@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class QuantidadeGado : Form
+    public partial class ConsultaQtdGado : Form
     {
-        public QuantidadeGado()
+        public ConsultaQtdGado()
         {
             InitializeComponent();
         }

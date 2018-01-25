@@ -1,6 +1,6 @@
 ﻿namespace TheFarmOfUs
 {
-    partial class Agricultura
+    partial class SetorAgricultura
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agricultura));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetorAgricultura));
             this.Qst = new System.Windows.Forms.Label();
             this.agri = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
@@ -52,16 +52,17 @@
             "Registrar compra ou venda de sacas; ",
             "Registrar compra de agrotóxicos;",
             "Atualizar informações sobre quantidade de sacas produzidas;",
-            "Comprar ou retirar máquinas agrícolas do estoque;",
+            "Comprar máquinas agrícolas;",
+            "Retirar máquinas do estoque;",
             "Consulta do estoque;",
             "Retornar à sessão anterior;"});
             this.agri.Location = new System.Drawing.Point(23, 61);
             this.agri.Name = "agri";
-            this.agri.Size = new System.Drawing.Size(593, 148);
+            this.agri.Size = new System.Drawing.Size(593, 172);
             this.agri.TabIndex = 3;
             this.agri.SelectedIndexChanged += new System.EventHandler(this.agri_SelectedIndexChanged);
             // 
-            // Agricultura
+            // SetorAgricultura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +70,7 @@
             this.ClientSize = new System.Drawing.Size(646, 310);
             this.Controls.Add(this.agri);
             this.Controls.Add(this.Qst);
-            this.Name = "Agricultura";
+            this.Name = "SetorAgricultura";
             this.Text = "Agricultura";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -22,14 +22,17 @@ namespace TheFarmOfUs
             string nome = nom.Text;
             int quant = int.Parse(qtd.Text);
 
-            CompraVendaSaldogeral.AttSacas(nome, quant);
+            CompraVendaRetiradaSaldo.AttSacas(nome, quant);
+
+            nom.ResetText();
+            qtd.Text = "Insira a quantidade";
         }
 
         private void cancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Agricultura ag = new Agricultura();
+                SetorAgricultura ag = new SetorAgricultura();
                 ag.Show();
                 Close();
             }

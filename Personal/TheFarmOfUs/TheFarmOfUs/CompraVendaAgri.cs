@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class BuySellplantinhas : Form
+    public partial class CompraVendaAgri : Form
     {
-        public BuySellplantinhas()
+        public CompraVendaAgri()
         {
             InitializeComponent();
         }
@@ -28,7 +28,19 @@ namespace TheFarmOfUs
             MessageBox.Show("O item escolhido foi: " + planta);
             if (MessageBox.Show("O valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                CompraVendaSaldogeral.CompraVendaPlanta(deseja, valorcompra, planta, qtdplanta);
+                CompraVendaRetiradaSaldo.CompraVendaPlanta(deseja, valorcompra, planta, qtdplanta);
+
+                if(CompraVendaRetiradaSaldo.ok == "s")
+                {
+                    vendiveis.ResetText();
+                    qtd.Text = "Insira a quantidade";
+                    valor.Text = "00,00";
+                }
+
+                else
+                {
+                    valor.Text = "00,00";
+                }
             }
         }
 
@@ -43,7 +55,19 @@ namespace TheFarmOfUs
             MessageBox.Show("O item escolhido foi: " + planta);
             if (MessageBox.Show("O valor se sua venda foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                CompraVendaSaldogeral.CompraVendaPlanta(deseja, valorcompra, planta, qtdplanta);
+                CompraVendaRetiradaSaldo.CompraVendaPlanta(deseja, valorcompra, planta, qtdplanta);
+
+                if (CompraVendaRetiradaSaldo.ok == "s")
+                {
+                    vendiveis.ResetText();
+                    qtd.Text = "Insira a quantidade";
+                    valor.Text = "00,00";
+                }
+
+                else
+                {
+                    qtd.Text = "Insira a quantidade";
+                }
             }
         }
 
@@ -51,7 +75,7 @@ namespace TheFarmOfUs
         {
             if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Agricultura ag = new Agricultura();
+                SetorAgricultura ag = new SetorAgricultura();
                 ag.Show();
                 Close();
             }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    class CompraVendaSaldogeral
+    class CompraVendaRetiradaSaldo
     {
         public static double tenhodisponivel, valorrestante;
         public static int qtdanimais, novaqtdani;
@@ -17,6 +17,7 @@ namespace TheFarmOfUs
         public static int quantidadebd, novaqtd;
         public static int qtdplantabd;
         public static double novaqtdplanta;
+        public static string ok;
 
         public static void PegarValorDisponivel(string escolha) //isso aqui vai servir tanto pra agricultura qto pra pecuária
         {
@@ -116,11 +117,14 @@ namespace TheFarmOfUs
                                                       WHERE Animal = '{1}'", novaqtdani, animal);
 
                     MessageBox.Show("Compra efetuada com sucesso, o saldo atual para uso do setor Gado é de R$ " + valorrestante + ".\nVocê possui " + novaqtdani + " " + animal + "(s) agora!");
+
+                    ok = "s";
                 }
 
                 else
                 {
                     MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
+                    ok = "n";
                 }
             }
 
@@ -143,11 +147,14 @@ namespace TheFarmOfUs
                                                  SET Quantidade = {0}
                                                  WHERE Animal = '{1}'", novaqtdani, animal);
                     MessageBox.Show("Venda efetuada com sucesso, o saldo atual para uso do setor Gado é de R$ " + valorrestante + ".\nVocê possui " + novaqtdani + " " + animal + "(s) agora!");
+
+                    ok = "s";
                 }
 
                 else
                 {
                     MessageBox.Show("Não há animais suficientes para a venda.Por favor,insira um número até " + qtdanimais);
+                    ok = "n";
                 }
             }
             
@@ -245,12 +252,14 @@ namespace TheFarmOfUs
                 }
 
                 MessageBox.Show("Efetuado com sucesso,você possui " + novaqtd + "kg/embalagens de " + nomedoali);
-                MessageBox.Show("O saldo atual para uso do setor Gado é de R$ " + valorrestante + ".");
+                MessageBox.Show("O saldo atual para uso do setor Pecuária é de R$ " + valorrestante + ".");
+                ok = "s";
             }
 
             else
             {
                 MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
+                ok = "n";
             }
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
@@ -267,7 +276,7 @@ namespace TheFarmOfUs
             {
                 cmd.Connection.Open();
             }
-
+              
             catch (SqlException)
             {
                 cone = "Não foi possível efeutar a conexão, tente mais tarde";
@@ -292,15 +301,17 @@ namespace TheFarmOfUs
                 cmd.ExecuteNonQuery();
                 
                 MessageBox.Show("Efetuado com sucesso,agora você possui " + novaqtd + "kg/embalagens de " + nomedoali);
+                ok = "s";
             }
 
             else
             {
                 MessageBox.Show("Você não possui o suficiente, por favor, insira um número até " + quantidadebd);
+                ok = "n";
             }
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
-        } //TEM ERRO
+        } //TEM ERRO....N TEM MAIS
 
         //parte de agricultura
 
@@ -353,11 +364,13 @@ namespace TheFarmOfUs
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Compra efetuada com sucesso, o saldo atual para uso do setor Agricultura é de R$ " + valorrestante + ".\nVocê possui " + novaqtdplanta + " " + planta + "(s) agora!");
+                    ok = "s";
                 }
 
                 else
                 {
                     MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
+                    ok = "n";
                 }
             }
 
@@ -382,11 +395,13 @@ namespace TheFarmOfUs
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Venda efetuada com sucesso, o saldo atual para uso do setor Gado é de R$ " + valorrestante + ".\nVocê possui " + novaqtdplanta + " " + planta + "(s) agora!");
+                    ok = "s";
                 }
 
                 else
                 {
                     MessageBox.Show("Não há sacas o suficiente para a venda.Por favor,insira um número até " + qtdplanta);
+                    ok = "n";
                 }
                 
                 cmd.ExecuteNonQuery();
@@ -466,11 +481,13 @@ namespace TheFarmOfUs
 
                 MessageBox.Show("Efetuado com sucesso,você possui " + novaqtd + "kg/embalagens de " + agro);
                 MessageBox.Show("O saldo atual para uso do setor Pecuária é de R$ " + valorrestante + ".");
+                ok = "s";
             }
 
             else
             {
                 MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
+                ok = "n";
             }
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
@@ -517,10 +534,8 @@ namespace TheFarmOfUs
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }  //FEITO
-
-        public static string ok;
-
-        public static string CompraVendaAttMaquina(string marca,string modelo, string ano, string placa, int potencia, double valorcompra,string deseja)
+        
+        public static string CompraVendaAttMaquina(string marca,string modelo, string ano, string placa, int potencia, double capacidade, double valorcompra,string deseja)
         {
             SqlCommand cmd = new SqlCommand()
             {
@@ -554,11 +569,11 @@ namespace TheFarmOfUs
 
                     cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
                     cmd.ExecuteNonQuery();
-
+                    
 
                     cmd.CommandText = String.Format(@"INSERT 
                                                       INTO MaquinasA
-                                                      VALUES('{0}','{1}','{2}',{3},'{4}')",marca,modelo,ano,potencia,placa);
+                                                      VALUES('{0}','{1}','{2}',{3},'{4}',{5},'Sim','')",marca,modelo,ano,potencia,placa,capacidade);
 
                     MessageBox.Show("Compra efetuada com sucesso, o saldo atual para uso do setor Gado é de R$ " + valorrestante + 
                                     ".\nSua nova aquisição foi um(a) " + marca + " " + modelo);
@@ -572,21 +587,104 @@ namespace TheFarmOfUs
                     ok = "n";
                 }
             }
-
-            else
-            {
-                //SE ELE QUISER RETIRAR
-            }
             
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
 
             return ok;
-        }
+        } //FEITO
+
+        public static void RetiraMaquinas(string modelo, string placa, string reason)
+        {
+            SqlCommand cmd = new SqlCommand()
+            {
+                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+            };
+
+            try
+            {
+                cmd.Connection.Open();
+            }
+
+            catch (SqlException)
+            {
+                cone = "Não foi possível efeutar a conexão, tente mais tarde";
+            }
+
+            cmd.CommandText = String.Format(@"UPDATE MaquinasA 
+                                              SET Disponivel = 'Não',
+                                              MotivoRetirada = @reason
+                                              WHERE Modelo = '{0}' AND Placa = '{1}'", modelo, placa);
+
+            cmd.Parameters.AddWithValue("@reason", reason);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Efetuado com sucesso");
+
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }  //FEITO
+
+        public static void AtualizaAnimais(int quantidade, string animal,string deseja)
+        {
+            SqlCommand cmd = new SqlCommand()
+            {
+                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+            };
+
+            try
+            {
+                cmd.Connection.Open();
+            }
+
+            catch (SqlException)
+            {
+                cone = "Não foi possível efeutar a conexão, tente mais tarde";
+            }
+
+            cmd.CommandText = String.Format(@"SELECT Quantidade
+                                               FROM Gado
+                                               WHERE Animal = '{0}';", animal);
+
+            quantidadebd = (int)cmd.ExecuteScalar();
+
+            if (deseja == "colocar")
+            {
+                novaqtd = quantidadebd + quantidade;
+
+                cmd.CommandText = String.Format(@"UPDATE Gado 
+                                             SET Quantidade = {0}
+                                             WHERE Animal = '{1}'", novaqtd, animal);
+                MessageBox.Show("Realizado com sucesso. A quantidade atual de" + animal + "(s) é de " + novaqtd);
+            }
+
+            else
+            {
+                if (quantidade > quantidadebd)
+                {
+                    MessageBox.Show("Você quer tirar mais do que o permitido, a quantidade atual no estoque é de " + quantidadebd + " " + animal + "(s).");
+                }
+
+                else
+                {
+                    novaqtd = quantidadebd - quantidade;
+                    cmd.CommandText = String.Format(@"UPDATE Gado 
+                                             SET Quantidade = {0}
+                                             WHERE Animal = '{1}'", novaqtd, animal);
+                    
+                    MessageBox.Show("Realizado com sucesso. A quantidade atual de" + animal + "(s) é de " + novaqtd);
+                }
+            }
+            
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        } //FEITO
     }
 } 
 
 //meus deuses isso ta mt "ué" 
+//n ta mais 
+//ta menos ué agr
 /*,
  * 
  * fiz merda hehe

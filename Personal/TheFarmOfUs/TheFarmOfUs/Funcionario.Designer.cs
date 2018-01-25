@@ -56,7 +56,7 @@
                 "mesma;",
             "Consulta de registros;",
             "Retornar à sessão anterior;"});
-            this.funcoesfuncionario.Location = new System.Drawing.Point(107, 34);
+            this.funcoesfuncionario.Location = new System.Drawing.Point(66, 50);
             this.funcoesfuncionario.Name = "funcoesfuncionario";
             this.funcoesfuncionario.Size = new System.Drawing.Size(462, 148);
             this.funcoesfuncionario.TabIndex = 3;

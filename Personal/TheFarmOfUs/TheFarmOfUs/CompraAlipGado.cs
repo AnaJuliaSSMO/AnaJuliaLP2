@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class AlimentoRemedioEtc : Form
+    public partial class CompraAlipGado : Form
     {
-        public AlimentoRemedioEtc()
+        public CompraAlipGado()
         {
             InitializeComponent();
         }
@@ -30,7 +30,21 @@ namespace TheFarmOfUs
             valortotal = valorunitario * quantidade;
             if (MessageBox.Show("O Valor se sua compra foi: R$ " + valortotal + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) 
             {
-                CompraVendaSaldogeral.CompraeVendaAlimentos(tipo, nome, quantidade, valortotal, destinado);
+                CompraVendaRetiradaSaldo.CompraeVendaAlimentos(tipo, nome, quantidade, valortotal, destinado);
+
+                if(CompraVendaRetiradaSaldo.ok == "s")
+                {
+                    desejo.ResetText();
+                    nomedesejado.Clear();
+                    destino.ResetText();
+                    qtd.Clear();
+                    valor.Text = "00,00";
+                }
+
+                else
+                {
+                    valor.Text = "00,00";
+                }
             }
         }
 

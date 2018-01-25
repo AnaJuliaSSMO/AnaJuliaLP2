@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class Agricultura : Form
+    public partial class SetorAgricultura : Form
     {
-        public Agricultura()
+        public SetorAgricultura()
         {
             InitializeComponent();
         }
@@ -23,14 +23,14 @@ namespace TheFarmOfUs
 
             if (resp == 0)
             {
-                BuySellplantinhas pl = new BuySellplantinhas();
+                CompraVendaAgri pl = new CompraVendaAgri();
                 pl.Show();
                 //FEITO
             }
 
             else if (resp == 1)
             {
-                Agroto agro = new Agroto();
+                CompraAgrotoxicos agro = new CompraAgrotoxicos();
                 agro.Show();
                 //FEITO 
             }
@@ -44,22 +44,20 @@ namespace TheFarmOfUs
 
             else if (resp == 3)
             {
-                MaquinasCompraAtt mac = new MaquinasCompraAtt();
+                CompraMaquinas mac = new CompraMaquinas();
                 mac.Show();
-                /* parcialmente feito
-                 * no caso de uma máquina quebrar ela será substituída, 
-                 * mas para isso precisa registrar a "retirada"
-                 * vai ter:
-                 * placa da máquina, que tem q ser única
-                 * motivo da retirada
-                 */
-                 
-                //HALF FEITO
+                //FEITO
             }
 
-            else if(resp == 4)
-            {  
-                //qto tem d cada
+            else if (resp == 4)
+            {
+                RetirarMaquinas re = new RetirarMaquinas();
+                re.Show();
+            }
+            else if(resp == 5)
+            {
+                string o = "ok";
+                MessageBox.Show("Qual prefere?","oi", o == MessageBoxDefaultButton.Button1 , MessageBoxIcon.Asterisk);
             }
 
             else

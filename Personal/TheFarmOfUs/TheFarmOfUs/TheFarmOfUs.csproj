@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agroto.cs">
+    <Compile Include="CompraAgrotoxicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agroto.Designer.cs">
-      <DependentUpon>Agroto.cs</DependentUpon>
+    <Compile Include="CompraAgrotoxicos.Designer.cs">
+      <DependentUpon>CompraAgrotoxicos.cs</DependentUpon>
     </Compile>
     <Compile Include="AttSaca.cs">
       <SubType>Form</SubType>
@@ -58,17 +58,56 @@
     <Compile Include="AttSaca.Designer.cs">
       <DependentUpon>AttSaca.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuySellplantinhas.cs">
+    <Compile Include="CompraVendaAgri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuySellplantinhas.Designer.cs">
-      <DependentUpon>BuySellplantinhas.cs</DependentUpon>
+    <Compile Include="CompraVendaAgri.Designer.cs">
+      <DependentUpon>CompraVendaAgri.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaquinasCompraAtt.cs">
+    <Compile Include="CompraMaquinas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MaquinasCompraAtt.Designer.cs">
-      <DependentUpon>MaquinasCompraAtt.cs</DependentUpon>
+    <Compile Include="CompraMaquinas.Designer.cs">
+      <DependentUpon>CompraMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEstoqueMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEstoqueMaquinas.Designer.cs">
+      <DependentUpon>ConsultarEstoqueMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEstoqueAgricultura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEstoqueAgricultura.Designer.cs">
+      <DependentUpon>ConsultarEstoqueAgricultura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desejair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desejair.Designer.cs">
+      <DependentUpon>Desejair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGINUSERDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LOGINUSERDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LOGINUSERDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LOGINUSERDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Maquinas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maquinas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RetirarMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetirarMaquinas.Designer.cs">
+      <DependentUpon>RetirarMaquinas.cs</DependentUpon>
     </Compile>
     <Compile Include="RetirarVitRemAli.cs">
       <SubType>Form</SubType>
@@ -76,17 +115,17 @@
     <Compile Include="RetirarVitRemAli.Designer.cs">
       <DependentUpon>RetirarVitRemAli.cs</DependentUpon>
     </Compile>
-    <Compile Include="AcresouReti.cs">
+    <Compile Include="AttQtdAnimais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AcresouReti.Designer.cs">
-      <DependentUpon>AcresouReti.cs</DependentUpon>
+    <Compile Include="AttQtdAnimais.Designer.cs">
+      <DependentUpon>AttQtdAnimais.cs</DependentUpon>
     </Compile>
-    <Compile Include="Agricultura.cs">
+    <Compile Include="SetorAgricultura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agricultura.Designer.cs">
-      <DependentUpon>Agricultura.cs</DependentUpon>
+    <Compile Include="SetorAgricultura.Designer.cs">
+      <DependentUpon>SetorAgricultura.cs</DependentUpon>
     </Compile>
     <Compile Include="Agrupamento_Setores.cs">
       <SubType>Form</SubType>
@@ -94,17 +133,17 @@
     <Compile Include="Agrupamento_Setores.Designer.cs">
       <DependentUpon>Agrupamento_Setores.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlimentoRemedioEtc.cs">
+    <Compile Include="CompraAlipGado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlimentoRemedioEtc.Designer.cs">
-      <DependentUpon>AlimentoRemedioEtc.cs</DependentUpon>
+    <Compile Include="CompraAlipGado.Designer.cs">
+      <DependentUpon>CompraAlipGado.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuyorSell.cs">
+    <Compile Include="CompraVendaGado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuyorSell.Designer.cs">
-      <DependentUpon>BuyorSell.cs</DependentUpon>
+    <Compile Include="CompraVendaGado.Designer.cs">
+      <DependentUpon>CompraVendaGado.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastrarLogin.cs">
       <SubType>Form</SubType>
@@ -113,24 +152,24 @@
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastrarNovoLogin.cs" />
-    <Compile Include="CompraVendaSaldogeral.cs" />
+    <Compile Include="CompraVendaRetiradaSaldo.cs" />
     <Compile Include="Contabilidade.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Contabilidade.Designer.cs">
       <DependentUpon>Contabilidade.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dono.cs">
+    <Compile Include="ConfirmacaoNCF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dono.Designer.cs">
-      <DependentUpon>Dono.cs</DependentUpon>
+    <Compile Include="ConfirmacaoNCF.Designer.cs">
+      <DependentUpon>ConfirmacaoNCF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MenuInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MenuInicial.Designer.cs">
+      <DependentUpon>MenuInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario.cs">
       <SubType>Form</SubType>
@@ -147,11 +186,11 @@
     <Compile Include="Logar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuantidadeGado.cs">
+    <Compile Include="ConsultaQtdGado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuantidadeGado.Designer.cs">
-      <DependentUpon>QuantidadeGado.cs</DependentUpon>
+    <Compile Include="ConsultaQtdGado.Designer.cs">
+      <DependentUpon>ConsultaQtdGado.cs</DependentUpon>
     </Compile>
     <Compile Include="VerSaldo.cs">
       <SubType>Form</SubType>
@@ -159,35 +198,47 @@
     <Compile Include="VerSaldo.Designer.cs">
       <DependentUpon>VerSaldo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Agroto.resx">
-      <DependentUpon>Agroto.cs</DependentUpon>
+    <EmbeddedResource Include="CompraAgrotoxicos.resx">
+      <DependentUpon>CompraAgrotoxicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AttSaca.resx">
       <DependentUpon>AttSaca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuySellplantinhas.resx">
-      <DependentUpon>BuySellplantinhas.cs</DependentUpon>
+    <EmbeddedResource Include="CompraVendaAgri.resx">
+      <DependentUpon>CompraVendaAgri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MaquinasCompraAtt.resx">
-      <DependentUpon>MaquinasCompraAtt.cs</DependentUpon>
+    <EmbeddedResource Include="CompraMaquinas.resx">
+      <DependentUpon>CompraMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEstoqueMaquinas.resx">
+      <DependentUpon>ConsultarEstoqueMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEstoqueAgricultura.resx">
+      <DependentUpon>ConsultarEstoqueAgricultura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desejair.resx">
+      <DependentUpon>Desejair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetirarMaquinas.resx">
+      <DependentUpon>RetirarMaquinas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RetirarVitRemAli.resx">
       <DependentUpon>RetirarVitRemAli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AcresouReti.resx">
-      <DependentUpon>AcresouReti.cs</DependentUpon>
+    <EmbeddedResource Include="AttQtdAnimais.resx">
+      <DependentUpon>AttQtdAnimais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Agricultura.resx">
-      <DependentUpon>Agricultura.cs</DependentUpon>
+    <EmbeddedResource Include="SetorAgricultura.resx">
+      <DependentUpon>SetorAgricultura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agrupamento_Setores.resx">
       <DependentUpon>Agrupamento_Setores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlimentoRemedioEtc.resx">
-      <DependentUpon>AlimentoRemedioEtc.cs</DependentUpon>
+    <EmbeddedResource Include="CompraAlipGado.resx">
+      <DependentUpon>CompraAlipGado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuyorSell.resx">
-      <DependentUpon>BuyorSell.cs</DependentUpon>
+    <EmbeddedResource Include="CompraVendaGado.resx">
+      <DependentUpon>CompraVendaGado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarLogin.resx">
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
@@ -195,11 +246,11 @@
     <EmbeddedResource Include="Contabilidade.resx">
       <DependentUpon>Contabilidade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dono.resx">
-      <DependentUpon>Dono.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmacaoNCF.resx">
+      <DependentUpon>ConfirmacaoNCF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MenuInicial.resx">
+      <DependentUpon>MenuInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario.resx">
       <DependentUpon>Funcionario.cs</DependentUpon>
@@ -216,12 +267,45 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuantidadeGado.resx">
-      <DependentUpon>QuantidadeGado.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaQtdGado.resx">
+      <DependentUpon>ConsultaQtdGado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerSaldo.resx">
       <DependentUpon>VerSaldo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LOGINUSERDataSet.xsc">
+      <DependentUpon>LOGINUSERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LOGINUSERDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LOGINUSERDataSet.xss">
+      <DependentUpon>LOGINUSERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet1.xsc">
+      <DependentUpon>LOGINUSERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LOGINUSERDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LOGINUSERDataSet1.xss">
+      <DependentUpon>LOGINUSERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Maquinas.xsc">
+      <DependentUpon>Maquinas.xsd</DependentUpon>
+    </None>
+    <None Include="Maquinas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Maquinas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Maquinas.xss">
+      <DependentUpon>Maquinas.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

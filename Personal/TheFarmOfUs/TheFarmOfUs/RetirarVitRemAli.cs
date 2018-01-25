@@ -61,18 +61,20 @@ namespace TheFarmOfUs
         {
             int qtdd = int.Parse(qtd.Text);
             string nome = nomes.SelectedItem.ToString();
-            string select = tipo.SelectedItem.ToString();
-            
-            if (CompraVendaSaldogeral.cone == "")
+            string tipoo = tipo.SelectedItem.ToString();
+
+            CompraVendaRetiradaSaldo.RetirarAlimentos(tipoo, nome, qtdd);
+            if(CompraVendaRetiradaSaldo.ok == "s")
             {
-                CompraVendaSaldogeral.RetirarAlimentos(nome, select, qtdd);
+                qtd.Text = "Insira a quantidade";
+                nomes.ResetText();
+                tipo.ResetText();
             }
 
             else
             {
-                MessageBox.Show(CompraVendaSaldogeral.cone);
+                qtd.Text = "Insira a quantidade";
             }
-
         }
 
         private void cancelar_Click_1(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace TheFarmOfUs
 {
-    partial class AlimentoRemedioEtc
+    partial class CompraAlipGado
     {
         /// <summary>
         /// Required designer variable.

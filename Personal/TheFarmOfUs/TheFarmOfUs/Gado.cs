@@ -26,7 +26,7 @@ namespace TheFarmOfUs
             if (resp == 0)  
             { 
                 //COMPRA E VENDA DE VAQUINHA MU
-                BuyorSell bs = new BuyorSell();
+                CompraVendaGado bs = new CompraVendaGado();
                 bs.Show();
                 //FEITO
             }
@@ -34,7 +34,7 @@ namespace TheFarmOfUs
             else if (resp == 1)
             {
                 //COMPRA ALIEMTNO VITAMINA REMÉDIO 
-                AlimentoRemedioEtc avr = new AlimentoRemedioEtc();
+                CompraAlipGado avr = new CompraAlipGado();
                 avr.Show();
                 // FEITO
             }
@@ -42,7 +42,7 @@ namespace TheFarmOfUs
             else if (resp == 2)
             {
                 //ACRESCENTA RETIRA GADP
-                AcresouReti acrt = new AcresouReti();
+                AttQtdAnimais acrt = new AttQtdAnimais();
                 acrt.Show();
                 //FEITO
                 //CONFERIDO
@@ -60,7 +60,7 @@ namespace TheFarmOfUs
             else if(resp == 4)
             {
                 //CONSULTA DE ESTOQUE
-                QuantidadeGado gadocont = new QuantidadeGado();
+                ConsultaQtdGado gadocont = new ConsultaQtdGado();
                 gadocont.Show();
                 //FEITO
                 //CONFERIDO

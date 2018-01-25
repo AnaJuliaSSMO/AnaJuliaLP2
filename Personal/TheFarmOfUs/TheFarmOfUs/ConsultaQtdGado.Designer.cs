@@ -1,6 +1,6 @@
 ﻿namespace TheFarmOfUs
 {
-    partial class QuantidadeGado
+    partial class ConsultaQtdGado
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class Agroto : Form
+    public partial class CompraAgrotoxicos : Form
     {
-        public Agroto()
+        public CompraAgrotoxicos()
         {
             InitializeComponent();
         }
@@ -22,12 +22,25 @@ namespace TheFarmOfUs
             string agro = nomedesejado.Text;
             int quantidade = int.Parse(qtd.Text);
             double valorunitario = double.Parse(valor.Text);
-            string plantadestino = destino.Text;
+            string plantadestino = destino.SelectedItem.ToString();
             double valorcompra = quantidade * valorunitario;
             
             if (MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                CompraVendaSaldogeral.CompraAgro(agro, quantidade, valorcompra, plantadestino);
+                CompraVendaRetiradaSaldo.CompraAgro(agro, quantidade, valorcompra, plantadestino);
+
+                if(CompraVendaRetiradaSaldo.ok == "s")
+                {
+                    nomedesejado.ResetText();
+                    qtd.Clear();
+                    valor.Text = "00,00";
+                    destino.ResetText();
+                }
+
+                else
+                {
+                    valor.Text = "00,00";
+                }
             }
         }
 
@@ -35,7 +48,7 @@ namespace TheFarmOfUs
         {
             if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Agricultura ag = new Agricultura();
+                SetorAgricultura ag = new SetorAgricultura();
                 ag.Show();
                 Close();
             }

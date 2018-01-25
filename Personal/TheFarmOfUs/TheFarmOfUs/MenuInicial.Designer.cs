@@ -1,6 +1,6 @@
 ﻿namespace TheFarmOfUs
 {
-    partial class Form1
+    partial class MenuInicial
     {
         /// <summary>
         /// Required designer variable.

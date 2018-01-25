@@ -1,6 +1,6 @@
 ﻿namespace TheFarmOfUs
 {
-    partial class AcresouReti
+    partial class AttQtdAnimais
     {
         /// <summary>
         /// Required designer variable.

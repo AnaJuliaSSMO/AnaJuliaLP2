@@ -29,7 +29,7 @@ namespace TheFarmOfUs
 
             else if(resp == 1)
             {
-                Agricultura planta = new Agricultura();
+                SetorAgricultura planta = new SetorAgricultura();
                 planta.Show();
             }
 
@@ -47,7 +47,7 @@ namespace TheFarmOfUs
 
             else
             {
-                Form1 menu = new Form1();
+                MenuInicial menu = new MenuInicial();
                 menu.ShowDialog();
             }
             Close();

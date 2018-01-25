@@ -13,9 +13,9 @@ using System.Windows.Forms;
  * pedindo pra trazer o valor que tem na tabela "diponivel"*/
 namespace TheFarmOfUs
 {
-    public partial class BuyorSell : Form
+    public partial class CompraVendaGado : Form
     {
-        public BuyorSell()
+        public CompraVendaGado()
         {
             InitializeComponent();
         }
@@ -39,7 +39,19 @@ namespace TheFarmOfUs
             MessageBox.Show("O animal escolhido foi: " + animalescolhido);
             if(MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?","Valor total foi de:",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                CompraVendaSaldogeral.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani);
+                CompraVendaRetiradaSaldo.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani);
+
+                if(CompraVendaRetiradaSaldo.ok == "s")
+                {
+                    animais.ResetText();
+                    qtd.Text = "Insira a quantidade";
+                    valor.Text = "00,00";
+                }
+
+                else
+                {
+                    valor.Text = "00,00";
+                }
             }
             //MessageBox.Show(CompraEVenda.PegarValorDisponivel(escolha));
 
@@ -57,7 +69,19 @@ namespace TheFarmOfUs
             MessageBox.Show("O animal escolhido foi: " + animalescolhido);
             if (MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                CompraVendaSaldogeral.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani);
+                CompraVendaRetiradaSaldo.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani);
+
+                if (CompraVendaRetiradaSaldo.ok == "s")
+                {
+                    animais.ResetText();
+                    qtd.Text = "Insira a quantidade";
+                    valor.Text = "00,00";
+                }
+
+                else
+                {
+                    qtd.Text = "Insira a quantidade";
+                }
             }
 
             // MessageBox.Show(CompraEVenda.PegarValorDisponivel(escolha));

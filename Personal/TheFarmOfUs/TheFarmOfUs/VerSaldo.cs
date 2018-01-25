@@ -28,13 +28,13 @@ namespace TheFarmOfUs
             if (escolhegado.Checked == true)
             {
                 string escolha = "gado";
-                CompraVendaSaldogeral.PegarValorDisponivel(escolha);
+                CompraVendaRetiradaSaldo.PegarValorDisponivel(escolha);
             }
 
             if(escolheplanta.Checked == true)
             {
                 string escolha = "planta";
-                CompraVendaSaldogeral.PegarValorDisponivel(escolha);
+                CompraVendaRetiradaSaldo.PegarValorDisponivel(escolha);
             }
         }
 
