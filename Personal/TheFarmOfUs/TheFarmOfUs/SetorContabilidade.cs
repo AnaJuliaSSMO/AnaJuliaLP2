@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class Contabilidade : Form
+    public partial class SetorContabilidade : Form
     {
-        public Contabilidade()
+        public SetorContabilidade()
         {
             InitializeComponent();
         }

@@ -30,5 +30,12 @@ namespace TheFarmOfUs
             co.Show();
             Close();
         }
+
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            SetorAgricultura set = new SetorAgricultura();
+            set.Show();
+            Close();
+        }
     }
 }

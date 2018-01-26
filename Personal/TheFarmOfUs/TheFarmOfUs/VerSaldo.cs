@@ -42,7 +42,7 @@ namespace TheFarmOfUs
         {
             if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Contabilidade cont = new Contabilidade();
+                SetorContabilidade cont = new SetorContabilidade();
                 cont.Show();
                 Close();
             }

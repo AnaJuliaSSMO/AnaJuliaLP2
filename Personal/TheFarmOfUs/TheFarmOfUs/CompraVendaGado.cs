@@ -91,7 +91,7 @@ namespace TheFarmOfUs
         {
             if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Gado gd = new Gado();
+                SetorPecuaria gd = new SetorPecuaria();
                 gd.Show();
                 Close();
             }

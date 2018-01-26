@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.irplanta = new System.Windows.Forms.Button();
             this.irmaquina = new System.Windows.Forms.Button();
+            this.voltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +58,7 @@
             // irmaquina
             // 
             this.irmaquina.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.irmaquina.Location = new System.Drawing.Point(12, 142);
+            this.irmaquina.Location = new System.Drawing.Point(12, 136);
             this.irmaquina.Name = "irmaquina";
             this.irmaquina.Size = new System.Drawing.Size(293, 52);
             this.irmaquina.TabIndex = 2;
@@ -65,11 +66,23 @@
             this.irmaquina.UseVisualStyleBackColor = true;
             this.irmaquina.Click += new System.EventHandler(this.irmaquina_Click);
             // 
+            // voltar
+            // 
+            this.voltar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar.Location = new System.Drawing.Point(104, 203);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(105, 52);
+            this.voltar.TabIndex = 3;
+            this.voltar.Text = "Retornar\r\n";
+            this.voltar.UseVisualStyleBackColor = true;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
+            // 
             // Desejair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 200);
+            this.ClientSize = new System.Drawing.Size(317, 267);
+            this.Controls.Add(this.voltar);
             this.Controls.Add(this.irmaquina);
             this.Controls.Add(this.irplanta);
             this.Controls.Add(this.label1);
@@ -85,5 +98,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button irplanta;
         private System.Windows.Forms.Button irmaquina;
+        private System.Windows.Forms.Button voltar;
     }
 }

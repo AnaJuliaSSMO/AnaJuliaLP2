@@ -23,25 +23,27 @@ namespace TheFarmOfUs
 
             if(resp == 0)
             {
-                Gado vaca = new Gado();
+                SetorPecuaria vaca = new SetorPecuaria();
                 vaca.Show();
+                //FEITO
             }
 
             else if(resp == 1)
             {
                 SetorAgricultura planta = new SetorAgricultura();
                 planta.Show();
+                //FEITO
             }
 
             else if(resp == 2)
             {
-                Funcionario func = new Funcionario();
+                SetorFuncionario func = new SetorFuncionario();
                 func.Show();
             }
 
             else if(resp == 3)
             {
-                Contabilidade conta = new Contabilidade();
+                SetorContabilidade conta = new SetorContabilidade();
                 conta.Show();
             }
 

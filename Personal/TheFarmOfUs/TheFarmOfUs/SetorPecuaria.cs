@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class Gado : Form
+    public partial class SetorPecuaria : Form
     {
-        public Gado()
+        public SetorPecuaria()
         {
             InitializeComponent();
         }
 
-        private void opitions_SelectedIndexChanged(object sender, EventArgs e)
+        private void opitions_SelectedIndexChanged(object sender, EventArgs e) //TUDO FEITO
         {
             //É MT CONFUSO SCRR
             int resp = opitions.SelectedIndex;

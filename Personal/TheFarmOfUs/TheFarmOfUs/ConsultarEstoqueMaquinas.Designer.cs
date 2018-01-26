@@ -41,6 +41,7 @@
             this.maquinasABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOGINUSERDataSet = new TheFarmOfUs.LOGINUSERDataSet();
             this.maquinasATableAdapter = new TheFarmOfUs.LOGINUSERDataSetTableAdapters.MaquinasATableAdapter();
+            this.voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet)).BeginInit();
@@ -130,14 +131,26 @@
             // 
             this.maquinasATableAdapter.ClearBeforeFill = true;
             // 
-            // ConsultaEstoqueMaquinaPlanta
+            // voltar
+            // 
+            this.voltar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar.Location = new System.Drawing.Point(372, 287);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(119, 49);
+            this.voltar.TabIndex = 54;
+            this.voltar.Text = "Retornar\r\n";
+            this.voltar.UseVisualStyleBackColor = true;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
+            // 
+            // ConsultarEstoqueMaquinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 292);
+            this.ClientSize = new System.Drawing.Size(841, 348);
+            this.Controls.Add(this.voltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Name = "ConsultaEstoqueMaquinaPlanta";
+            this.Name = "ConsultarEstoqueMaquinas";
             this.Text = "ConsultaEstoqueMaquinas";
             this.Load += new System.EventHandler(this.ConsultaEstoqueMaquinaPlanta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -162,5 +175,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn capacidadeTanqueLitrosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn disponivelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button voltar;
     }
 }

@@ -20,17 +20,17 @@ namespace TheFarmOfUs {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Maquinas")]
+    [global::System.Xml.Serialization.XmlRootAttribute("LOGINUSERDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Maquinas : global::System.Data.DataSet {
+    public partial class LOGINUSERDataSet2 : global::System.Data.DataSet {
         
-        private MaquinasADataTable tableMaquinasA;
+        private GadoDataTable tableGado;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Maquinas() {
+        public LOGINUSERDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TheFarmOfUs {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected Maquinas(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected LOGINUSERDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TheFarmOfUs {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["MaquinasA"] != null)) {
-                    base.Tables.Add(new MaquinasADataTable(ds.Tables["MaquinasA"]));
+                if ((ds.Tables["Gado"] != null)) {
+                    base.Tables.Add(new GadoDataTable(ds.Tables["Gado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TheFarmOfUs {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public MaquinasADataTable MaquinasA {
+        public GadoDataTable Gado {
             get {
-                return this.tableMaquinasA;
+                return this.tableGado;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TheFarmOfUs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Maquinas cln = ((Maquinas)(base.Clone()));
+            LOGINUSERDataSet2 cln = ((LOGINUSERDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TheFarmOfUs {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["MaquinasA"] != null)) {
-                    base.Tables.Add(new MaquinasADataTable(ds.Tables["MaquinasA"]));
+                if ((ds.Tables["Gado"] != null)) {
+                    base.Tables.Add(new GadoDataTable(ds.Tables["Gado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TheFarmOfUs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableMaquinasA = ((MaquinasADataTable)(base.Tables["MaquinasA"]));
+            this.tableGado = ((GadoDataTable)(base.Tables["Gado"]));
             if ((initTable == true)) {
-                if ((this.tableMaquinasA != null)) {
-                    this.tableMaquinasA.InitVars();
+                if ((this.tableGado != null)) {
+                    this.tableGado.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TheFarmOfUs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Maquinas";
+            this.DataSetName = "LOGINUSERDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Maquinas.xsd";
+            this.Namespace = "http://tempuri.org/LOGINUSERDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableMaquinasA = new MaquinasADataTable();
-            base.Tables.Add(this.tableMaquinasA);
+            this.tableGado = new GadoDataTable();
+            base.Tables.Add(this.tableGado);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeMaquinasA() {
+        private bool ShouldSerializeGado() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TheFarmOfUs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Maquinas ds = new Maquinas();
+            LOGINUSERDataSet2 ds = new LOGINUSERDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,37 +270,29 @@ namespace TheFarmOfUs {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void MaquinasARowChangeEventHandler(object sender, MaquinasARowChangeEvent e);
+        public delegate void GadoRowChangeEventHandler(object sender, GadoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class MaquinasADataTable : global::System.Data.TypedTableBase<MaquinasARow> {
+        public partial class GadoDataTable : global::System.Data.TypedTableBase<GadoRow> {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnMarca;
+            private global::System.Data.DataColumn columnEspecie;
             
-            private global::System.Data.DataColumn columnModelo;
+            private global::System.Data.DataColumn columnAnimal;
             
-            private global::System.Data.DataColumn columnAno;
+            private global::System.Data.DataColumn columnAlimentacao;
             
-            private global::System.Data.DataColumn columnPotencia;
-            
-            private global::System.Data.DataColumn columnPlaca;
-            
-            private global::System.Data.DataColumn columnCapacidadeTanqueLitros;
-            
-            private global::System.Data.DataColumn columnDisponivel;
-            
-            private global::System.Data.DataColumn columnMotivoRetirada;
+            private global::System.Data.DataColumn columnQuantidade;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MaquinasADataTable() {
-                this.TableName = "MaquinasA";
+            public GadoDataTable() {
+                this.TableName = "Gado";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +300,7 @@ namespace TheFarmOfUs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal MaquinasADataTable(global::System.Data.DataTable table) {
+            internal GadoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,7 +317,7 @@ namespace TheFarmOfUs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected MaquinasADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GadoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -340,65 +332,33 @@ namespace TheFarmOfUs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MarcaColumn {
+            public global::System.Data.DataColumn EspecieColumn {
                 get {
-                    return this.columnMarca;
+                    return this.columnEspecie;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ModeloColumn {
+            public global::System.Data.DataColumn AnimalColumn {
                 get {
-                    return this.columnModelo;
+                    return this.columnAnimal;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AnoColumn {
+            public global::System.Data.DataColumn AlimentacaoColumn {
                 get {
-                    return this.columnAno;
+                    return this.columnAlimentacao;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PotenciaColumn {
+            public global::System.Data.DataColumn QuantidadeColumn {
                 get {
-                    return this.columnPotencia;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PlacaColumn {
-                get {
-                    return this.columnPlaca;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CapacidadeTanqueLitrosColumn {
-                get {
-                    return this.columnCapacidadeTanqueLitros;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DisponivelColumn {
-                get {
-                    return this.columnDisponivel;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MotivoRetiradaColumn {
-                get {
-                    return this.columnMotivoRetirada;
+                    return this.columnQuantidade;
                 }
             }
             
@@ -413,60 +373,56 @@ namespace TheFarmOfUs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MaquinasARow this[int index] {
+            public GadoRow this[int index] {
                 get {
-                    return ((MaquinasARow)(this.Rows[index]));
+                    return ((GadoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MaquinasARowChangeEventHandler MaquinasARowChanging;
+            public event GadoRowChangeEventHandler GadoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MaquinasARowChangeEventHandler MaquinasARowChanged;
+            public event GadoRowChangeEventHandler GadoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MaquinasARowChangeEventHandler MaquinasARowDeleting;
+            public event GadoRowChangeEventHandler GadoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MaquinasARowChangeEventHandler MaquinasARowDeleted;
+            public event GadoRowChangeEventHandler GadoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddMaquinasARow(MaquinasARow row) {
+            public void AddGadoRow(GadoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MaquinasARow AddMaquinasARow(string Marca, string Modelo, string Ano, int Potencia, string Placa, int CapacidadeTanqueLitros, string Disponivel, string MotivoRetirada) {
-                MaquinasARow rowMaquinasARow = ((MaquinasARow)(this.NewRow()));
+            public GadoRow AddGadoRow(string Especie, string Animal, string Alimentacao, int Quantidade) {
+                GadoRow rowGadoRow = ((GadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Marca,
-                        Modelo,
-                        Ano,
-                        Potencia,
-                        Placa,
-                        CapacidadeTanqueLitros,
-                        Disponivel,
-                        MotivoRetirada};
-                rowMaquinasARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowMaquinasARow);
-                return rowMaquinasARow;
+                        Especie,
+                        Animal,
+                        Alimentacao,
+                        Quantidade};
+                rowGadoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGadoRow);
+                return rowGadoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MaquinasARow FindById(int Id) {
-                return ((MaquinasARow)(this.Rows.Find(new object[] {
+            public GadoRow FindById(int Id) {
+                return ((GadoRow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                MaquinasADataTable cln = ((MaquinasADataTable)(base.Clone()));
+                GadoDataTable cln = ((GadoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -474,21 +430,17 @@ namespace TheFarmOfUs {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new MaquinasADataTable();
+                return new GadoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnMarca = base.Columns["Marca"];
-                this.columnModelo = base.Columns["Modelo"];
-                this.columnAno = base.Columns["Ano"];
-                this.columnPotencia = base.Columns["Potencia"];
-                this.columnPlaca = base.Columns["Placa"];
-                this.columnCapacidadeTanqueLitros = base.Columns["CapacidadeTanqueLitros"];
-                this.columnDisponivel = base.Columns["Disponivel"];
-                this.columnMotivoRetirada = base.Columns["MotivoRetirada"];
+                this.columnEspecie = base.Columns["Especie"];
+                this.columnAnimal = base.Columns["Animal"];
+                this.columnAlimentacao = base.Columns["Alimentacao"];
+                this.columnQuantidade = base.Columns["Quantidade"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -496,22 +448,14 @@ namespace TheFarmOfUs {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnMarca = new global::System.Data.DataColumn("Marca", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMarca);
-                this.columnModelo = new global::System.Data.DataColumn("Modelo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnModelo);
-                this.columnAno = new global::System.Data.DataColumn("Ano", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAno);
-                this.columnPotencia = new global::System.Data.DataColumn("Potencia", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPotencia);
-                this.columnPlaca = new global::System.Data.DataColumn("Placa", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlaca);
-                this.columnCapacidadeTanqueLitros = new global::System.Data.DataColumn("CapacidadeTanqueLitros", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCapacidadeTanqueLitros);
-                this.columnDisponivel = new global::System.Data.DataColumn("Disponivel", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDisponivel);
-                this.columnMotivoRetirada = new global::System.Data.DataColumn("MotivoRetirada", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMotivoRetirada);
+                this.columnEspecie = new global::System.Data.DataColumn("Especie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEspecie);
+                this.columnAnimal = new global::System.Data.DataColumn("Animal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimal);
+                this.columnAlimentacao = new global::System.Data.DataColumn("Alimentacao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAlimentacao);
+                this.columnQuantidade = new global::System.Data.DataColumn("Quantidade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuantidade);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -520,45 +464,38 @@ namespace TheFarmOfUs {
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
-                this.columnMarca.AllowDBNull = false;
-                this.columnMarca.MaxLength = 50;
-                this.columnModelo.AllowDBNull = false;
-                this.columnModelo.MaxLength = 60;
-                this.columnAno.AllowDBNull = false;
-                this.columnAno.MaxLength = 4;
-                this.columnPotencia.AllowDBNull = false;
-                this.columnPlaca.AllowDBNull = false;
-                this.columnPlaca.MaxLength = 10;
-                this.columnCapacidadeTanqueLitros.AllowDBNull = false;
-                this.columnDisponivel.AllowDBNull = false;
-                this.columnDisponivel.MaxLength = 3;
-                this.columnMotivoRetirada.MaxLength = 100;
+                this.columnEspecie.AllowDBNull = false;
+                this.columnEspecie.MaxLength = 50;
+                this.columnAnimal.AllowDBNull = false;
+                this.columnAnimal.MaxLength = 50;
+                this.columnAlimentacao.MaxLength = 50;
+                this.columnQuantidade.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MaquinasARow NewMaquinasARow() {
-                return ((MaquinasARow)(this.NewRow()));
+            public GadoRow NewGadoRow() {
+                return ((GadoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new MaquinasARow(builder);
+                return new GadoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(MaquinasARow);
+                return typeof(GadoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.MaquinasARowChanged != null)) {
-                    this.MaquinasARowChanged(this, new MaquinasARowChangeEvent(((MaquinasARow)(e.Row)), e.Action));
+                if ((this.GadoRowChanged != null)) {
+                    this.GadoRowChanged(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -566,8 +503,8 @@ namespace TheFarmOfUs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.MaquinasARowChanging != null)) {
-                    this.MaquinasARowChanging(this, new MaquinasARowChangeEvent(((MaquinasARow)(e.Row)), e.Action));
+                if ((this.GadoRowChanging != null)) {
+                    this.GadoRowChanging(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -575,8 +512,8 @@ namespace TheFarmOfUs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.MaquinasARowDeleted != null)) {
-                    this.MaquinasARowDeleted(this, new MaquinasARowChangeEvent(((MaquinasARow)(e.Row)), e.Action));
+                if ((this.GadoRowDeleted != null)) {
+                    this.GadoRowDeleted(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -584,14 +521,14 @@ namespace TheFarmOfUs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.MaquinasARowDeleting != null)) {
-                    this.MaquinasARowDeleting(this, new MaquinasARowChangeEvent(((MaquinasARow)(e.Row)), e.Action));
+                if ((this.GadoRowDeleting != null)) {
+                    this.GadoRowDeleting(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveMaquinasARow(MaquinasARow row) {
+            public void RemoveGadoRow(GadoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -600,7 +537,7 @@ namespace TheFarmOfUs {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Maquinas ds = new Maquinas();
+                LOGINUSERDataSet2 ds = new LOGINUSERDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -618,7 +555,7 @@ namespace TheFarmOfUs {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "MaquinasADataTable";
+                attribute2.FixedValue = "GadoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -662,131 +599,87 @@ namespace TheFarmOfUs {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class MaquinasARow : global::System.Data.DataRow {
+        public partial class GadoRow : global::System.Data.DataRow {
             
-            private MaquinasADataTable tableMaquinasA;
+            private GadoDataTable tableGado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal MaquinasARow(global::System.Data.DataRowBuilder rb) : 
+            internal GadoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableMaquinasA = ((MaquinasADataTable)(this.Table));
+                this.tableGado = ((GadoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableMaquinasA.IdColumn]));
+                    return ((int)(this[this.tableGado.IdColumn]));
                 }
                 set {
-                    this[this.tableMaquinasA.IdColumn] = value;
+                    this[this.tableGado.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Marca {
+            public string Especie {
                 get {
-                    return ((string)(this[this.tableMaquinasA.MarcaColumn]));
+                    return ((string)(this[this.tableGado.EspecieColumn]));
                 }
                 set {
-                    this[this.tableMaquinasA.MarcaColumn] = value;
+                    this[this.tableGado.EspecieColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Modelo {
+            public string Animal {
                 get {
-                    return ((string)(this[this.tableMaquinasA.ModeloColumn]));
+                    return ((string)(this[this.tableGado.AnimalColumn]));
                 }
                 set {
-                    this[this.tableMaquinasA.ModeloColumn] = value;
+                    this[this.tableGado.AnimalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Ano {
-                get {
-                    return ((string)(this[this.tableMaquinasA.AnoColumn]));
-                }
-                set {
-                    this[this.tableMaquinasA.AnoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Potencia {
-                get {
-                    return ((int)(this[this.tableMaquinasA.PotenciaColumn]));
-                }
-                set {
-                    this[this.tableMaquinasA.PotenciaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Placa {
-                get {
-                    return ((string)(this[this.tableMaquinasA.PlacaColumn]));
-                }
-                set {
-                    this[this.tableMaquinasA.PlacaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int CapacidadeTanqueLitros {
-                get {
-                    return ((int)(this[this.tableMaquinasA.CapacidadeTanqueLitrosColumn]));
-                }
-                set {
-                    this[this.tableMaquinasA.CapacidadeTanqueLitrosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Disponivel {
-                get {
-                    return ((string)(this[this.tableMaquinasA.DisponivelColumn]));
-                }
-                set {
-                    this[this.tableMaquinasA.DisponivelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MotivoRetirada {
+            public string Alimentacao {
                 get {
                     try {
-                        return ((string)(this[this.tableMaquinasA.MotivoRetiradaColumn]));
+                        return ((string)(this[this.tableGado.AlimentacaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MotivoRetirada\' in table \'MaquinasA\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Alimentacao\' in table \'Gado\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMaquinasA.MotivoRetiradaColumn] = value;
+                    this[this.tableGado.AlimentacaoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMotivoRetiradaNull() {
-                return this.IsNull(this.tableMaquinasA.MotivoRetiradaColumn);
+            public int Quantidade {
+                get {
+                    return ((int)(this[this.tableGado.QuantidadeColumn]));
+                }
+                set {
+                    this[this.tableGado.QuantidadeColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMotivoRetiradaNull() {
-                this[this.tableMaquinasA.MotivoRetiradaColumn] = global::System.Convert.DBNull;
+            public bool IsAlimentacaoNull() {
+                return this.IsNull(this.tableGado.AlimentacaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAlimentacaoNull() {
+                this[this.tableGado.AlimentacaoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -794,22 +687,22 @@ namespace TheFarmOfUs {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class MaquinasARowChangeEvent : global::System.EventArgs {
+        public class GadoRowChangeEvent : global::System.EventArgs {
             
-            private MaquinasARow eventRow;
+            private GadoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MaquinasARowChangeEvent(MaquinasARow row, global::System.Data.DataRowAction action) {
+            public GadoRowChangeEvent(GadoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MaquinasARow Row {
+            public GadoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -825,7 +718,7 @@ namespace TheFarmOfUs {
         }
     }
 }
-namespace TheFarmOfUs.MaquinasTableAdapters {
+namespace TheFarmOfUs.LOGINUSERDataSet2TableAdapters {
     
     
     /// <summary>
@@ -837,7 +730,7 @@ namespace TheFarmOfUs.MaquinasTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class MaquinasATableAdapter : global::System.ComponentModel.Component {
+    public partial class GadoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -851,7 +744,7 @@ namespace TheFarmOfUs.MaquinasTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public MaquinasATableAdapter() {
+        public GadoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -948,67 +841,48 @@ namespace TheFarmOfUs.MaquinasTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "MaquinasA";
+            tableMapping.DataSetTable = "Gado";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Marca", "Marca");
-            tableMapping.ColumnMappings.Add("Modelo", "Modelo");
-            tableMapping.ColumnMappings.Add("Ano", "Ano");
-            tableMapping.ColumnMappings.Add("Potencia", "Potencia");
-            tableMapping.ColumnMappings.Add("Placa", "Placa");
-            tableMapping.ColumnMappings.Add("CapacidadeTanqueLitros", "CapacidadeTanqueLitros");
-            tableMapping.ColumnMappings.Add("Disponivel", "Disponivel");
-            tableMapping.ColumnMappings.Add("MotivoRetirada", "MotivoRetirada");
+            tableMapping.ColumnMappings.Add("Especie", "Especie");
+            tableMapping.ColumnMappings.Add("Animal", "Animal");
+            tableMapping.ColumnMappings.Add("Alimentacao", "Alimentacao");
+            tableMapping.ColumnMappings.Add("Quantidade", "Quantidade");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[MaquinasA] WHERE (([Id] = @Original_Id) AND ([Marca] = @Original_Marca) AND ([Modelo] = @Original_Modelo) AND ([Ano] = @Original_Ano) AND ([Potencia] = @Original_Potencia) AND ([Placa] = @Original_Placa) AND ([CapacidadeTanqueLitros] = @Original_CapacidadeTanqueLitros) AND ([Disponivel] = @Original_Disponivel) AND ((@IsNull_MotivoRetirada = 1 AND [MotivoRetirada] IS NULL) OR ([MotivoRetirada] = @Original_MotivoRetirada)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Gado] WHERE (([Id] = @Original_Id) AND ([Especie] = @Original_Especie) AND ([Animal] = @Original_Animal) AND ((@IsNull_Alimentacao = 1 AND [Alimentacao] IS NULL) OR ([Alimentacao] = @Original_Alimentacao)) AND ([Quantidade] = @Original_Quantidade))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ano", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ano", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Potencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Potencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Placa", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Placa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CapacidadeTanqueLitros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CapacidadeTanqueLitros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Disponivel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Disponivel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MotivoRetirada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MotivoRetirada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MotivoRetirada", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MotivoRetirada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Animal", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Animal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alimentacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alimentacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alimentacao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alimentacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MaquinasA] ([Marca], [Modelo], [Ano], [Potencia], [Placa], [CapacidadeTanqueLitros], [Disponivel], [MotivoRetirada]) VALUES (@Marca, @Modelo, @Ano, @Potencia, @Placa, @CapacidadeTanqueLitros, @Disponivel, @MotivoRetirada);
-SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponivel, MotivoRetirada FROM MaquinasA WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Gado] ([Especie], [Animal], [Alimentacao], [Quantidade]) VALUE" +
+                "S (@Especie, @Animal, @Alimentacao, @Quantidade);\r\nSELECT Id, Especie, Animal, A" +
+                "limentacao, Quantidade FROM Gado WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ano", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ano", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Potencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Potencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Placa", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Placa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CapacidadeTanqueLitros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CapacidadeTanqueLitros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Disponivel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Disponivel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MotivoRetirada", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MotivoRetirada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Animal", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Animal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alimentacao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alimentacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MaquinasA] SET [Marca] = @Marca, [Modelo] = @Modelo, [Ano] = @Ano, [Potencia] = @Potencia, [Placa] = @Placa, [CapacidadeTanqueLitros] = @CapacidadeTanqueLitros, [Disponivel] = @Disponivel, [MotivoRetirada] = @MotivoRetirada WHERE (([Id] = @Original_Id) AND ([Marca] = @Original_Marca) AND ([Modelo] = @Original_Modelo) AND ([Ano] = @Original_Ano) AND ([Potencia] = @Original_Potencia) AND ([Placa] = @Original_Placa) AND ([CapacidadeTanqueLitros] = @Original_CapacidadeTanqueLitros) AND ([Disponivel] = @Original_Disponivel) AND ((@IsNull_MotivoRetirada = 1 AND [MotivoRetirada] IS NULL) OR ([MotivoRetirada] = @Original_MotivoRetirada)));
-SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponivel, MotivoRetirada FROM MaquinasA WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Gado] SET [Especie] = @Especie, [Animal] = @Animal, [Alimentacao] = @Alimentacao, [Quantidade] = @Quantidade WHERE (([Id] = @Original_Id) AND ([Especie] = @Original_Especie) AND ([Animal] = @Original_Animal) AND ((@IsNull_Alimentacao = 1 AND [Alimentacao] IS NULL) OR ([Alimentacao] = @Original_Alimentacao)) AND ([Quantidade] = @Original_Quantidade));
+SELECT Id, Especie, Animal, Alimentacao, Quantidade FROM Gado WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ano", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ano", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Potencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Potencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Placa", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Placa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CapacidadeTanqueLitros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CapacidadeTanqueLitros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Disponivel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Disponivel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MotivoRetirada", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MotivoRetirada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Animal", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Animal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alimentacao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alimentacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ano", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ano", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Potencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Potencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Placa", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Placa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CapacidadeTanqueLitros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CapacidadeTanqueLitros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Disponivel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Disponivel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MotivoRetirada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MotivoRetirada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MotivoRetirada", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MotivoRetirada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Animal", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Animal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alimentacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alimentacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alimentacao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alimentacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1025,8 +899,7 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponive" +
-                "l, MotivoRetirada FROM dbo.MaquinasA";
+            this._commandCollection[0].CommandText = "SELECT Id, Especie, Animal, Alimentacao, Quantidade FROM dbo.Gado";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1034,7 +907,7 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Maquinas.MaquinasADataTable dataTable) {
+        public virtual int Fill(LOGINUSERDataSet2.GadoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1047,9 +920,9 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Maquinas.MaquinasADataTable GetData() {
+        public virtual LOGINUSERDataSet2.GadoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Maquinas.MaquinasADataTable dataTable = new Maquinas.MaquinasADataTable();
+            LOGINUSERDataSet2.GadoDataTable dataTable = new LOGINUSERDataSet2.GadoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1057,15 +930,15 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Maquinas.MaquinasADataTable dataTable) {
+        public virtual int Update(LOGINUSERDataSet2.GadoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Maquinas dataSet) {
-            return this.Adapter.Update(dataSet, "MaquinasA");
+        public virtual int Update(LOGINUSERDataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "Gado");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1087,48 +960,29 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Marca, string Original_Modelo, string Original_Ano, int Original_Potencia, string Original_Placa, int Original_CapacidadeTanqueLitros, string Original_Disponivel, string Original_MotivoRetirada) {
+        public virtual int Delete(int Original_Id, string Original_Especie, string Original_Animal, string Original_Alimentacao, int Original_Quantidade) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Marca == null)) {
-                throw new global::System.ArgumentNullException("Original_Marca");
+            if ((Original_Especie == null)) {
+                throw new global::System.ArgumentNullException("Original_Especie");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Marca));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Especie));
             }
-            if ((Original_Modelo == null)) {
-                throw new global::System.ArgumentNullException("Original_Modelo");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Modelo));
-            }
-            if ((Original_Ano == null)) {
-                throw new global::System.ArgumentNullException("Original_Ano");
+            if ((Original_Animal == null)) {
+                throw new global::System.ArgumentNullException("Original_Animal");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Ano));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Animal));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Potencia));
-            if ((Original_Placa == null)) {
-                throw new global::System.ArgumentNullException("Original_Placa");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Placa));
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_CapacidadeTanqueLitros));
-            if ((Original_Disponivel == null)) {
-                throw new global::System.ArgumentNullException("Original_Disponivel");
+            if ((Original_Alimentacao == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Disponivel));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Alimentacao));
             }
-            if ((Original_MotivoRetirada == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_MotivoRetirada));
-            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Quantidade));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1149,45 +1003,26 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Marca, string Modelo, string Ano, int Potencia, string Placa, int CapacidadeTanqueLitros, string Disponivel, string MotivoRetirada) {
-            if ((Marca == null)) {
-                throw new global::System.ArgumentNullException("Marca");
+        public virtual int Insert(string Especie, string Animal, string Alimentacao, int Quantidade) {
+            if ((Especie == null)) {
+                throw new global::System.ArgumentNullException("Especie");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Marca));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Especie));
             }
-            if ((Modelo == null)) {
-                throw new global::System.ArgumentNullException("Modelo");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Modelo));
-            }
-            if ((Ano == null)) {
-                throw new global::System.ArgumentNullException("Ano");
+            if ((Animal == null)) {
+                throw new global::System.ArgumentNullException("Animal");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Ano));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Animal));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Potencia));
-            if ((Placa == null)) {
-                throw new global::System.ArgumentNullException("Placa");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Placa));
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(CapacidadeTanqueLitros));
-            if ((Disponivel == null)) {
-                throw new global::System.ArgumentNullException("Disponivel");
+            if ((Alimentacao == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Disponivel));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Alimentacao));
             }
-            if ((MotivoRetirada == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(MotivoRetirada));
-            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Quantidade));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1208,105 +1043,49 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Marca, 
-                    string Modelo, 
-                    string Ano, 
-                    int Potencia, 
-                    string Placa, 
-                    int CapacidadeTanqueLitros, 
-                    string Disponivel, 
-                    string MotivoRetirada, 
-                    int Original_Id, 
-                    string Original_Marca, 
-                    string Original_Modelo, 
-                    string Original_Ano, 
-                    int Original_Potencia, 
-                    string Original_Placa, 
-                    int Original_CapacidadeTanqueLitros, 
-                    string Original_Disponivel, 
-                    string Original_MotivoRetirada, 
-                    int Id) {
-            if ((Marca == null)) {
-                throw new global::System.ArgumentNullException("Marca");
+        public virtual int Update(string Especie, string Animal, string Alimentacao, int Quantidade, int Original_Id, string Original_Especie, string Original_Animal, string Original_Alimentacao, int Original_Quantidade, int Id) {
+            if ((Especie == null)) {
+                throw new global::System.ArgumentNullException("Especie");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Marca));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Especie));
             }
-            if ((Modelo == null)) {
-                throw new global::System.ArgumentNullException("Modelo");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Modelo));
-            }
-            if ((Ano == null)) {
-                throw new global::System.ArgumentNullException("Ano");
+            if ((Animal == null)) {
+                throw new global::System.ArgumentNullException("Animal");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Ano));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Animal));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Potencia));
-            if ((Placa == null)) {
-                throw new global::System.ArgumentNullException("Placa");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Placa));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(CapacidadeTanqueLitros));
-            if ((Disponivel == null)) {
-                throw new global::System.ArgumentNullException("Disponivel");
+            if ((Alimentacao == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Disponivel));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Alimentacao));
             }
-            if ((MotivoRetirada == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(MotivoRetirada));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id));
-            if ((Original_Marca == null)) {
-                throw new global::System.ArgumentNullException("Original_Marca");
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Quantidade));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            if ((Original_Especie == null)) {
+                throw new global::System.ArgumentNullException("Original_Especie");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Marca));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Especie));
             }
-            if ((Original_Modelo == null)) {
-                throw new global::System.ArgumentNullException("Original_Modelo");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Modelo));
-            }
-            if ((Original_Ano == null)) {
-                throw new global::System.ArgumentNullException("Original_Ano");
+            if ((Original_Animal == null)) {
+                throw new global::System.ArgumentNullException("Original_Animal");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Ano));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Animal));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Potencia));
-            if ((Original_Placa == null)) {
-                throw new global::System.ArgumentNullException("Original_Placa");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Placa));
-            }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_CapacidadeTanqueLitros));
-            if ((Original_Disponivel == null)) {
-                throw new global::System.ArgumentNullException("Original_Disponivel");
+            if ((Original_Alimentacao == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Disponivel));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Alimentacao));
             }
-            if ((Original_MotivoRetirada == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_MotivoRetirada));
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Quantidade));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1327,25 +1106,8 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Marca, 
-                    string Modelo, 
-                    string Ano, 
-                    int Potencia, 
-                    string Placa, 
-                    int CapacidadeTanqueLitros, 
-                    string Disponivel, 
-                    string MotivoRetirada, 
-                    int Original_Id, 
-                    string Original_Marca, 
-                    string Original_Modelo, 
-                    string Original_Ano, 
-                    int Original_Potencia, 
-                    string Original_Placa, 
-                    int Original_CapacidadeTanqueLitros, 
-                    string Original_Disponivel, 
-                    string Original_MotivoRetirada) {
-            return this.Update(Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponivel, MotivoRetirada, Original_Id, Original_Marca, Original_Modelo, Original_Ano, Original_Potencia, Original_Placa, Original_CapacidadeTanqueLitros, Original_Disponivel, Original_MotivoRetirada, Original_Id);
+        public virtual int Update(string Especie, string Animal, string Alimentacao, int Quantidade, int Original_Id, string Original_Especie, string Original_Animal, string Original_Alimentacao, int Original_Quantidade) {
+            return this.Update(Especie, Animal, Alimentacao, Quantidade, Original_Id, Original_Especie, Original_Animal, Original_Alimentacao, Original_Quantidade, Original_Id);
         }
     }
     
@@ -1361,7 +1123,7 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         
         private UpdateOrderOption _updateOrder;
         
-        private MaquinasATableAdapter _maquinasATableAdapter;
+        private GadoTableAdapter _gadoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1383,12 +1145,12 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public MaquinasATableAdapter MaquinasATableAdapter {
+        public GadoTableAdapter GadoTableAdapter {
             get {
-                return this._maquinasATableAdapter;
+                return this._gadoTableAdapter;
             }
             set {
-                this._maquinasATableAdapter = value;
+                this._gadoTableAdapter = value;
             }
         }
         
@@ -1411,9 +1173,9 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._maquinasATableAdapter != null) 
-                            && (this._maquinasATableAdapter.Connection != null))) {
-                    return this._maquinasATableAdapter.Connection;
+                if (((this._gadoTableAdapter != null) 
+                            && (this._gadoTableAdapter.Connection != null))) {
+                    return this._gadoTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1428,7 +1190,7 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._maquinasATableAdapter != null)) {
+                if ((this._gadoTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1440,14 +1202,14 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(Maquinas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(LOGINUSERDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._maquinasATableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.MaquinasA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._gadoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Gado.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._maquinasATableAdapter.Update(updatedRows));
+                    result = (result + this._gadoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1459,13 +1221,13 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(Maquinas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(LOGINUSERDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._maquinasATableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.MaquinasA.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._gadoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Gado.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._maquinasATableAdapter.Update(addedRows));
+                    result = (result + this._gadoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1477,13 +1239,13 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(Maquinas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(LOGINUSERDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._maquinasATableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.MaquinasA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._gadoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Gado.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._maquinasATableAdapter.Update(deletedRows));
+                    result = (result + this._gadoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1519,15 +1281,15 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(Maquinas dataSet) {
+        public virtual int UpdateAll(LOGINUSERDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._maquinasATableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._maquinasATableAdapter.Connection) == false))) {
+            if (((this._gadoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gadoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1563,13 +1325,13 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._maquinasATableAdapter != null)) {
-                    revertConnections.Add(this._maquinasATableAdapter, this._maquinasATableAdapter.Connection);
-                    this._maquinasATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._maquinasATableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._maquinasATableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._maquinasATableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._maquinasATableAdapter.Adapter);
+                if ((this._gadoTableAdapter != null)) {
+                    revertConnections.Add(this._gadoTableAdapter, this._gadoTableAdapter.Connection);
+                    this._gadoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gadoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gadoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gadoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gadoTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1630,9 +1392,9 @@ SELECT Id, Marca, Modelo, Ano, Potencia, Placa, CapacidadeTanqueLitros, Disponiv
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._maquinasATableAdapter != null)) {
-                    this._maquinasATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._maquinasATableAdapter]));
-                    this._maquinasATableAdapter.Transaction = null;
+                if ((this._gadoTableAdapter != null)) {
+                    this._gadoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gadoTableAdapter]));
+                    this._gadoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -38,6 +38,7 @@
             this.usuario = new System.Windows.Forms.TextBox();
             this.entrar = new System.Windows.Forms.Button();
             this.sair = new System.Windows.Forms.Button();
+            this.esquecisenha = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // preencherformulario
@@ -45,7 +46,7 @@
             this.preencherformulario.AutoSize = true;
             this.preencherformulario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preencherformulario.LinkColor = System.Drawing.Color.Black;
-            this.preencherformulario.Location = new System.Drawing.Point(12, 76);
+            this.preencherformulario.Location = new System.Drawing.Point(12, 55);
             this.preencherformulario.Name = "preencherformulario";
             this.preencherformulario.Size = new System.Drawing.Size(691, 44);
             this.preencherformulario.TabIndex = 0;
@@ -69,7 +70,7 @@
             this.cadastrarlogin.AutoSize = true;
             this.cadastrarlogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastrarlogin.LinkColor = System.Drawing.Color.Black;
-            this.cadastrarlogin.Location = new System.Drawing.Point(12, 140);
+            this.cadastrarlogin.Location = new System.Drawing.Point(12, 119);
             this.cadastrarlogin.Name = "cadastrarlogin";
             this.cadastrarlogin.Size = new System.Drawing.Size(452, 22);
             this.cadastrarlogin.TabIndex = 3;
@@ -81,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 206);
+            this.label1.Location = new System.Drawing.Point(162, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(363, 22);
             this.label1.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(195, 248);
+            this.label2.Location = new System.Drawing.Point(188, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 22);
             this.label2.TabIndex = 5;
@@ -101,7 +102,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(197, 303);
+            this.label3.Location = new System.Drawing.Point(190, 271);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 22);
             this.label3.TabIndex = 6;
@@ -110,7 +111,7 @@
             // senha
             // 
             this.senha.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.senha.Location = new System.Drawing.Point(272, 303);
+            this.senha.Location = new System.Drawing.Point(265, 271);
             this.senha.Multiline = true;
             this.senha.Name = "senha";
             this.senha.PasswordChar = '*';
@@ -120,7 +121,7 @@
             // usuario
             // 
             this.usuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuario.Location = new System.Drawing.Point(272, 243);
+            this.usuario.Location = new System.Drawing.Point(265, 211);
             this.usuario.Multiline = true;
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(183, 27);
@@ -129,7 +130,7 @@
             // entrar
             // 
             this.entrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entrar.Location = new System.Drawing.Point(272, 351);
+            this.entrar.Location = new System.Drawing.Point(265, 319);
             this.entrar.Name = "entrar";
             this.entrar.Size = new System.Drawing.Size(82, 42);
             this.entrar.TabIndex = 9;
@@ -140,7 +141,7 @@
             // sair
             // 
             this.sair.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sair.Location = new System.Drawing.Point(376, 351);
+            this.sair.Location = new System.Drawing.Point(369, 319);
             this.sair.Name = "sair";
             this.sair.Size = new System.Drawing.Size(79, 42);
             this.sair.TabIndex = 10;
@@ -148,12 +149,27 @@
             this.sair.UseVisualStyleBackColor = true;
             this.sair.Click += new System.EventHandler(this.sair_Click);
             // 
-            // Form1
+            // esquecisenha
+            // 
+            this.esquecisenha.ActiveLinkColor = System.Drawing.Color.Navy;
+            this.esquecisenha.AutoSize = true;
+            this.esquecisenha.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.esquecisenha.LinkColor = System.Drawing.Color.Black;
+            this.esquecisenha.Location = new System.Drawing.Point(253, 373);
+            this.esquecisenha.Name = "esquecisenha";
+            this.esquecisenha.Size = new System.Drawing.Size(195, 22);
+            this.esquecisenha.TabIndex = 11;
+            this.esquecisenha.TabStop = true;
+            this.esquecisenha.Text = "Esqueci minha senha:\r\n";
+            this.esquecisenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.esquecisenha_LinkClicked);
+            // 
+            // MenuInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(710, 419);
+            this.Controls.Add(this.esquecisenha);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.entrar);
             this.Controls.Add(this.usuario);
@@ -164,7 +180,7 @@
             this.Controls.Add(this.cadastrarlogin);
             this.Controls.Add(this.formal);
             this.Controls.Add(this.preencherformulario);
-            this.Name = "Form1";
+            this.Name = "MenuInicial";
             this.Text = "The Farm Of Us";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,6 +199,7 @@
         private System.Windows.Forms.TextBox usuario;
         private System.Windows.Forms.Button entrar;
         private System.Windows.Forms.Button sair;
+        private System.Windows.Forms.LinkLabel esquecisenha;
     }
 }
 

@@ -23,5 +23,12 @@ namespace TheFarmOfUs
             // TODO: This line of code loads data into the 'lOGINUSERDataSet.MaquinasA' table. You can move, or remove it, as needed.
             this.maquinasATableAdapter.Fill(this.lOGINUSERDataSet.MaquinasA);
         }
+
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            Desejair co = new Desejair();
+            co.Show();
+            Close();
+        }
     }
 }

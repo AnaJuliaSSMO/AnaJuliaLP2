@@ -53,11 +53,13 @@ namespace TheFarmOfUs
             {
                 RetirarMaquinas re = new RetirarMaquinas();
                 re.Show();
+                //FEITO
             }
             else if(resp == 5)
             {
-                string o = "ok";
-                MessageBox.Show("Qual prefere?","oi", o == MessageBoxDefaultButton.Button1 , MessageBoxIcon.Asterisk);
+                Desejair de = new Desejair();
+                de.Show();
+                //FEITO
             }
 
             else

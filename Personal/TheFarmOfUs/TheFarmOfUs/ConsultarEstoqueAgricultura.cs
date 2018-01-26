@@ -23,5 +23,12 @@ namespace TheFarmOfUs
             this.plantasTableAdapter.Fill(this.lOGINUSERDataSet1.Plantas);
 
         }
+
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            Desejair co = new Desejair();
+            co.Show();
+            Close();
+        }
     }
 }

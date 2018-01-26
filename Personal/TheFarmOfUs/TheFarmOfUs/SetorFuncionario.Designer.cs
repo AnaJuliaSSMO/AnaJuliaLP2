@@ -1,6 +1,6 @@
 ﻿namespace TheFarmOfUs
 {
-    partial class Gado
+    partial class SetorFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gado));
-            this.opitions = new System.Windows.Forms.CheckedListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetorFuncionario));
             this.Qst = new System.Windows.Forms.Label();
+            this.funcoesfuncionario = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
-            // 
-            // opitions
-            // 
-            this.opitions.BackColor = System.Drawing.SystemColors.Control;
-            this.opitions.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opitions.FormattingEnabled = true;
-            this.opitions.Items.AddRange(new object[] {
-            "Registrar compra ou venda de novo gado;",
-            "Registrar compra de alimentos, vitaminas e/ou remédios;",
-            "Acrescentar ou retirar gados do estoque;",
-            "Alterar quantidade de alimentos, vitaminas e/ou remédios do estoque;",
-            "Consulta do estoque;",
-            "Retornar à sessão anterior;"});
-            this.opitions.Location = new System.Drawing.Point(12, 46);
-            this.opitions.Name = "opitions";
-            this.opitions.Size = new System.Drawing.Size(613, 148);
-            this.opitions.TabIndex = 0;
-            this.opitions.SelectedIndexChanged += new System.EventHandler(this.opitions_SelectedIndexChanged);
             // 
             // Qst
             // 
             this.Qst.AutoSize = true;
             this.Qst.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qst.Location = new System.Drawing.Point(234, 9);
+            this.Qst.Location = new System.Drawing.Point(219, 9);
             this.Qst.Name = "Qst";
             this.Qst.Size = new System.Drawing.Size(182, 22);
-            this.Qst.TabIndex = 1;
+            this.Qst.TabIndex = 2;
             this.Qst.Text = "O que deseja fazer?\r\n";
             // 
-            // Gado
+            // funcoesfuncionario
+            // 
+            this.funcoesfuncionario.BackColor = System.Drawing.SystemColors.Control;
+            this.funcoesfuncionario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.funcoesfuncionario.FormattingEnabled = true;
+            this.funcoesfuncionario.Items.AddRange(new object[] {
+            "Adicionar um novo funcionário;",
+            "Retirar o registro de um funcionário;",
+            "Atualizar informações de um funcionário;",
+            "Consulta de registros;",
+            "Retornar à sessão anterior;"});
+            this.funcoesfuncionario.Location = new System.Drawing.Point(87, 49);
+            this.funcoesfuncionario.Name = "funcoesfuncionario";
+            this.funcoesfuncionario.Size = new System.Drawing.Size(462, 124);
+            this.funcoesfuncionario.TabIndex = 3;
+            this.funcoesfuncionario.SelectedIndexChanged += new System.EventHandler(this.funcoesfuncionario_SelectedIndexChanged);
+            // 
+            // SetorFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(639, 289);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(632, 313);
+            this.Controls.Add(this.funcoesfuncionario);
             this.Controls.Add(this.Qst);
-            this.Controls.Add(this.opitions);
-            this.Name = "Gado";
-            this.Text = "Gado";
+            this.Name = "SetorFuncionario";
+            this.Text = "Funcionario";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,7 +78,7 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckedListBox opitions;
         private System.Windows.Forms.Label Qst;
+        private System.Windows.Forms.CheckedListBox funcoesfuncionario;
     }
 }

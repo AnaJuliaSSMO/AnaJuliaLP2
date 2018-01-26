@@ -76,7 +76,13 @@ namespace TheFarmOfUs
             }
             
             else { MessageBox.Show(Logar.cone); }
-        }       
+        }
+
+        private void esquecisenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RefazSenha senha = new RefazSenha();
+            senha.Show();
+        }
     }
 }
     

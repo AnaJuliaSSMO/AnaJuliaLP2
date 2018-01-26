@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFuncionario.Designer.cs">
+      <DependentUpon>AddFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttFuncionario.Designer.cs">
+      <DependentUpon>AttFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompraAgrotoxicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,12 @@
     </Compile>
     <Compile Include="CompraMaquinas.Designer.cs">
       <DependentUpon>CompraMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaRegistroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaRegistroFuncionario.Designer.cs">
+      <DependentUpon>ConsultaRegistroFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarEstoqueMaquinas.cs">
       <SubType>Form</SubType>
@@ -98,16 +116,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LOGINUSERDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Maquinas.Designer.cs">
+    <Compile Include="LOGINUSERDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Maquinas.xsd</DependentUpon>
+      <DependentUpon>LOGINUSERDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LOGINUSERDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LOGINUSERDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RefazSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefazSenha.Designer.cs">
+      <DependentUpon>RefazSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="RetirarMaquinas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RetirarMaquinas.Designer.cs">
       <DependentUpon>RetirarMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetirarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetirarRegistro.Designer.cs">
+      <DependentUpon>RetirarRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="RetirarVitRemAli.cs">
       <SubType>Form</SubType>
@@ -153,11 +188,11 @@
     </Compile>
     <Compile Include="CadastrarNovoLogin.cs" />
     <Compile Include="CompraVendaRetiradaSaldo.cs" />
-    <Compile Include="Contabilidade.cs">
+    <Compile Include="SetorContabilidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Contabilidade.Designer.cs">
-      <DependentUpon>Contabilidade.cs</DependentUpon>
+    <Compile Include="SetorContabilidade.Designer.cs">
+      <DependentUpon>SetorContabilidade.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfirmacaoNCF.cs">
       <SubType>Form</SubType>
@@ -171,17 +206,17 @@
     <Compile Include="MenuInicial.Designer.cs">
       <DependentUpon>MenuInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionario.cs">
+    <Compile Include="SetorFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionario.Designer.cs">
-      <DependentUpon>Funcionario.cs</DependentUpon>
+    <Compile Include="SetorFuncionario.Designer.cs">
+      <DependentUpon>SetorFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gado.cs">
+    <Compile Include="SetorPecuaria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gado.Designer.cs">
-      <DependentUpon>Gado.cs</DependentUpon>
+    <Compile Include="SetorPecuaria.Designer.cs">
+      <DependentUpon>SetorPecuaria.cs</DependentUpon>
     </Compile>
     <Compile Include="Logar.cs" />
     <Compile Include="Program.cs" />
@@ -198,6 +233,12 @@
     <Compile Include="VerSaldo.Designer.cs">
       <DependentUpon>VerSaldo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddFuncionario.resx">
+      <DependentUpon>AddFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttFuncionario.resx">
+      <DependentUpon>AttFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CompraAgrotoxicos.resx">
       <DependentUpon>CompraAgrotoxicos.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +251,9 @@
     <EmbeddedResource Include="CompraMaquinas.resx">
       <DependentUpon>CompraMaquinas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaRegistroFuncionario.resx">
+      <DependentUpon>ConsultaRegistroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEstoqueMaquinas.resx">
       <DependentUpon>ConsultarEstoqueMaquinas.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,8 +263,14 @@
     <EmbeddedResource Include="Desejair.resx">
       <DependentUpon>Desejair.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RefazSenha.resx">
+      <DependentUpon>RefazSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RetirarMaquinas.resx">
       <DependentUpon>RetirarMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetirarRegistro.resx">
+      <DependentUpon>RetirarRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RetirarVitRemAli.resx">
       <DependentUpon>RetirarVitRemAli.cs</DependentUpon>
@@ -243,8 +293,8 @@
     <EmbeddedResource Include="CadastrarLogin.resx">
       <DependentUpon>CadastrarLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contabilidade.resx">
-      <DependentUpon>Contabilidade.cs</DependentUpon>
+    <EmbeddedResource Include="SetorContabilidade.resx">
+      <DependentUpon>SetorContabilidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmacaoNCF.resx">
       <DependentUpon>ConfirmacaoNCF.cs</DependentUpon>
@@ -252,11 +302,11 @@
     <EmbeddedResource Include="MenuInicial.resx">
       <DependentUpon>MenuInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionario.resx">
-      <DependentUpon>Funcionario.cs</DependentUpon>
+    <EmbeddedResource Include="SetorFuncionario.resx">
+      <DependentUpon>SetorFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gado.resx">
-      <DependentUpon>Gado.cs</DependentUpon>
+    <EmbeddedResource Include="SetorPecuaria.resx">
+      <DependentUpon>SetorPecuaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -295,16 +345,27 @@
     <None Include="LOGINUSERDataSet1.xss">
       <DependentUpon>LOGINUSERDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Maquinas.xsc">
-      <DependentUpon>Maquinas.xsd</DependentUpon>
+    <None Include="LOGINUSERDataSet2.xsc">
+      <DependentUpon>LOGINUSERDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="Maquinas.xsd">
+    <None Include="LOGINUSERDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Maquinas.Designer.cs</LastGenOutput>
+      <LastGenOutput>LOGINUSERDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Maquinas.xss">
-      <DependentUpon>Maquinas.xsd</DependentUpon>
+    <None Include="LOGINUSERDataSet2.xss">
+      <DependentUpon>LOGINUSERDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet4.xsc">
+      <DependentUpon>LOGINUSERDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LOGINUSERDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LOGINUSERDataSet4.xss">
+      <DependentUpon>LOGINUSERDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

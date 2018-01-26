@@ -41,7 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.fechar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.cpfs = new System.Windows.Forms.TextBox();
+            this.CPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,21 +165,21 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "CPF:";
             // 
-            // cpfs
+            // CPF
             // 
-            this.cpfs.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpfs.Location = new System.Drawing.Point(350, 189);
-            this.cpfs.Multiline = true;
-            this.cpfs.Name = "cpfs";
-            this.cpfs.Size = new System.Drawing.Size(320, 34);
-            this.cpfs.TabIndex = 14;
+            this.CPF.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPF.Location = new System.Drawing.Point(350, 189);
+            this.CPF.Mask = "000,000,000-00";
+            this.CPF.Name = "CPF";
+            this.CPF.Size = new System.Drawing.Size(318, 29);
+            this.CPF.TabIndex = 15;
             // 
             // CadastrarLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 429);
-            this.Controls.Add(this.cpfs);
+            this.Controls.Add(this.CPF);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.button1);
@@ -214,6 +214,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button fechar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox cpfs;
+        private System.Windows.Forms.MaskedTextBox CPF;
     }
 }

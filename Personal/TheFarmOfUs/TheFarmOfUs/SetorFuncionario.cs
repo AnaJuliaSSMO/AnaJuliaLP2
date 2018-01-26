@@ -10,25 +10,27 @@ using System.Windows.Forms;
 
 namespace TheFarmOfUs
 {
-    public partial class Funcionario : Form
+    public partial class SetorFuncionario : Form
     {
-        public Funcionario()
+        public SetorFuncionario()
         {
             InitializeComponent();
         }
 
         private void funcoesfuncionario_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int resp =funcoesfuncionario.SelectedIndex;
+            int resp = funcoesfuncionario.SelectedIndex;
 
             if (resp == 0)
             {
-               // Adicionar um novo funcionário;
+                AddFuncionario add = new AddFuncionario();
+                add.Show();
             }
 
             else if (resp == 1)
             {
-                //Retirar o registro de um funcionário; FAMOSO DELETE
+                 RetirarRegistro ret = new RetirarRegistro();
+                ret.Show();
             }
 
             else if (resp == 2)
@@ -38,13 +40,8 @@ namespace TheFarmOfUs
 
             else if (resp == 3)
             {
-               /* Cálculo de multa rescisória de acordo com o salário do funcionário e registro da mesma;
-                * QUE??*/
-            }
-
-            else if(resp == 4)
-            {
-              //  Consulta de registros; turu bom?
+                ConsultaRegistroFuncionario con = new ConsultaRegistroFuncionario();
+                con.Show();
             }
             else
             {

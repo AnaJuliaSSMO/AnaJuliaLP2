@@ -31,14 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lOGINUSERDataSet1 = new TheFarmOfUs.LOGINUSERDataSet1();
-            this.plantasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.plantasTableAdapter = new TheFarmOfUs.LOGINUSERDataSet1TableAdapters.PlantasTableAdapter();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plantasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lOGINUSERDataSet1 = new TheFarmOfUs.LOGINUSERDataSet1();
+            this.plantasTableAdapter = new TheFarmOfUs.LOGINUSERDataSet1TableAdapters.PlantasTableAdapter();
+            this.voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,22 +62,8 @@
             this.dataGridView1.DataSource = this.plantasBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(145, 48);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(243, 178);
+            this.dataGridView1.Size = new System.Drawing.Size(245, 178);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // lOGINUSERDataSet1
-            // 
-            this.lOGINUSERDataSet1.DataSetName = "LOGINUSERDataSet1";
-            this.lOGINUSERDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // plantasBindingSource
-            // 
-            this.plantasBindingSource.DataMember = "Plantas";
-            this.plantasBindingSource.DataSource = this.lOGINUSERDataSet1;
-            // 
-            // plantasTableAdapter
-            // 
-            this.plantasTableAdapter.ClearBeforeFill = true;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -90,19 +77,45 @@
             this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
             this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
             // 
-            // ConsultarAgricultura
+            // plantasBindingSource
+            // 
+            this.plantasBindingSource.DataMember = "Plantas";
+            this.plantasBindingSource.DataSource = this.lOGINUSERDataSet1;
+            // 
+            // lOGINUSERDataSet1
+            // 
+            this.lOGINUSERDataSet1.DataSetName = "LOGINUSERDataSet1";
+            this.lOGINUSERDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // plantasTableAdapter
+            // 
+            this.plantasTableAdapter.ClearBeforeFill = true;
+            // 
+            // voltar
+            // 
+            this.voltar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar.Location = new System.Drawing.Point(209, 232);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(92, 39);
+            this.voltar.TabIndex = 4;
+            this.voltar.Text = "Retornar\r\n";
+            this.voltar.UseVisualStyleBackColor = true;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
+            // 
+            // ConsultarEstoqueAgricultura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 238);
+            this.ClientSize = new System.Drawing.Size(535, 279);
+            this.Controls.Add(this.voltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Name = "ConsultarAgricultura";
+            this.Name = "ConsultarEstoqueAgricultura";
             this.Text = "ConsultarAgricultura";
             this.Load += new System.EventHandler(this.ConsultarAgricultura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +130,6 @@
         private LOGINUSERDataSet1TableAdapters.PlantasTableAdapter plantasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button voltar;
     }
 }
