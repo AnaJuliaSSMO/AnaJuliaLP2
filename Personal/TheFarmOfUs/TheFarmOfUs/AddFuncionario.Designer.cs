@@ -35,12 +35,13 @@
             this.cpf = new System.Windows.Forms.MaskedTextBox();
             this.add = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.nasc = new System.Windows.Forms.MaskedTextBox();
             this.setores = new System.Windows.Forms.ComboBox();
             this.nometxt = new System.Windows.Forms.TextBox();
-            this.salario = new System.Windows.Forms.TextBox();
             this.cance = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.data = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -95,7 +96,7 @@
             // add
             // 
             this.add.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(131, 266);
+            this.add.Location = new System.Drawing.Point(131, 315);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(325, 39);
             this.add.TabIndex = 5;
@@ -112,16 +113,6 @@
             this.label5.Size = new System.Drawing.Size(183, 22);
             this.label5.TabIndex = 6;
             this.label5.Text = "Data de nascimento:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 227);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 22);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Salário: R$";
             // 
             // nasc
             // 
@@ -154,19 +145,10 @@
             this.nometxt.Size = new System.Drawing.Size(387, 29);
             this.nometxt.TabIndex = 10;
             // 
-            // salario
-            // 
-            this.salario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salario.Location = new System.Drawing.Point(111, 220);
-            this.salario.Name = "salario";
-            this.salario.Size = new System.Drawing.Size(192, 29);
-            this.salario.TabIndex = 11;
-            this.salario.Text = "00,00";
-            // 
             // cance
             // 
             this.cance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cance.Location = new System.Drawing.Point(131, 316);
+            this.cance.Location = new System.Drawing.Point(131, 365);
             this.cance.Name = "cance";
             this.cance.Size = new System.Drawing.Size(325, 39);
             this.cance.TabIndex = 12;
@@ -174,13 +156,45 @@
             this.cance.UseVisualStyleBackColor = true;
             this.cance.Click += new System.EventHandler(this.cance_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(70, 275);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(423, 22);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "O salário é prédefinido de acordo com seu setor.";
+            // 
+            // data
+            // 
+            this.data.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.data.Location = new System.Drawing.Point(131, 226);
+            this.data.Mask = "00/00/0000";
+            this.data.Name = "data";
+            this.data.Size = new System.Drawing.Size(111, 29);
+            this.data.TabIndex = 14;
+            this.data.ValidatingType = typeof(System.DateTime);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 233);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 22);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Data de hoje:";
+            // 
             // AddFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 367);
+            this.ClientSize = new System.Drawing.Size(556, 428);
+            this.Controls.Add(this.data);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.cance);
-            this.Controls.Add(this.salario);
             this.Controls.Add(this.nometxt);
             this.Controls.Add(this.setores);
             this.Controls.Add(this.nasc);
@@ -208,11 +222,12 @@
         private System.Windows.Forms.MaskedTextBox cpf;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox nasc;
         private System.Windows.Forms.ComboBox setores;
         private System.Windows.Forms.TextBox nometxt;
-        private System.Windows.Forms.TextBox salario;
         private System.Windows.Forms.Button cance;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox data;
+        private System.Windows.Forms.Label label7;
     }
 }

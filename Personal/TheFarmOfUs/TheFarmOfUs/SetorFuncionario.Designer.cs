@@ -49,14 +49,16 @@
             this.funcoesfuncionario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.funcoesfuncionario.FormattingEnabled = true;
             this.funcoesfuncionario.Items.AddRange(new object[] {
-            "Adicionar um novo funcionário;",
-            "Retirar o registro de um funcionário;",
+            "Admitir um novo funcionário;",
+            "Demitir um funcionário;",
             "Atualizar informações de um funcionário;",
             "Consulta de registros;",
+            "Consulta de demissões;",
+            "Consultar logins;",
             "Retornar à sessão anterior;"});
-            this.funcoesfuncionario.Location = new System.Drawing.Point(87, 49);
+            this.funcoesfuncionario.Location = new System.Drawing.Point(72, 48);
             this.funcoesfuncionario.Name = "funcoesfuncionario";
-            this.funcoesfuncionario.Size = new System.Drawing.Size(462, 124);
+            this.funcoesfuncionario.Size = new System.Drawing.Size(462, 172);
             this.funcoesfuncionario.TabIndex = 3;
             this.funcoesfuncionario.SelectedIndexChanged += new System.EventHandler(this.funcoesfuncionario_SelectedIndexChanged);
             // 

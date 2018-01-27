@@ -20,67 +20,18 @@ namespace TheFarmOfUs
 
         private void add_Click(object sender, EventArgs e)
         {
-            string cone = "";
             string nome = nometxt.Text;
             string CPF = cpf.Text;
             string nasceu = nasc.Text;
             string setor = setores.SelectedItem.ToString();
-            double sal = double.Parse(salario.Text);
-            //
-            string pegacpf;
-            
-            SqlCommand cmd = new SqlCommand()
-            {
-                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
-            };
+            string datad = data.Text;
 
-            try
-            {
-                cmd.Connection.Open();
-            }
-
-            catch (SqlException)
-            {
-                cone = "Não foi possível estabelecer conexão no momento. Por favor, tente mais tarde.";
-            }
-
-            if(cone == "")
-            {
-                cmd.CommandText = String.Format(@"SELECT CPF
-                                              FROM Funcionario
-                                              WHERE CPF = '{0}'", CPF);
-                pegacpf = (string)cmd.ExecuteScalar();
-                cmd.ExecuteNonQuery();
-
-                if (pegacpf == null)
-                {
-                    cmd.CommandText = String.Format(@"INSERT
-                                                  INTO Funcionario
-                                                  VALUES ('{0}','{1}','{2}','{3}',@salario)", nome, CPF, nasceu, setor);
-
-                    cmd.Parameters.AddWithValue("@salario", sal);
-
-                    MessageBox.Show("Registro efetuado com sucesso!");
-
-                    cpf.Clear();
-                    nometxt.Clear();
-                    nasc.Clear();
-                    setores.ResetText();
-                    salario.Text = "00,00";
-                }
-
-                else
-                {
-                    MessageBox.Show("Funcionário já está cadastrado em nosso banco de dados.\nCaso tenha alguma dúvida, verifique a consulta de funcionários.");
-                }
-            }
-
-            else
-            {
-                MessageBox.Show(cone);
-            }
-            cmd.ExecuteNonQuery();
-            cmd.Connection.Close(); 
+            RelacaoFuncionarios.AdmiteFuncionario(nome, CPF, nasceu, setor,datad);
+            cpf.Clear();
+            nometxt.Clear();
+            nasc.Clear();
+            setores.ResetText();
+            data.Clear();
         }
 
         private void cance_Click(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace TheFarmOfUs
             string plantadestino = destino.SelectedItem.ToString();
             double valorcompra = quantidade * valorunitario;
             
-            if (MessageBox.Show("O Valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("O valor de sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 CompraVendaRetiradaSaldo.CompraAgro(agro, quantidade, valorcompra, plantadestino);
 

@@ -155,7 +155,7 @@
             this.esquecisenha.AutoSize = true;
             this.esquecisenha.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.esquecisenha.LinkColor = System.Drawing.Color.Black;
-            this.esquecisenha.Location = new System.Drawing.Point(253, 373);
+            this.esquecisenha.Location = new System.Drawing.Point(261, 374);
             this.esquecisenha.Name = "esquecisenha";
             this.esquecisenha.Size = new System.Drawing.Size(195, 22);
             this.esquecisenha.TabIndex = 11;

@@ -26,7 +26,7 @@ namespace TheFarmOfUs
             double valorcompra = valorunitario * qtdplanta;
 
             MessageBox.Show("O item escolhido foi: " + planta);
-            if (MessageBox.Show("O valor se sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("O valor de sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 CompraVendaRetiradaSaldo.CompraVendaPlanta(deseja, valorcompra, planta, qtdplanta);
 
@@ -53,7 +53,7 @@ namespace TheFarmOfUs
             double valorcompra = valorunitario * qtdplanta;
 
             MessageBox.Show("O item escolhido foi: " + planta);
-            if (MessageBox.Show("O valor se sua venda foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("O valor de sua venda foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 CompraVendaRetiradaSaldo.CompraVendaPlanta(deseja, valorcompra, planta, qtdplanta);
 

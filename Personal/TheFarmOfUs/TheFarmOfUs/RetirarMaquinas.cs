@@ -112,7 +112,6 @@ namespace TheFarmOfUs
             motivo.ResetText();
             outromotivo.Clear();
             placas.ResetText();
-            // CompraVendaSaldogeral.RetirarAlimentos(tipoo, nome, qtdd);
 
             outromotivo.Enabled = false;
         }

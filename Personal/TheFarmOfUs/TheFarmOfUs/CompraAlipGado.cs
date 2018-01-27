@@ -28,7 +28,7 @@ namespace TheFarmOfUs
             double valortotal;
 
             valortotal = valorunitario * quantidade;
-            if (MessageBox.Show("O Valor se sua compra foi: R$ " + valortotal + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) 
+            if (MessageBox.Show("O valor dse sua compra foi: R$ " + valortotal + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) 
             {
                 CompraVendaRetiradaSaldo.CompraeVendaAlimentos(tipo, nome, quantidade, valortotal, destinado);
 

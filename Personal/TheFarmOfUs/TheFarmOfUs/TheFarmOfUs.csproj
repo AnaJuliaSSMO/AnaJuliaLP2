@@ -46,11 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoAgricultura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcessoAgricultura.Designer.cs">
+      <DependentUpon>AcessoAgricultura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AcessoContabilidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcessoContabilidade.Designer.cs">
+      <DependentUpon>AcessoContabilidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AcessoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcessoFuncionario.Designer.cs">
+      <DependentUpon>AcessoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AcessoPecuaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcessoPecuaria.Designer.cs">
+      <DependentUpon>AcessoPecuaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddFuncionario.Designer.cs">
       <DependentUpon>AddFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministraSalario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministraSalario.Designer.cs">
+      <DependentUpon>AdministraSalario.cs</DependentUpon>
     </Compile>
     <Compile Include="AttFuncionario.cs">
       <SubType>Form</SubType>
@@ -82,6 +112,12 @@
     <Compile Include="CompraMaquinas.Designer.cs">
       <DependentUpon>CompraMaquinas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaLogin.Designer.cs">
+      <DependentUpon>ConsultaLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaRegistroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +135,12 @@
     </Compile>
     <Compile Include="ConsultarEstoqueAgricultura.Designer.cs">
       <DependentUpon>ConsultarEstoqueAgricultura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemitirFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemitirFunc.Designer.cs">
+      <DependentUpon>DemitirFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="Desejair.cs">
       <SubType>Form</SubType>
@@ -121,10 +163,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LOGINUSERDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LOGINUSERDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LOGINUSERDataSet31.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LOGINUSERDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LOGINUSERDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LOGINUSERDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LOGINUSERDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LOGINUSERDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LOGINUSERDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="RefazSenha.cs">
       <SubType>Form</SubType>
@@ -132,17 +189,18 @@
     <Compile Include="RefazSenha.Designer.cs">
       <DependentUpon>RefazSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="RelacaoFuncionarios.cs" />
     <Compile Include="RetirarMaquinas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RetirarMaquinas.Designer.cs">
       <DependentUpon>RetirarMaquinas.cs</DependentUpon>
     </Compile>
-    <Compile Include="RetirarRegistro.cs">
+    <Compile Include="ConsultaDemissoesFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RetirarRegistro.Designer.cs">
-      <DependentUpon>RetirarRegistro.cs</DependentUpon>
+    <Compile Include="ConsultaDemissoesFunc.Designer.cs">
+      <DependentUpon>ConsultaDemissoesFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="RetirarVitRemAli.cs">
       <SubType>Form</SubType>
@@ -194,11 +252,11 @@
     <Compile Include="SetorContabilidade.Designer.cs">
       <DependentUpon>SetorContabilidade.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfirmacaoNCF.cs">
+    <Compile Include="AcessoCADLOG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfirmacaoNCF.Designer.cs">
-      <DependentUpon>ConfirmacaoNCF.cs</DependentUpon>
+    <Compile Include="AcessoCADLOG.Designer.cs">
+      <DependentUpon>AcessoCADLOG.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuInicial.cs">
       <SubType>Form</SubType>
@@ -233,8 +291,23 @@
     <Compile Include="VerSaldo.Designer.cs">
       <DependentUpon>VerSaldo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AcessoAgricultura.resx">
+      <DependentUpon>AcessoAgricultura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AcessoContabilidade.resx">
+      <DependentUpon>AcessoContabilidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AcessoFuncionario.resx">
+      <DependentUpon>AcessoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AcessoPecuaria.resx">
+      <DependentUpon>AcessoPecuaria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddFuncionario.resx">
       <DependentUpon>AddFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministraSalario.resx">
+      <DependentUpon>AdministraSalario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AttFuncionario.resx">
       <DependentUpon>AttFuncionario.cs</DependentUpon>
@@ -251,6 +324,9 @@
     <EmbeddedResource Include="CompraMaquinas.resx">
       <DependentUpon>CompraMaquinas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaLogin.resx">
+      <DependentUpon>ConsultaLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaRegistroFuncionario.resx">
       <DependentUpon>ConsultaRegistroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEstoqueAgricultura.resx">
       <DependentUpon>ConsultarEstoqueAgricultura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemitirFunc.resx">
+      <DependentUpon>DemitirFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desejair.resx">
       <DependentUpon>Desejair.cs</DependentUpon>
@@ -269,8 +348,8 @@
     <EmbeddedResource Include="RetirarMaquinas.resx">
       <DependentUpon>RetirarMaquinas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RetirarRegistro.resx">
-      <DependentUpon>RetirarRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaDemissoesFunc.resx">
+      <DependentUpon>ConsultaDemissoesFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RetirarVitRemAli.resx">
       <DependentUpon>RetirarVitRemAli.cs</DependentUpon>
@@ -296,8 +375,8 @@
     <EmbeddedResource Include="SetorContabilidade.resx">
       <DependentUpon>SetorContabilidade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfirmacaoNCF.resx">
-      <DependentUpon>ConfirmacaoNCF.cs</DependentUpon>
+    <EmbeddedResource Include="AcessoCADLOG.resx">
+      <DependentUpon>AcessoCADLOG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuInicial.resx">
       <DependentUpon>MenuInicial.cs</DependentUpon>
@@ -356,6 +435,17 @@
     <None Include="LOGINUSERDataSet2.xss">
       <DependentUpon>LOGINUSERDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="LOGINUSERDataSet31.xsc">
+      <DependentUpon>LOGINUSERDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LOGINUSERDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LOGINUSERDataSet31.xss">
+      <DependentUpon>LOGINUSERDataSet31.xsd</DependentUpon>
+    </None>
     <None Include="LOGINUSERDataSet4.xsc">
       <DependentUpon>LOGINUSERDataSet4.xsd</DependentUpon>
     </None>
@@ -366,6 +456,28 @@
     </None>
     <None Include="LOGINUSERDataSet4.xss">
       <DependentUpon>LOGINUSERDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet5.xsc">
+      <DependentUpon>LOGINUSERDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LOGINUSERDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LOGINUSERDataSet5.xss">
+      <DependentUpon>LOGINUSERDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet6.xsc">
+      <DependentUpon>LOGINUSERDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="LOGINUSERDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LOGINUSERDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LOGINUSERDataSet6.xss">
+      <DependentUpon>LOGINUSERDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -61,7 +61,7 @@
             this.Qst.TabIndex = 1;
             this.Qst.Text = "O que deseja fazer?\r\n";
             // 
-            // Gado
+            // SetorPecuaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +69,7 @@
             this.ClientSize = new System.Drawing.Size(639, 289);
             this.Controls.Add(this.Qst);
             this.Controls.Add(this.opitions);
-            this.Name = "Gado";
+            this.Name = "SetorPecuaria";
             this.Text = "Gado";
             this.ResumeLayout(false);
             this.PerformLayout();

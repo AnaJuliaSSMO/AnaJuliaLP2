@@ -48,30 +48,41 @@ namespace TheFarmOfUs
                 cone = "Não foi possível efeutar a conexão, tente mais tarde";
             }
 
-            if(sen == confsen)
+            if (cone == "")
             {
-                cmd.CommandText = String.Format(@"SELECT CPF
+                if (sen == confsen)
+                {
+                    cmd.CommandText = String.Format(@"SELECT CPF
                                                   FROM Login
                                                   WHERE CPF = '{0}'", cpf);
-                confere = (string)cmd.ExecuteScalar();
-                cmd.ExecuteNonQuery();
+                    confere = (string)cmd.ExecuteScalar();
+                    cmd.ExecuteNonQuery();
 
-                if (confere == null)
-                {
-                    MessageBox.Show("CPF não cadastrado em nosso sistema.");
-                    CPF.Clear();
+                    if (confere == null)
+                    {
+                        MessageBox.Show("CPF não cadastrado em nosso sistema.");
+                        CPF.Clear();
+                    }
+
+                    else
+                    {
+                        cmd.CommandText = String.Format(@"UPDATE Login
+                                                     SET Senha = @novasenha
+                                                     WHERE CPF = '{0}'", cpf);
+
+                        cmd.Parameters.AddWithValue("@novasenha", sen);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Senha alterada com sucesso");
+                        MessageBox.Show("Nova senha é: " + sen);
+                        CPF.Clear();
+                        senha.Clear();
+                        novasenha.Clear();
+                    }
                 }
 
                 else
                 {
-                    cmd.CommandText = String.Format(@"UPDATE Login
-                                                     SET Senha = @novasenha
-                                                     WHERE CPF = '{0}'", cpf);
-
-                    cmd.Parameters.AddWithValue("@novasenha", sen);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Senha alterada com sucesso");
-                    CPF.Clear();
+                    MessageBox.Show("Senhas não conferem");
                     senha.Clear();
                     novasenha.Clear();
                 }
@@ -79,9 +90,7 @@ namespace TheFarmOfUs
 
             else
             {
-                MessageBox.Show("Senhas não conferem");
-                senha.Clear();
-                novasenha.Clear();
+                MessageBox.Show(cone);
             }
 
             cmd.Connection.Close();

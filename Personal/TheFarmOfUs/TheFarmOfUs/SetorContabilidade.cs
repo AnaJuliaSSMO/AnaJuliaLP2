@@ -31,20 +31,14 @@ namespace TheFarmOfUs
                 ver.Show();
                 //FEITO
                 //CONFERIDO E MDS Q Q EU TAVA FAZENDO
+                //EU NAU SEI
+                //literalmente pq eu n lembro oq eu fiz '-'
             }
 
             else if (select == 1)
             {
-                /*pagamentos,abonos salariais (eu nem sei oq k7's é um abono salarial, mas blz), etc
-                 * DESCOBRI OQ É ABONO
-                 * e n sou eu quem controlo isso :p
-                 */
-            }
-
-            else if (select == 2)
-            {
-                //demitir ou admitir novos caras, eh isso
-                //vou ter que criar um banco "Funcionários"
+                AdministraSalario sal = new AdministraSalario();
+                sal.Show();
             }
 
             else

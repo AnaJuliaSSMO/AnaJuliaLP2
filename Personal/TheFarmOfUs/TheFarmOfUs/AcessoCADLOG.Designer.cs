@@ -43,7 +43,7 @@
             this.label1.Size = new System.Drawing.Size(514, 66);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nesta sessão é permitida apenas a entrada de funcionários \r\nda empresa autorizado" +
-    "s, por favor, intifique-se com o\r\nseu NCF: \r\n";
+    "s, por favor, identifique-se com o\r\nseu NCF: \r\n";
             // 
             // nrf
             // 

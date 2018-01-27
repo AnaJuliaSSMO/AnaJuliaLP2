@@ -29,8 +29,15 @@ namespace TheFarmOfUs
 
         private void ConsultaRegistroFuncionario_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'lOGINUSERDataSet3.Funcionario' table. You can move, or remove it, as needed.
+            this.funcionarioTableAdapter1.Fill(this.lOGINUSERDataSet3.Funcionario);
             // TODO: This line of code loads data into the 'lOGINUSERDataSet4.Funcionario' table. You can move, or remove it, as needed.
             this.funcionarioTableAdapter.Fill(this.lOGINUSERDataSet4.Funcionario);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

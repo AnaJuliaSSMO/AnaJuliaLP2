@@ -32,17 +32,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.retor = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lOGINUSERDataSet4 = new TheFarmOfUs.LOGINUSERDataSet4();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionarioTableAdapter = new TheFarmOfUs.LOGINUSERDataSet4TableAdapters.FuncionarioTableAdapter();
+            this.funcionarioBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.lOGINUSERDataSet3 = new TheFarmOfUs.LOGINUSERDataSet3();
+            this.funcionarioBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionarioTableAdapter1 = new TheFarmOfUs.LOGINUSERDataSet3TableAdapters.FuncionarioTableAdapter();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data_Admissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lOGINUSERDataSet4 = new TheFarmOfUs.LOGINUSERDataSet4();
-            this.funcionarioTableAdapter = new TheFarmOfUs.LOGINUSERDataSet4TableAdapters.FuncionarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,22 +81,68 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
+            this.Nome,
+            this.Data_Admissao,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.DataSource = this.funcionarioBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 38);
+            this.dataGridView1.DataSource = this.funcionarioBindingSource3;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 34);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 150);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // funcionarioBindingSource1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.funcionarioBindingSource1.DataMember = "Funcionario";
+            this.funcionarioBindingSource1.DataSource = this.lOGINUSERDataSet4;
+            // 
+            // lOGINUSERDataSet4
+            // 
+            this.lOGINUSERDataSet4.DataSetName = "LOGINUSERDataSet4";
+            this.lOGINUSERDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.lOGINUSERDataSet4;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // funcionarioBindingSource2
+            // 
+            this.funcionarioBindingSource2.DataMember = "Funcionario";
+            this.funcionarioBindingSource2.DataSource = this.lOGINUSERDataSet4;
+            // 
+            // lOGINUSERDataSet3
+            // 
+            this.lOGINUSERDataSet3.DataSetName = "LOGINUSERDataSet3";
+            this.lOGINUSERDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioBindingSource3
+            // 
+            this.funcionarioBindingSource3.DataMember = "Funcionario";
+            this.funcionarioBindingSource3.DataSource = this.lOGINUSERDataSet3;
+            // 
+            // funcionarioTableAdapter1
+            // 
+            this.funcionarioTableAdapter1.ClearBeforeFill = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Data_Admissao
+            // 
+            this.Data_Admissao.DataPropertyName = "Data_Admissao";
+            this.Data_Admissao.HeaderText = "Data_Admissao";
+            this.Data_Admissao.Name = "Data_Admissao";
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -112,20 +168,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Salario";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.lOGINUSERDataSet4;
-            // 
-            // lOGINUSERDataSet4
-            // 
-            this.lOGINUSERDataSet4.DataSetName = "LOGINUSERDataSet4";
-            this.lOGINUSERDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioTableAdapter
-            // 
-            this.funcionarioTableAdapter.ClearBeforeFill = true;
-            // 
             // ConsultaRegistroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,8 +180,12 @@
             this.Text = "ConsultaRegistroFuncionario";
             this.Load += new System.EventHandler(this.ConsultaRegistroFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,7 +204,13 @@
         private LOGINUSERDataSet4 lOGINUSERDataSet4;
         private System.Windows.Forms.BindingSource funcionarioBindingSource;
         private LOGINUSERDataSet4TableAdapters.FuncionarioTableAdapter funcionarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource1;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource2;
+        private LOGINUSERDataSet3 lOGINUSERDataSet3;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource3;
+        private LOGINUSERDataSet3TableAdapters.FuncionarioTableAdapter funcionarioTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data_Admissao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;

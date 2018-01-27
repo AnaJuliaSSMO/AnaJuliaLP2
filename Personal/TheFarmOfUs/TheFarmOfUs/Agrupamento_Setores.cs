@@ -23,30 +23,32 @@ namespace TheFarmOfUs
 
             if(resp == 0)
             {
-                SetorPecuaria vaca = new SetorPecuaria();
-                vaca.Show();
+                AcessoPecuaria ace = new AcessoPecuaria();
+                ace.Show();
                 //FEITO
             }
 
             else if(resp == 1)
             {
-                SetorAgricultura planta = new SetorAgricultura();
-                planta.Show();
+                AcessoAgricultura ace = new AcessoAgricultura();
+                ace.Show();
                 //FEITO
             }
 
             else if(resp == 2)
             {
-                SetorFuncionario func = new SetorFuncionario();
-                func.Show();
+                AcessoFuncionario ace = new AcessoFuncionario();
+                ace.Show();
+                //FEITO
             }
 
             else if(resp == 3)
             {
-                SetorContabilidade conta = new SetorContabilidade();
-                conta.Show();
+                AcessoContabilidade ace = new AcessoContabilidade();
+                ace.Show();
+                //FEITO
             }
-
+                
             else
             {
                 MenuInicial menu = new MenuInicial();

@@ -28,7 +28,7 @@ namespace TheFarmOfUs
             double capacidadetanque = int.Parse(capacidade.Text);
             double valor = double.Parse(preco.Text);
 
-            if (MessageBox.Show("O Valor se sua compra foi: R$ " + valor + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("O valor de sua compra foi: R$ " + valor + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 CompraVendaRetiradaSaldo.CompraVendaAttMaquina(marca, modelo, ano, placa, potencia, capacidadetanque, valor, deseja);
 

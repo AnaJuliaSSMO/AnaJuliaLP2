@@ -51,7 +51,6 @@
             this.cont.Items.AddRange(new object[] {
             "Ver saldo disponível para o setor de Gado e Agricultura;",
             "Administração do salário de funcionários;",
-            "Admissão ou demissão de funcionário;",
             "Voltar à sessão anterior;"});
             this.cont.Location = new System.Drawing.Point(11, 90);
             this.cont.Name = "cont";
@@ -59,7 +58,7 @@
             this.cont.TabIndex = 3;
             this.cont.SelectedIndexChanged += new System.EventHandler(this.cont_SelectedIndexChanged);
             // 
-            // Contabilidade
+            // SetorContabilidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,7 +66,7 @@
             this.ClientSize = new System.Drawing.Size(529, 254);
             this.Controls.Add(this.cont);
             this.Controls.Add(this.Qst);
-            this.Name = "Contabilidade";
+            this.Name = "SetorContabilidade";
             this.Text = "Contabilidade";
             this.Load += new System.EventHandler(this.Contabilidade_Load);
             this.ResumeLayout(false);

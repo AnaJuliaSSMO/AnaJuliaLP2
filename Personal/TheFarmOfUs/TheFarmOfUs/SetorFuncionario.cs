@@ -29,13 +29,14 @@ namespace TheFarmOfUs
 
             else if (resp == 1)
             {
-                 RetirarRegistro ret = new RetirarRegistro();
+                DemitirFunc ret = new DemitirFunc();
                 ret.Show();
             }
 
             else if (resp == 2)
             {
-               // Atualizar informações de um funcionário; FMZ UPDATE
+                AttFuncionario att = new AttFuncionario();
+                att.Show();
             }
 
             else if (resp == 3)
@@ -43,6 +44,19 @@ namespace TheFarmOfUs
                 ConsultaRegistroFuncionario con = new ConsultaRegistroFuncionario();
                 con.Show();
             }
+
+            else if (resp == 4)
+            { 
+                ConsultaDemissoesFunc con = new ConsultaDemissoesFunc();
+                con.Show();
+            }
+
+            else if (resp == 5)
+            {
+                ConsultaLogin con = new ConsultaLogin();
+                con.Show();
+            }
+
             else
             {
                 Agrupamento_Setores menu = new Agrupamento_Setores();

@@ -92,6 +92,7 @@
             this.novasenha.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.novasenha.Location = new System.Drawing.Point(226, 120);
             this.novasenha.Name = "novasenha";
+            this.novasenha.PasswordChar = '*';
             this.novasenha.Size = new System.Drawing.Size(152, 29);
             this.novasenha.TabIndex = 5;
             // 
