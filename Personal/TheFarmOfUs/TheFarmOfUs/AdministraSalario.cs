@@ -58,7 +58,7 @@ namespace TheFarmOfUs
         {
             if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                SetorFuncionario sf = new SetorFuncionario();
+                SetorContabilidade sf = new SetorContabilidade();
                 sf.Show();
                 Close();
             }

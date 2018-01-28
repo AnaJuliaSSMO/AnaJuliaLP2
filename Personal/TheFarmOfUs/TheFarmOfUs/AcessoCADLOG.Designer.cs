@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(seg1));
             this.label1 = new System.Windows.Forms.Label();
             this.nrf = new System.Windows.Forms.TextBox();
             this.enviar = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             this.nrf.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nrf.Location = new System.Drawing.Point(16, 89);
             this.nrf.Name = "nrf";
+            this.nrf.PasswordChar = '*';
             this.nrf.Size = new System.Drawing.Size(480, 29);
             this.nrf.TabIndex = 4;
             // 
@@ -79,6 +81,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(526, 188);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.enviar);

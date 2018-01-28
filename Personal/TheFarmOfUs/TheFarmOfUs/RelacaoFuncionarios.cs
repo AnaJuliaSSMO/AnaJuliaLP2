@@ -157,7 +157,7 @@ namespace TheFarmOfUs
 
                     cmd.Parameters.AddWithValue("@salario", tenhodisponivel);
 
-                    MessageBox.Show("Registro efetuado com sucesso!");
+                    MessageBox.Show("Registro efetuado com sucesso!Bem vindo à Fazenda!");
                 }
 
                 else

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AcessoAgricultura));
             this.sair = new System.Windows.Forms.Button();
             this.enviar = new System.Windows.Forms.Button();
             this.nrf = new System.Windows.Forms.TextBox();
@@ -61,6 +62,7 @@
             this.nrf.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nrf.Location = new System.Drawing.Point(16, 103);
             this.nrf.Name = "nrf";
+            this.nrf.PasswordChar = '*';
             this.nrf.Size = new System.Drawing.Size(480, 29);
             this.nrf.TabIndex = 12;
             // 
@@ -79,6 +81,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(531, 222);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.enviar);

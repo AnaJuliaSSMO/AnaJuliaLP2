@@ -182,6 +182,7 @@
             this.Controls.Add(this.preencherformulario);
             this.Name = "MenuInicial";
             this.Text = "The Farm Of Us";
+            this.Load += new System.EventHandler(this.MenuInicial_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

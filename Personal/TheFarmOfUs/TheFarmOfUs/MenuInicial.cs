@@ -50,6 +50,8 @@ namespace TheFarmOfUs
 
         private void entrar_Click(object sender, EventArgs e)
         {
+
+            MessageBox.Show("Seja bem vindo à The Farm of Us.\n\nThe Farm of Us foi criado para poder lhe ajudar na administração de sua fazenda\n\nAqui, você poderá controlar seus gastos, vendas,compras e tudo o que voce pode imaginar.\n\nAproveite e obrigado por aderir aos nossos serviços.");
             Agrupamento_Setores gp = new Agrupamento_Setores();
 
             string user = usuario.Text;
@@ -57,31 +59,29 @@ namespace TheFarmOfUs
 
             Logar.RealizarLogin(user,pass);
 
-            if(Logar.cone == "")
+            if (Logar.entrou == "n")
             {
                 usuario.Clear();
                 senha.Clear();
-
-                if (Logar.entrou == "n")
-                {
-                    MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    gp.Show();
-                    Hide();
-                }
-
-                else
-                {
-                    MessageBox.Show("Usuário ou senha inválidos","Opa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gp.Show();
+                Hide();
             }
-            
-            else { MessageBox.Show(Logar.cone); }
+
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos", "Opa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void esquecisenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RefazSenha senha = new RefazSenha();
             senha.Show();
+        }
+
+        private void MenuInicial_Load(object sender, EventArgs e)
+        {
         }
     }
 }
