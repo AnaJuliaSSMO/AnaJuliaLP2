@@ -21,15 +21,15 @@ namespace TheFarmOfUs
         {
             string nrfs = nrf.Text;
 
-            if (nrfs != "53t0rp3cu4r1a") { MessageBox.Show("Acesso negado"); }
-
-            else
+            if (nrfs == "cowandothers" || nrfs == "masterajmlc1901")
             {
                 MessageBox.Show("Acesso permitido");
                 SetorPecuaria set = new SetorPecuaria();
                 set.Show();
                 Close();
             }
+
+            else { MessageBox.Show("Acesso negado");}
         }
 
         private void sair_Click(object sender, EventArgs e)

@@ -103,7 +103,9 @@
             this.Controls.Add(this.qtd);
             this.Controls.Add(this.nom);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AttSaca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atualizar quantidade de sacas";
             this.ResumeLayout(false);
             this.PerformLayout();

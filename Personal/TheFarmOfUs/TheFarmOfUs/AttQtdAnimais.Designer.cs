@@ -63,6 +63,7 @@
             this.animais.Name = "animais";
             this.animais.Size = new System.Drawing.Size(310, 30);
             this.animais.TabIndex = 16;
+            this.animais.SelectedIndexChanged += new System.EventHandler(this.animais_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -119,7 +120,9 @@
             this.Controls.Add(this.qtd);
             this.Controls.Add(this.animais);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AttQtdAnimais";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atualizar quantidade do gado";
             this.ResumeLayout(false);
             this.PerformLayout();

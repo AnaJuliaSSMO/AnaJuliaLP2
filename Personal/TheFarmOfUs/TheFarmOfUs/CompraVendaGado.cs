@@ -62,55 +62,55 @@ namespace TheFarmOfUs
 
             if (sel == 0)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\vaca.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.vaca);
                 simpleSound.Play();
             }
 
             else if (sel == 1)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\boi.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.boi);
                 simpleSound.Play();
             }
 
             else if (sel == 2)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\galinha.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.galinha);
                 simpleSound.Play();
             }
 
             else if (sel == 3)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\porco.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.porco);
                 simpleSound.Play();
             }
-
+            
             else if (sel == 4)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\cavalo.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.cavalo);
                 simpleSound.Play();
             }
 
             else if (sel == 5)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\cabra.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.cabra);
                 simpleSound.Play();
             }
 
             else if (sel == 6)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\carneiro.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.carneiro);
                 simpleSound.Play();
             }
 
             else if (sel == 7)
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\coelho.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.coelho);
                 simpleSound.Play();
             }
 
             else
             {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\pato.WAV");
+                SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.pato);
                 simpleSound.Play();
             }
         }
@@ -153,6 +153,11 @@ namespace TheFarmOfUs
                 gd.Show();
                 Close();
             }
+        }
+
+        private void CompraVendaGado_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

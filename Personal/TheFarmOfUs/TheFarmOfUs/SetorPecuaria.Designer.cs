@@ -69,7 +69,9 @@
             this.ClientSize = new System.Drawing.Size(639, 289);
             this.Controls.Add(this.Qst);
             this.Controls.Add(this.opitions);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SetorPecuaria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gado";
             this.ResumeLayout(false);
             this.PerformLayout();

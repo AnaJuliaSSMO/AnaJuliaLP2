@@ -67,14 +67,6 @@ namespace TheFarmOfUs
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         } //FEITO
-        /*TAVA MUITO CONFUSO PRA EU ENXERGAR
-         * POR ISSO CASULAMENTE TERÃO ESSAS LINHAS DE COMENT
-         * RIKKA TAKANASHI MELHOR WAIFU
-         * NÃU TOMEM VACINA CONTRA FEBRE AMARELA 
-         * VCS VÃO TER ALERGIA CRIANÇAS
-         * O GOVERNO MENTE
-         * EH ISTO
-         */
 
         public static void CompraVendaGado(string deseja, double valorcompra, string animal, int quantidadeani)
         {
@@ -107,7 +99,7 @@ namespace TheFarmOfUs
 
                 if (deseja == "comprar") //r A CONTA MUDA ENT POR ISSO TEM ESSAS COISAS
                 {
-                    if (tenhodisponivel > valorcompra)
+                    if (tenhodisponivel >= valorcompra)
                     {
                         valorrestante = tenhodisponivel - valorcompra;
                         novaqtdani = qtdanimais + quantidadeani;
@@ -141,7 +133,7 @@ namespace TheFarmOfUs
 
                 else //ele só tem que verificar o valor na hr da venda
                 {
-                    if (qtdanimais > quantidadeani) //se tiver mais no banco do q ele quiser vender 
+                    if (qtdanimais >= quantidadeani) //se tiver mais no banco do q ele quiser vender 
                     {
                         valorrestante = tenhodisponivel + valorcompra;
                         novaqtdani = qtdanimais - quantidadeani;
@@ -149,7 +141,7 @@ namespace TheFarmOfUs
 
                         cmd.CommandText = String.Format(@"UPDATE Disponivel 
                                                      SET Valor_disponivel = @valorfinal
-                                                     WHERE Setor = 'Pecuaria'", valorrestante);
+                                                     WHERE Setor = 'P0ecuaria'", valorrestante);
 
                         cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
                         cmd.ExecuteNonQuery();
@@ -178,19 +170,6 @@ namespace TheFarmOfUs
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         } //FEITO //COLOCADO IF DE CONEXÃO
-
-        /*Eu não sei como as pessoas conseguem enxergar 
-         * tão de boas
-         * talvez eu precise de um novo óculos
-         * ou um novo olho
-         * poderia ter uma funçãoiznha
-         * que me permitisse "esconder uma parte do código"
-         * se´ra que tem?
-         * seria bem util
-         * EXISTE ESSA FUNÇÃOZINHA
-         * :p
-         */
-        //PARTE DE ALIMENTOS, VITAMINAS,ETC
 
         public static void CompraeVendaAlimentos(string tipo, string nomedoali, int quantidade, double valorcompra, string animaldestino) 
         {
@@ -221,12 +200,12 @@ namespace TheFarmOfUs
                 cmd.ExecuteNonQuery();
 
                 cmd.CommandText = String.Format(@"SELECT Valor_disponivel
-                                                FROM Disponivel
-                                                WHERE Setor = 'Pecuaria'");
+                                                  FROM Disponivel
+                                                  WHERE Setor = 'Pecuaria'");
                 tenhodisponivel = (double)cmd.ExecuteScalar();
                 cmd.ExecuteNonQuery();
 
-                if (tenhodisponivel > valorcompra)
+                if (tenhodisponivel >= valorcompra)
                 {
                     valorrestante = tenhodisponivel - valorcompra;
 
@@ -306,7 +285,7 @@ namespace TheFarmOfUs
 
                 quantidadebd = (int)cmd.ExecuteScalar();
 
-                if (quantidadebd > quantidade) //se a quantidade no banco for maior do que a quantidade que a pessoa quer retirar, ent ta ok
+                if (quantidadebd >= quantidade) //se a quantidade no banco for maior do que a quantidade que a pessoa quer retirar, ent ta ok
                 {
                     novaqtd = quantidadebd - quantidade;
 
@@ -336,9 +315,7 @@ namespace TheFarmOfUs
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         } //FEITO //COLOCADO O IF DE CONEXAO
-
-        //parte de agricultura
-
+        
         public static void CompraVendaPlanta(string deseja, double valorcompra, string planta, int qtdplanta)
         {
             SqlCommand cmd = new SqlCommand()
@@ -357,8 +334,8 @@ namespace TheFarmOfUs
             }
 
             cmd.CommandText = String.Format(@"SELECT Valor_disponivel
-                                                FROM Disponivel
-                                                WHERE Setor = 'Agricultura'");
+                                              FROM Disponivel
+                                              WHERE Setor = 'Agricultura'");
             tenhodisponivel = (double)cmd.ExecuteScalar();
 
             cmd.CommandText = String.Format(@"SELECT Quantidade
@@ -368,7 +345,7 @@ namespace TheFarmOfUs
 
             if (deseja == "comprar") //r A CONTA MUDA ENT POR ISSO TEM ESSAS COISAS
             {
-                if (tenhodisponivel > valorcompra)
+                if (tenhodisponivel >= valorcompra)
                 {
                     valorrestante = tenhodisponivel - valorcompra;
                     novaqtdplanta = qtdplantabd + qtdplanta;
@@ -400,7 +377,7 @@ namespace TheFarmOfUs
 
             else //ele só tem que verificar o valor na hr da compra
             {
-                if (qtdplantabd > qtdplanta) //se tiver mais no banco do q ele quiser vender 
+                if (qtdplantabd >= qtdplanta) //se tiver mais no banco do q ele quiser vender 
                 {
                     valorrestante = tenhodisponivel + valorcompra;
                     novaqtdplanta = qtdplantabd - qtdplanta;
@@ -468,7 +445,7 @@ namespace TheFarmOfUs
                 tenhodisponivel = (double)cmd.ExecuteScalar();
                 cmd.ExecuteNonQuery();
 
-                if (tenhodisponivel > valorcompra)
+                if (tenhodisponivel >= valorcompra)
                 {
                     valorrestante = tenhodisponivel - valorcompra;
 
@@ -593,7 +570,7 @@ namespace TheFarmOfUs
 
                 if (deseja == "comprar")
                 {
-                    if (tenhodisponivel > valorcompra)
+                    if (tenhodisponivel >= valorcompra)
                     {
                         valorrestante = tenhodisponivel - valorcompra;
 
@@ -729,8 +706,3 @@ namespace TheFarmOfUs
         } //FEITO
     }
 } 
-
-//meus deuses isso ta mt "ué" 
-//n ta mais 
-//ta menos ué agr
-

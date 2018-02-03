@@ -194,7 +194,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AdministraSalario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdministraSalario";
             this.Load += new System.EventHandler(this.AdministraSalario_Load);
             this.ResumeLayout(false);

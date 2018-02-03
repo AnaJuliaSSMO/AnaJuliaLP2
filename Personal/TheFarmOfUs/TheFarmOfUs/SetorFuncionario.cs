@@ -60,7 +60,7 @@ namespace TheFarmOfUs
             else
             {
                 Agrupamento_Setores menu = new Agrupamento_Setores();
-                menu.ShowDialog();
+                menu.Show();
             }
             this.Close();
 

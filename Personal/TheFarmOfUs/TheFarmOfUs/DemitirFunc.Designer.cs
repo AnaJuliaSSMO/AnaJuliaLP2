@@ -201,7 +201,9 @@
             this.Controls.Add(this.CPF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DemitirFunc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Demitir funcionário";
             this.ResumeLayout(false);
             this.PerformLayout();

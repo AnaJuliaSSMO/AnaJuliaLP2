@@ -150,7 +150,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quervender);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CompraVendaAgri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar / Vender sacas de produtos da fazenda";
             this.ResumeLayout(false);
             this.PerformLayout();

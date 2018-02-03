@@ -52,7 +52,7 @@
             this.nrf.Location = new System.Drawing.Point(16, 89);
             this.nrf.Name = "nrf";
             this.nrf.PasswordChar = '*';
-            this.nrf.Size = new System.Drawing.Size(480, 29);
+            this.nrf.Size = new System.Drawing.Size(510, 29);
             this.nrf.TabIndex = 4;
             // 
             // enviar
@@ -83,12 +83,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(526, 188);
+            this.ClientSize = new System.Drawing.Size(537, 188);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.enviar);
             this.Controls.Add(this.nrf);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "seg1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trava de segurança";
             this.ResumeLayout(false);
             this.PerformLayout();

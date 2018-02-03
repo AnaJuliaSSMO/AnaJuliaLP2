@@ -10,8 +10,7 @@ namespace TheFarmOfUs
 {
     class Logar //É A PRIMEIRA TELA, VC SÓ RECEBE LOGIN E SENHA ;)
     {
-        public static string nomeconf,userconf,senhaconf, entrou, cone="";
-
+        public static string nomeconf,userconf,senhaconf, cone="",entrou;
         public static void RealizarLogin(string user, string pass)
         {
             entrou = "n";
@@ -48,16 +47,25 @@ namespace TheFarmOfUs
                     entrou = "s";
                 }
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
+                if(entrou == "n")
                 {
-                    while (reader.Read())
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
                     {
-                        nomeconf = reader.GetString(0);
-                        userconf = reader.GetString(1);
-                        senhaconf = reader.GetString(2);
+                        while (reader.Read())
+                        {
+                            nomeconf = reader.GetString(0);
+                        }
                     }
+
+                    MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Seja bem vindo à The Farm of Us.\n\nThe Farm of Us foi criado para poder lhe ajudar na administração de sua fazenda\n\nAqui, você poderá controlar seus gastos, vendas,compras e tudo o que voce pode imaginar.\n\nAproveite e obrigado por aderir aos nossos serviços.");
+                }
+
+                else
+                {
+                    MessageBox.Show("Senha ou usuário inválido.");
                 }
             }
 
@@ -65,9 +73,9 @@ namespace TheFarmOfUs
             {
                 MessageBox.Show(cone);
             }
-            
+
             cmd.Connection.Close();
-        } //FEITO //COLOCADO O IF DE CONEXÃO
-      }
+        }
+    }
 }
     

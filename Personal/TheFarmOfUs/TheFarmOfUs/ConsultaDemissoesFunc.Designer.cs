@@ -128,6 +128,7 @@
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ConsultaDemissoesFunc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar demissões da fazenda";
             this.Load += new System.EventHandler(this.ConsultaDemissoesFunc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

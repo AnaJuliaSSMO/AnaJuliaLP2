@@ -18,11 +18,10 @@ namespace TheFarmOfUs
         {
             InitializeComponent();  
         }
-
-
+        
         private void MenuInicial_Load(object sender, EventArgs e)
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\reigado.WAV");
+            SoundPlayer simpleSound = new SoundPlayer(TheFarmOfUs.Audios.reigado);
             simpleSound.Play();
         }
         
@@ -61,19 +60,24 @@ namespace TheFarmOfUs
 
             Logar.RealizarLogin(user,pass);
 
-            usuario.Clear();
-            senha.Clear();
+            if(Logar.entrou == "s")
+            {
+                usuario.Clear();
+                senha.Clear();
+            }
 
-            MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show("Seja bem vindo à The Farm of Us.\n\nThe Farm of Us foi criado para poder lhe ajudar na administração de sua fazenda\n\nAqui, você poderá controlar seus gastos, vendas,compras e tudo o que voce pode imaginar.\n\nAproveite e obrigado por aderir aos nossos serviços.");
-            
-            gp.Show();
-            Hide();
+            else
+            {
+                usuario.Clear();
+                senha.Clear();
+                gp.Show();
+                Hide();
+            }
         }
 
         private void esquecisenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RefazSenha senha = new RefazSenha();
+            AcessoSenha senha= new AcessoSenha();
             senha.Show();
         }
     }

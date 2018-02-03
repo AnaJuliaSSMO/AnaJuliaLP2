@@ -70,7 +70,9 @@
             this.Controls.Add(this.choosesetor);
             this.Controls.Add(this.qualset);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Agrupamento_Setores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agrupamento_Setores";
             this.ResumeLayout(false);
             this.PerformLayout();

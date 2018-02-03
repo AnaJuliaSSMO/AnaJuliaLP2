@@ -70,7 +70,7 @@ namespace TheFarmOfUs
             {
                 //VOLTAR 
                 Agrupamento_Setores menu = new Agrupamento_Setores();
-                menu.ShowDialog();
+                menu.Show();
             }
             Close();
         }

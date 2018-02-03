@@ -56,8 +56,6 @@ namespace TheFarmOfUs
 
         private void fechar_Click(object sender, EventArgs e)
         {
-            MenuInicial me = new MenuInicial();
-            me.Show();
             Close();
         }
     }

@@ -99,7 +99,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.consultar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VerSaldo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VerSaldo";
             this.ResumeLayout(false);
             this.PerformLayout();

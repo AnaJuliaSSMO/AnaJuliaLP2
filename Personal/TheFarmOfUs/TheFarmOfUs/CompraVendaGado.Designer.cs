@@ -142,8 +142,11 @@
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quervender);
             this.Controls.Add(this.quercomprar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CompraVendaGado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar / Vender animais";
+            this.Load += new System.EventHandler(this.CompraVendaGado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

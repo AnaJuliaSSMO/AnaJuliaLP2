@@ -20,15 +20,15 @@ namespace TheFarmOfUs
         {
             string nrfs = nrf.Text;
 
-            if (nrfs != "acessibilidadetotal1901") { MessageBox.Show("Acesso negado"); }
-
-            else
+            if (nrfs == "acessibilidadetotal1901" || nrfs == "masterajmlc1901")
             {
                 MessageBox.Show("Acesso permitido");
                 SetorContabilidade set = new SetorContabilidade();
                 set.Show();
                 Close();
             }
+
+            else { MessageBox.Show("Acesso negado"); }
         }
 
         private void sair_Click_1(object sender, EventArgs e)

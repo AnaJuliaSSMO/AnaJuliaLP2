@@ -43,6 +43,7 @@
             // 
             // preencherformulario
             // 
+            this.preencherformulario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.preencherformulario.AutoSize = true;
             this.preencherformulario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preencherformulario.LinkColor = System.Drawing.Color.Black;
@@ -57,6 +58,7 @@
             // 
             // formal
             // 
+            this.formal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.formal.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formal.Location = new System.Drawing.Point(212, 12);
             this.formal.Name = "formal";
@@ -66,6 +68,7 @@
             // 
             // cadastrarlogin
             // 
+            this.cadastrarlogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cadastrarlogin.AutoSize = true;
             this.cadastrarlogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastrarlogin.LinkColor = System.Drawing.Color.Black;
@@ -79,6 +82,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(162, 174);
@@ -89,6 +93,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(188, 216);
@@ -99,6 +104,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(190, 271);
@@ -109,6 +115,7 @@
             // 
             // senha
             // 
+            this.senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.senha.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.senha.Location = new System.Drawing.Point(265, 271);
             this.senha.Multiline = true;
@@ -119,6 +126,7 @@
             // 
             // usuario
             // 
+            this.usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.usuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuario.Location = new System.Drawing.Point(265, 211);
             this.usuario.Multiline = true;
@@ -128,6 +136,7 @@
             // 
             // entrar
             // 
+            this.entrar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.entrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entrar.Location = new System.Drawing.Point(265, 319);
             this.entrar.Name = "entrar";
@@ -139,6 +148,7 @@
             // 
             // sair
             // 
+            this.sair.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.sair.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sair.Location = new System.Drawing.Point(369, 319);
             this.sair.Name = "sair";
@@ -151,6 +161,8 @@
             // esquecisenha
             // 
             this.esquecisenha.ActiveLinkColor = System.Drawing.Color.Navy;
+            this.esquecisenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.esquecisenha.AutoSize = true;
             this.esquecisenha.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.esquecisenha.LinkColor = System.Drawing.Color.Black;
@@ -166,6 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(710, 419);
             this.Controls.Add(this.esquecisenha);
@@ -179,7 +192,9 @@
             this.Controls.Add(this.cadastrarlogin);
             this.Controls.Add(this.formal);
             this.Controls.Add(this.preencherformulario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MenuInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The Farm Of Us";
             this.Load += new System.EventHandler(this.MenuInicial_Load);
             this.ResumeLayout(false);

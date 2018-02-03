@@ -171,7 +171,9 @@
             this.Controls.Add(this.valor);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quercomprar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CompraAgrotoxicos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar agrotóxicos";
             this.ResumeLayout(false);
             this.PerformLayout();

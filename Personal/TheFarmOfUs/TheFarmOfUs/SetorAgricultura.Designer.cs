@@ -70,7 +70,9 @@
             this.ClientSize = new System.Drawing.Size(646, 310);
             this.Controls.Add(this.agri);
             this.Controls.Add(this.Qst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SetorAgricultura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agricultura";
             this.ResumeLayout(false);
             this.PerformLayout();

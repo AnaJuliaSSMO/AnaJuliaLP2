@@ -30,8 +30,8 @@ namespace TheFarmOfUs
             {
                 SetorFuncionario set = new SetorFuncionario();
                 set.Show();
+                Close();
             }
-            Close();
         }
     }
 }

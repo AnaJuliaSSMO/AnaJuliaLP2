@@ -86,7 +86,9 @@
             this.Controls.Add(this.irmaquina);
             this.Controls.Add(this.irplanta);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Desejair";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar estoque de:";
             this.ResumeLayout(false);
             this.PerformLayout();

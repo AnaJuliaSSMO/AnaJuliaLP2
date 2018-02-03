@@ -152,7 +152,9 @@
             this.Controls.Add(this.nomes);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.retirar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RetirarMaquinas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Retirar máquinas agrícolas do estoque";
             this.ResumeLayout(false);
             this.PerformLayout();

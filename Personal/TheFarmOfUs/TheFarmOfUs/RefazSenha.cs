@@ -21,7 +21,6 @@ namespace TheFarmOfUs
         private void cancelar_Click(object sender, EventArgs e)
         {
             MenuInicial men = new MenuInicial();
-            men.Show();
             Close();
         }
 
@@ -93,6 +92,60 @@ namespace TheFarmOfUs
                 MessageBox.Show(cone);
             }
 
+            cmd.Connection.Close();
+        }
+
+        private void CPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            string cpf = CPF.Text;
+            string pegacpf, cone = "", nome;
+
+            SqlCommand cmd = new SqlCommand()
+            {
+                Connection = new SqlConnection(@"Data Source=(localdb)\MySlave;Initial Catalog=LOGINUSER;Integrated Security=SSPI")
+            };
+
+            try
+            {
+                cmd.Connection.Open();
+            }
+
+            catch (SqlException)
+            {
+                cone = "Não foi possível estabelecer conexão no momento. Por favor, tente mais tarde.";
+            }
+
+            if (cone == "")
+            {
+                cmd.CommandText = String.Format(@"SELECT CPF
+                                              FROM Funcionario
+                                              WHERE CPF = '{0}'", cpf);
+                pegacpf = (string)cmd.ExecuteScalar();
+                cmd.ExecuteNonQuery();
+
+                if (pegacpf == null)
+                {
+                    MessageBox.Show("CPF não cadastrado em nosso sistema, por favor verifique as informações.");
+                }
+
+                else
+                {
+                    cmd.CommandText = String.Format(@"SELECT Nome
+                                                      FROM Funcionario
+                                                      WHERE CPF = '{0}'", cpf);
+
+                    nome = (string)cmd.ExecuteScalar();
+                    cmd.ExecuteNonQuery();
+
+                    nometxt.Text = nome;
+                }
+            }
+
+            else
+            {
+                MessageBox.Show(cone);
+            }
+            cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
     }

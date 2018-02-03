@@ -94,7 +94,7 @@
             // voltar
             // 
             this.voltar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voltar.Location = new System.Drawing.Point(209, 232);
+            this.voltar.Location = new System.Drawing.Point(217, 232);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(92, 39);
             this.voltar.TabIndex = 4;
@@ -110,7 +110,9 @@
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConsultarEstoqueAgricultura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar estoque de sacas";
             this.Load += new System.EventHandler(this.ConsultarAgricultura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

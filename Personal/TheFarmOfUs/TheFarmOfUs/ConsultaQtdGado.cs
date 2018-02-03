@@ -31,8 +31,8 @@ namespace TheFarmOfUs
             {
                 SetorPecuaria gado = new SetorPecuaria();
                 gado.Show();
+                Close();
             }
-            Close();
         }
     }
 }

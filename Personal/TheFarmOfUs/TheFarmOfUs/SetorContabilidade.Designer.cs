@@ -66,7 +66,9 @@
             this.ClientSize = new System.Drawing.Size(529, 254);
             this.Controls.Add(this.cont);
             this.Controls.Add(this.Qst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SetorContabilidade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contabilidade";
             this.Load += new System.EventHandler(this.Contabilidade_Load);
             this.ResumeLayout(false);

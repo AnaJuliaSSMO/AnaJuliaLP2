@@ -63,8 +63,9 @@
             this.nrf.Location = new System.Drawing.Point(16, 103);
             this.nrf.Name = "nrf";
             this.nrf.PasswordChar = '*';
-            this.nrf.Size = new System.Drawing.Size(480, 29);
+            this.nrf.Size = new System.Drawing.Size(503, 29);
             this.nrf.TabIndex = 12;
+            this.nrf.TextChanged += new System.EventHandler(this.nrf_TextChanged);
             // 
             // label1
             // 
@@ -76,6 +77,7 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Nesta sessão é permitida apenas a entrada de funcionários \r\nda empresa autorizado" +
     "s, por favor, identifique-se com o\r\nseu NCF: \r\n";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AcessoAgricultura
             // 
@@ -88,7 +90,9 @@
             this.Controls.Add(this.enviar);
             this.Controls.Add(this.nrf);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AcessoAgricultura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trava de segurança";
             this.ResumeLayout(false);
             this.PerformLayout();

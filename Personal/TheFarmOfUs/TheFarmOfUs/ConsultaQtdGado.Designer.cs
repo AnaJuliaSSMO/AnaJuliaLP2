@@ -126,7 +126,9 @@
             this.Controls.Add(this.retor);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConsultaQtdGado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar estoque de gado";
             this.Load += new System.EventHandler(this.QuantidadeGado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -168,19 +168,20 @@
             this.destino.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.destino.FormattingEnabled = true;
             this.destino.Items.AddRange(new object[] {
-            "Porco",
+            "Vaca",
             "Boi",
-            "Cabra",
+            "Galinha",
+            "Porco",
             "Cavalo",
+            "Cabra",
             "Carneiro",
             "Coelho",
-            "Pato",
-            "Vaca",
-            "Galinha"});
+            "Pato"});
             this.destino.Location = new System.Drawing.Point(57, 254);
             this.destino.Name = "destino";
             this.destino.Size = new System.Drawing.Size(310, 30);
             this.destino.TabIndex = 34;
+            this.destino.SelectedIndexChanged += new System.EventHandler(this.destino_SelectedIndexChanged);
             // 
             // CompraAlipGado
             // 
@@ -200,7 +201,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quercomprar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CompraAlipGado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar alimentos, remédios e/ou vitaminas ";
             this.ResumeLayout(false);
             this.PerformLayout();

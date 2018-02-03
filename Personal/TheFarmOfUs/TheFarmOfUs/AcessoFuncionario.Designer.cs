@@ -65,6 +65,7 @@
             this.nrf.PasswordChar = '*';
             this.nrf.Size = new System.Drawing.Size(480, 29);
             this.nrf.TabIndex = 20;
+            this.nrf.TextChanged += new System.EventHandler(this.nrf_TextChanged);
             // 
             // label1
             // 
@@ -88,7 +89,9 @@
             this.Controls.Add(this.enviar);
             this.Controls.Add(this.nrf);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AcessoFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trava de segurança";
             this.ResumeLayout(false);
             this.PerformLayout();

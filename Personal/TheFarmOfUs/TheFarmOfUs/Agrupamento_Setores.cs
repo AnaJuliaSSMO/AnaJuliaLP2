@@ -52,6 +52,7 @@ namespace TheFarmOfUs
             else
             {
                 MenuInicial menu = new MenuInicial();
+                Close();
                 menu.ShowDialog();
             }
             Close();

@@ -88,7 +88,9 @@
             this.Controls.Add(this.enviar);
             this.Controls.Add(this.nrf);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AcessoContabilidade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trava de segurança";
             this.ResumeLayout(false);
             this.PerformLayout();

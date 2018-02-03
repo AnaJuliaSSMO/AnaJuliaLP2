@@ -64,7 +64,7 @@
             this.nomeDataGridViewTextBoxColumn,
             this.cPFDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.loginBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(445, 150);
             this.dataGridView1.TabIndex = 2;
@@ -126,7 +126,9 @@
             this.Controls.Add(this.retor);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConsultaLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar logins dos funcionários";
             this.Load += new System.EventHandler(this.ConsultaLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

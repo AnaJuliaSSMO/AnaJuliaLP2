@@ -71,7 +71,9 @@
             this.ClientSize = new System.Drawing.Size(632, 313);
             this.Controls.Add(this.funcoesfuncionario);
             this.Controls.Add(this.Qst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SetorFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
             this.ResumeLayout(false);
             this.PerformLayout();

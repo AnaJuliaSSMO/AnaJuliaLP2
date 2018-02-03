@@ -68,7 +68,7 @@
             // retor
             // 
             this.retor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.retor.Location = new System.Drawing.Point(286, 199);
+            this.retor.Location = new System.Drawing.Point(269, 199);
             this.retor.Name = "retor";
             this.retor.Size = new System.Drawing.Size(136, 44);
             this.retor.TabIndex = 3;
@@ -176,7 +176,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.retor);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConsultaRegistroFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar registros de funcionarios";
             this.Load += new System.EventHandler(this.ConsultaRegistroFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

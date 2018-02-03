@@ -23,8 +23,8 @@ namespace TheFarmOfUs
             {
                 SetorFuncionario set = new SetorFuncionario();
                 set.Show();
+                Close();
             }
-            Close();
         }
 
         private void ConsultaRegistroFuncionario_Load(object sender, EventArgs e)
