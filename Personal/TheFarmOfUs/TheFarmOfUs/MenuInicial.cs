@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,10 +19,13 @@ namespace TheFarmOfUs
             InitializeComponent();  
         }
 
-        private void formal_TextChanged(object sender, EventArgs e)
-        {
-        }
 
+        private void MenuInicial_Load(object sender, EventArgs e)
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\reigado.WAV");
+            simpleSound.Play();
+        }
+        
         private void preencherformulario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string name = formal.Text;
@@ -50,8 +54,6 @@ namespace TheFarmOfUs
 
         private void entrar_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Seja bem vindo à The Farm of Us.\n\nThe Farm of Us foi criado para poder lhe ajudar na administração de sua fazenda\n\nAqui, você poderá controlar seus gastos, vendas,compras e tudo o que voce pode imaginar.\n\nAproveite e obrigado por aderir aos nossos serviços.");
             Agrupamento_Setores gp = new Agrupamento_Setores();
 
             string user = usuario.Text;
@@ -59,29 +61,20 @@ namespace TheFarmOfUs
 
             Logar.RealizarLogin(user,pass);
 
-            if (Logar.entrou == "n")
-            {
-                usuario.Clear();
-                senha.Clear();
-                MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                gp.Show();
-                Hide();
-            }
+            usuario.Clear();
+            senha.Clear();
 
-            else
-            {
-                MessageBox.Show("Usuário ou senha inválidos", "Opa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            MessageBox.Show("Tudo ok, bem vindo Sr / Sra " + Logar.nomeconf, "Acesso com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Seja bem vindo à The Farm of Us.\n\nThe Farm of Us foi criado para poder lhe ajudar na administração de sua fazenda\n\nAqui, você poderá controlar seus gastos, vendas,compras e tudo o que voce pode imaginar.\n\nAproveite e obrigado por aderir aos nossos serviços.");
+            
+            gp.Show();
+            Hide();
         }
 
         private void esquecisenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RefazSenha senha = new RefazSenha();
             senha.Show();
-        }
-
-        private void MenuInicial_Load(object sender, EventArgs e)
-        {
         }
     }
 }

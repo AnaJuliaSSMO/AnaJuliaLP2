@@ -151,7 +151,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ConsultarEstoqueMaquinas";
-            this.Text = "ConsultaEstoqueMaquinas";
+            this.Text = "Consultar estoque de Máquinas agrícolas";
             this.Load += new System.EventHandler(this.ConsultaEstoqueMaquinaPlanta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasABindingSource)).EndInit();

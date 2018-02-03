@@ -228,7 +228,7 @@
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quercomprar);
             this.Name = "CompraMaquinas";
-            this.Text = "MaquinasCompraAtt";
+            this.Text = "Comprar máquinas ágricolas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

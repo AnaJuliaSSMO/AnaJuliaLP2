@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lOGINUSERDataSet2 = new TheFarmOfUs.LOGINUSERDataSet2();
-            this.gadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gadoTableAdapter = new TheFarmOfUs.LOGINUSERDataSet2TableAdapters.GadoTableAdapter();
             this.especieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alimentacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lOGINUSERDataSet2 = new TheFarmOfUs.LOGINUSERDataSet2();
+            this.gadoTableAdapter = new TheFarmOfUs.LOGINUSERDataSet2TableAdapters.GadoTableAdapter();
             this.retor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,20 +69,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // lOGINUSERDataSet2
-            // 
-            this.lOGINUSERDataSet2.DataSetName = "LOGINUSERDataSet2";
-            this.lOGINUSERDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gadoBindingSource
-            // 
-            this.gadoBindingSource.DataMember = "Gado";
-            this.gadoBindingSource.DataSource = this.lOGINUSERDataSet2;
-            // 
-            // gadoTableAdapter
-            // 
-            this.gadoTableAdapter.ClearBeforeFill = true;
-            // 
             // especieDataGridViewTextBoxColumn
             // 
             this.especieDataGridViewTextBoxColumn.DataPropertyName = "Especie";
@@ -107,6 +93,20 @@
             this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
             this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
             // 
+            // gadoBindingSource
+            // 
+            this.gadoBindingSource.DataMember = "Gado";
+            this.gadoBindingSource.DataSource = this.lOGINUSERDataSet2;
+            // 
+            // lOGINUSERDataSet2
+            // 
+            this.lOGINUSERDataSet2.DataSetName = "LOGINUSERDataSet2";
+            this.lOGINUSERDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gadoTableAdapter
+            // 
+            this.gadoTableAdapter.ClearBeforeFill = true;
+            // 
             // retor
             // 
             this.retor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,11 +127,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ConsultaQtdGado";
-            this.Text = "QuantidadeGado";
+            this.Text = "Consultar estoque de gado";
             this.Load += new System.EventHandler(this.QuantidadeGado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

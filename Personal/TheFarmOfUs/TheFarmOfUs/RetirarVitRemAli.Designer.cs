@@ -125,7 +125,7 @@
             this.Controls.Add(this.tipo);
             this.Controls.Add(this.label1);
             this.Name = "RetirarVitRemAli";
-            this.Text = "AcrescentaRetiraVitAliRem";
+            this.Text = "Retirar alimentos, vitaminas e/ou remédios do estoque";
             this.ResumeLayout(false);
             this.PerformLayout();
 

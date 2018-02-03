@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -53,8 +54,65 @@ namespace TheFarmOfUs
                     valor.Text = "00,00";
                 }
             }
-            //MessageBox.Show(CompraEVenda.PegarValorDisponivel(escolha));
+        }
 
+        private void animais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int sel = animais.SelectedIndex;
+
+            if (sel == 0)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\vaca.WAV");
+                simpleSound.Play();
+            }
+
+            else if (sel == 1)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\boi.WAV");
+                simpleSound.Play();
+            }
+
+            else if (sel == 2)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\galinha.WAV");
+                simpleSound.Play();
+            }
+
+            else if (sel == 3)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\porco.WAV");
+                simpleSound.Play();
+            }
+
+            else if (sel == 4)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\cavalo.WAV");
+                simpleSound.Play();
+            }
+
+            else if (sel == 5)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\cabra.WAV");
+                simpleSound.Play();
+            }
+
+            else if (sel == 6)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\carneiro.WAV");
+                simpleSound.Play();
+            }
+
+            else if (sel == 7)
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\coelho.WAV");
+                simpleSound.Play();
+            }
+
+            else
+            {
+                SoundPlayer simpleSound = new SoundPlayer(@"C:\AnaJuliaLP2\Personal\TheFarmOfUs\songs\pato.WAV");
+                simpleSound.Play();
+            }
         }
 
         private void quervender_Click(object sender, EventArgs e)

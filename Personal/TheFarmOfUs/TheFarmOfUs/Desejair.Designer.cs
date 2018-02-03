@@ -87,7 +87,7 @@
             this.Controls.Add(this.irplanta);
             this.Controls.Add(this.label1);
             this.Name = "Desejair";
-            this.Text = "Desejair";
+            this.Text = "Consultar estoque de:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

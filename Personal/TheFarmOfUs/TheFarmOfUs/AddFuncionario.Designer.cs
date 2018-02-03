@@ -221,7 +221,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddFuncionario";
-            this.Text = "AddFuncionario";
+            this.Text = "Admitir funcionário novo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

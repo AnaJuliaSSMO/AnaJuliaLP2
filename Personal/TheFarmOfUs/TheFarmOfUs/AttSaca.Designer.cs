@@ -104,7 +104,7 @@
             this.Controls.Add(this.nom);
             this.Controls.Add(this.label1);
             this.Name = "AttSaca";
-            this.Text = "AttSaca";
+            this.Text = "Atualizar quantidade de sacas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

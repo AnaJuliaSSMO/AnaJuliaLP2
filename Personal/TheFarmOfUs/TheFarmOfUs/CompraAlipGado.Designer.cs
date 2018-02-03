@@ -182,7 +182,7 @@
             this.destino.Size = new System.Drawing.Size(310, 30);
             this.destino.TabIndex = 34;
             // 
-            // AlimentoRemedioEtc
+            // CompraAlipGado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,8 +200,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quercomprar);
-            this.Name = "AlimentoRemedioEtc";
-            this.Text = "AlimentoRemedioEtc";
+            this.Name = "CompraAlipGado";
+            this.Text = "Comprar alimentos, remédios e/ou vitaminas ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -202,7 +202,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "DemitirFunc";
-            this.Text = "DemitirFunc";
+            this.Text = "Demitir funcionário";
             this.ResumeLayout(false);
             this.PerformLayout();
 

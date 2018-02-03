@@ -89,7 +89,7 @@
             this.Controls.Add(this.nrf);
             this.Controls.Add(this.label1);
             this.Name = "seg1";
-            this.Text = "Dono";
+            this.Text = "Trava de segurança";
             this.ResumeLayout(false);
             this.PerformLayout();
 

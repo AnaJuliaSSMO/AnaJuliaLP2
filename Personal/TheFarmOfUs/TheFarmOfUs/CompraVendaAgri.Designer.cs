@@ -136,7 +136,7 @@
             this.quercomprar.UseVisualStyleBackColor = true;
             this.quercomprar.Click += new System.EventHandler(this.quercomprar_Click);
             // 
-            // BuySellplantinhas
+            // CompraVendaAgri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,8 +150,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quervender);
-            this.Name = "BuySellplantinhas";
-            this.Text = "BuyorSellPlantaedition";
+            this.Name = "CompraVendaAgri";
+            this.Text = "Comprar / Vender sacas de produtos da fazenda";
             this.ResumeLayout(false);
             this.PerformLayout();
 

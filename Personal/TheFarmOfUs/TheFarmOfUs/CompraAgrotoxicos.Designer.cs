@@ -155,7 +155,7 @@
             this.quercomprar.UseVisualStyleBackColor = true;
             this.quercomprar.Click += new System.EventHandler(this.quercomprar_Click);
             // 
-            // Agroto
+            // CompraAgrotoxicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,8 +171,8 @@
             this.Controls.Add(this.valor);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quercomprar);
-            this.Name = "Agroto";
-            this.Text = "Agroto";
+            this.Name = "CompraAgrotoxicos";
+            this.Text = "Comprar agrotóxicos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

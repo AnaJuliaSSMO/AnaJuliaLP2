@@ -63,7 +63,6 @@
             this.formal.Size = new System.Drawing.Size(321, 29);
             this.formal.TabIndex = 1;
             this.formal.Text = "Por qual nome deseja ser chamado?";
-            this.formal.TextChanged += new System.EventHandler(this.formal_TextChanged);
             // 
             // cadastrarlogin
             // 

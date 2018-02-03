@@ -153,6 +153,7 @@
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.retirar);
             this.Name = "RetirarMaquinas";
+            this.Text = "Retirar máquinas agrícolas do estoque";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -117,6 +117,7 @@
             this.animais.Name = "animais";
             this.animais.Size = new System.Drawing.Size(310, 30);
             this.animais.TabIndex = 16;
+            this.animais.SelectedIndexChanged += new System.EventHandler(this.animais_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -128,7 +129,7 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Qual animal deseja comprar/vender, qual a quantidade\r\ne qual o seu valor?\r\n";
             // 
-            // BuyorSell
+            // CompraVendaGado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,8 +142,8 @@
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.quervender);
             this.Controls.Add(this.quercomprar);
-            this.Name = "BuyorSell";
-            this.Text = "BuyorSell";
+            this.Name = "CompraVendaGado";
+            this.Text = "Comprar / Vender animais";
             this.ResumeLayout(false);
             this.PerformLayout();
 

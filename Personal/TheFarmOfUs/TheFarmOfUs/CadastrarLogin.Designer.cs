@@ -193,7 +193,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CadastrarLogin";
-            this.Text = "CadastrarLogin";
+            this.Text = "Cadastrar login de funcionário";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

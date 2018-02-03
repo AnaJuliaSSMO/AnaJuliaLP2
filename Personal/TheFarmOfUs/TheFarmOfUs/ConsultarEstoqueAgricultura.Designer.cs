@@ -111,7 +111,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ConsultarEstoqueAgricultura";
-            this.Text = "ConsultarAgricultura";
+            this.Text = "Consultar estoque de sacas";
             this.Load += new System.EventHandler(this.ConsultarAgricultura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantasBindingSource)).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministraSalario));
             this.label1 = new System.Windows.Forms.Label();
             this.salario = new System.Windows.Forms.TextBox();
             this.setores = new System.Windows.Forms.ComboBox();
@@ -98,6 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Location = new System.Drawing.Point(17, 198);
@@ -176,6 +178,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(401, 442);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.alt);
@@ -189,6 +193,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "AdministraSalario";
             this.Text = "AdministraSalario";
             this.Load += new System.EventHandler(this.AdministraSalario_Load);

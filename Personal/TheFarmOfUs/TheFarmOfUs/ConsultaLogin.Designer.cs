@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lOGINUSERDataSet6 = new TheFarmOfUs.LOGINUSERDataSet6();
-            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loginTableAdapter = new TheFarmOfUs.LOGINUSERDataSet6TableAdapters.LoginTableAdapter();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lOGINUSERDataSet6 = new TheFarmOfUs.LOGINUSERDataSet6();
+            this.loginTableAdapter = new TheFarmOfUs.LOGINUSERDataSet6TableAdapters.LoginTableAdapter();
             this.retor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,20 +69,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(445, 150);
             this.dataGridView1.TabIndex = 2;
             // 
-            // lOGINUSERDataSet6
-            // 
-            this.lOGINUSERDataSet6.DataSetName = "LOGINUSERDataSet6";
-            this.lOGINUSERDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loginBindingSource
-            // 
-            this.loginBindingSource.DataMember = "Login";
-            this.loginBindingSource.DataSource = this.lOGINUSERDataSet6;
-            // 
-            // loginTableAdapter
-            // 
-            this.loginTableAdapter.ClearBeforeFill = true;
-            // 
             // usuarioDataGridViewTextBoxColumn
             // 
             this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario";
@@ -107,6 +93,20 @@
             this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
             // 
+            // loginBindingSource
+            // 
+            this.loginBindingSource.DataMember = "Login";
+            this.loginBindingSource.DataSource = this.lOGINUSERDataSet6;
+            // 
+            // lOGINUSERDataSet6
+            // 
+            this.lOGINUSERDataSet6.DataSetName = "LOGINUSERDataSet6";
+            this.lOGINUSERDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loginTableAdapter
+            // 
+            this.loginTableAdapter.ClearBeforeFill = true;
+            // 
             // retor
             // 
             this.retor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,11 +127,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ConsultaLogin";
-            this.Text = "ConsultaLogin";
+            this.Text = "Consultar logins dos funcionários";
             this.Load += new System.EventHandler(this.ConsultaLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINUSERDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

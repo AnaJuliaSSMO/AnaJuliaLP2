@@ -108,7 +108,7 @@
             this.acrescentar.UseVisualStyleBackColor = true;
             this.acrescentar.Click += new System.EventHandler(this.acrescentar_Click);
             // 
-            // AcresouReti
+            // AttQtdAnimais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +119,8 @@
             this.Controls.Add(this.qtd);
             this.Controls.Add(this.animais);
             this.Controls.Add(this.label1);
-            this.Name = "AcresouReti";
-            this.Text = "AcrescentaGado";
+            this.Name = "AttQtdAnimais";
+            this.Text = "Atualizar quantidade do gado";
             this.ResumeLayout(false);
             this.PerformLayout();
 
