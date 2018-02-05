@@ -88,9 +88,10 @@ namespace TheFarmOfUs
             if (cone == "")
             {
                 cmd.CommandText = String.Format(@"SELECT Valor_disponivel
-                                                FROM Disponivel
-                                                WHERE Setor = 'Pecuaria'");
+                                                  FROM Disponivel
+                                                  WHERE Setor = 'Pecuaria'");
                 tenhodisponivel = (double)cmd.ExecuteScalar();
+                MessageBox.Show(tenhodisponivel.ToString());
 
                 cmd.CommandText = String.Format(@"SELECT Quantidade
                                       FROM Gado
@@ -107,8 +108,8 @@ namespace TheFarmOfUs
                         valorrestante = double.Parse(txtvalor);*/
 
                         cmd.CommandText = String.Format(@"UPDATE Disponivel 
-                                                     SET Valor_disponivel = @valorfinal
-                                                     WHERE Setor = 'Pecuaria'", valorrestante);
+                                                          SET Valor_disponivel = @valorfinal
+                                                          WHERE Setor = 'Pecuaria'", valorrestante);
 
                         cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
                         cmd.ExecuteNonQuery();
@@ -116,8 +117,8 @@ namespace TheFarmOfUs
                         //reader.Close();
 
                         cmd.CommandText = String.Format(@"UPDATE Gado 
-                                                      SET Quantidade = {0}
-                                                      WHERE Animal = '{1}'", novaqtdani, animal);
+                                                          SET Quantidade = {0}
+                                                          WHERE Animal = '{1}'", novaqtdani, animal);
 
                         MessageBox.Show("Compra efetuada com sucesso, o saldo atual para uso do setor Pecuária é de R$ " + valorrestante + ".\nVocê possui " + novaqtdani + " " + animal + "(s) agora!");
 
@@ -140,8 +141,8 @@ namespace TheFarmOfUs
 
 
                         cmd.CommandText = String.Format(@"UPDATE Disponivel 
-                                                     SET Valor_disponivel = @valorfinal
-                                                     WHERE Setor = 'P0ecuaria'", valorrestante);
+                                                          SET Valor_disponivel = @valorfinal
+                                                          WHERE Setor = 'Pecuaria'", valorrestante);
 
                         cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
                         cmd.ExecuteNonQuery();
@@ -432,15 +433,15 @@ namespace TheFarmOfUs
             if (cone == "")
             {
                 cmd.CommandText = String.Format(@"SELECT Nome 
-                                               FROM Agrotoxicos
-                                               WHERE Nome = '{0}';", agro);
+                                                  FROM Agrotoxicos
+                                                  WHERE Nome = '{0}';", agro);
 
                 jaecadastrado = (string)cmd.ExecuteScalar();
                 cmd.ExecuteNonQuery();
 
                 cmd.CommandText = String.Format(@"SELECT Valor_disponivel
-                                                FROM Disponivel
-                                                WHERE Setor = 'Agricultura'");
+                                                  FROM Disponivel
+                                                  WHERE Setor = 'Agricultura'");
 
                 tenhodisponivel = (double)cmd.ExecuteScalar();
                 cmd.ExecuteNonQuery();
@@ -450,9 +451,9 @@ namespace TheFarmOfUs
                     valorrestante = tenhodisponivel - valorcompra;
 
                     cmd.CommandText = String.Format(@"UPDATE Disponivel 
-                                                  SET Valor_disponivel = @valorfinal
-                                                  WHERE Setor = 'Agricultura'", valorrestante);
-
+                                                      SET Valor_disponivel = @valorfinal
+                                                      WHERE Setor = 'Agricultura'", valorrestante);
+                      
                     cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
                     cmd.ExecuteNonQuery();
 
@@ -460,23 +461,23 @@ namespace TheFarmOfUs
                     {
                         novaqtd = quantidade;
                         cmd.CommandText = String.Format(@"INSERT  
-                                                      INTO Agrotoxicos 
-                                                      VALUES ('{0}',{1},'{2}')", agro, novaqtd, plantadestino);
+                                                          INTO Agrotoxicos 
+                                                          VALUES ('{0}',{1},'{2}')", agro, novaqtd, plantadestino);
                     }
 
                     else //se sim, ele vai dar um update
                     {
                         cmd.CommandText = String.Format(@"SELECT Quantidade 
-                                                   FROM Agrotoxicos
-                                                   WHERE Nome = '{0}';", agro);
+                                                          FROM Agrotoxicos
+                                                          WHERE Nome = '{0}';", agro);
 
                         quantidadebd = (int)cmd.ExecuteScalar();
                         cmd.ExecuteNonQuery();
 
                         novaqtd = quantidadebd + quantidade;
                         cmd.CommandText = String.Format(@"UPDATE Agrotoxicos 
-                                                    SET Quantidade = {0}
-                                                    WHERE Nome = '{1}'", novaqtd, agro);
+                                                          SET Quantidade = {0}
+                                                          WHERE Nome = '{1}'", novaqtd, agro);
                     }
 
                     MessageBox.Show("Efetuado com sucesso,você possui " + novaqtd + "kg/embalagens de " + agro);

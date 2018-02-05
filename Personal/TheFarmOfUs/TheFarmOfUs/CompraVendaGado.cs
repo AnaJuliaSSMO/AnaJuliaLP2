@@ -125,7 +125,7 @@ namespace TheFarmOfUs
             double valorcompra = valorunitario * quantidadeani;
 
             MessageBox.Show("O animal escolhido foi: " + animalescolhido);
-            if (MessageBox.Show("O valor de sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("O valor de sua venda foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 CompraVendaRetiradaSaldo.CompraVendaGado(deseja, valorcompra, animalescolhido, quantidadeani);
 
