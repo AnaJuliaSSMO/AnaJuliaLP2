@@ -66,7 +66,7 @@ namespace TheFarmOfUs
 
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
-        } //FEITO
+        } //FEITO //COLOCADO O IF DE CONEXÃO
 
         public static void CompraVendaGado(string deseja, double valorcompra, string animal, int quantidadeani)
         {
@@ -334,82 +334,90 @@ namespace TheFarmOfUs
                 cone = "Não foi possível estabelecer conexão no momento. Por favor, tente mais tarde.";
             }
 
-            cmd.CommandText = String.Format(@"SELECT Valor_disponivel
+            if (cone == "")
+            {
+                cmd.CommandText = String.Format(@"SELECT Valor_disponivel
                                               FROM Disponivel
                                               WHERE Setor = 'Agricultura'");
-            tenhodisponivel = (double)cmd.ExecuteScalar();
+                tenhodisponivel = (double)cmd.ExecuteScalar();
 
-            cmd.CommandText = String.Format(@"SELECT Quantidade
+                cmd.CommandText = String.Format(@"SELECT Quantidade
                                               FROM Plantas
                                               WHERE Nome = '{0}';", planta);
-            qtdplantabd = (int)cmd.ExecuteScalar();
+                qtdplantabd = (int)cmd.ExecuteScalar();
 
-            if (deseja == "comprar") //r A CONTA MUDA ENT POR ISSO TEM ESSAS COISAS
-            {
-                if (tenhodisponivel >= valorcompra)
+                if (deseja == "comprar") //r A CONTA MUDA ENT POR ISSO TEM ESSAS COISAS
                 {
-                    valorrestante = tenhodisponivel - valorcompra;
-                    novaqtdplanta = qtdplantabd + qtdplanta;
+                    if (tenhodisponivel >= valorcompra)
+                    {
+                        valorrestante = tenhodisponivel - valorcompra;
+                        novaqtdplanta = qtdplantabd + qtdplanta;
 
-                    cmd.CommandText = String.Format(@"UPDATE Disponivel 
+                        cmd.CommandText = String.Format(@"UPDATE Disponivel 
                                                      SET Valor_disponivel = @valorfinal
                                                      WHERE Setor = 'Agricultura'", valorrestante);
 
-                    cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
-                    cmd.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
+                        cmd.ExecuteNonQuery();
 
-                    cmd.CommandText = String.Format(@"UPDATE Plantas 
+                        cmd.CommandText = String.Format(@"UPDATE Plantas 
                                                       SET Quantidade = @novaqtd
                                                       WHERE Nome = '{1}'", novaqtdplanta, planta);
 
-                    cmd.Parameters.AddWithValue("@novaqtd", novaqtdplanta);
-                    cmd.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@novaqtd", novaqtdplanta);
+                        cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Compra efetuada com sucesso, o saldo atual para uso do setor Agricultura é de R$ " + valorrestante + ".\nVocê possui " + novaqtdplanta + " " + planta + "(s) agora!");
-                    ok = "s";
+                        MessageBox.Show("Compra efetuada com sucesso, o saldo atual para uso do setor Agricultura é de R$ " + valorrestante + ".\nVocê possui " + novaqtdplanta + " " + planta + "(s) agora!");
+                        ok = "s";
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
+                        ok = "n";
+                    }
                 }
 
-                else
+                else //ele só tem que verificar o valor na hr da compra
                 {
-                    MessageBox.Show("Saldo insuficiente,por favor, insira um valor até R$ " + tenhodisponivel + " ou consulte o setor de contabilidade.");
-                    ok = "n";
-                }
-            }
+                    if (qtdplantabd >= qtdplanta) //se tiver mais no banco do q ele quiser vender 
+                    {
+                        valorrestante = tenhodisponivel + valorcompra;
+                        novaqtdplanta = qtdplantabd - qtdplanta;
 
-            else //ele só tem que verificar o valor na hr da compra
-            {
-                if (qtdplantabd >= qtdplanta) //se tiver mais no banco do q ele quiser vender 
-                {
-                    valorrestante = tenhodisponivel + valorcompra;
-                    novaqtdplanta = qtdplantabd - qtdplanta;
-                    
-                    cmd.CommandText = String.Format(@"UPDATE Disponivel 
+                        cmd.CommandText = String.Format(@"UPDATE Disponivel 
                                                      SET Valor_disponivel = @valorfinal
                                                      WHERE Setor = 'Agricultura'", valorrestante);
 
-                    cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
-                    cmd.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@valorfinal", valorrestante);
+                        cmd.ExecuteNonQuery();
 
-                    cmd.CommandText = String.Format(@"UPDATE Plantas 
+                        cmd.CommandText = String.Format(@"UPDATE Plantas 
                                                     SET Quantidade = @novaqtd
                                                     WHERE Nome = '{1}'", novaqtdplanta, planta);
-                    cmd.Parameters.AddWithValue("@novaqtd", novaqtdplanta);
+                        cmd.Parameters.AddWithValue("@novaqtd", novaqtdplanta);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Venda efetuada com sucesso, o saldo atual para uso do setor Pecuária é de R$ " + valorrestante + ".\nVocê possui " + novaqtdplanta + " " + planta + "(s) agora!");
+                        ok = "s";
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Não há sacas o suficiente para a venda.Por favor,insira um número até " + qtdplanta);
+                        ok = "n";
+                    }
+
                     cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Venda efetuada com sucesso, o saldo atual para uso do setor Pecuária é de R$ " + valorrestante + ".\nVocê possui " + novaqtdplanta + " " + planta + "(s) agora!");
-                    ok = "s";
                 }
-
-                else
-                {
-                    MessageBox.Show("Não há sacas o suficiente para a venda.Por favor,insira um número até " + qtdplanta);
-                    ok = "n";
-                }
-                
-                cmd.ExecuteNonQuery();
-                cmd.Connection.Close();
             }
-        } //FEITO?? FEITO :3
+
+            else
+            {
+                MessageBox.Show(cone);
+            }
+            cmd.Connection.Close();
+        } //FEITO //COLOCADO O IF DE CONEXÃO
 
         public static void CompraAgro(string agro, int quantidade, double valorcompra, string plantadestino)
         {
@@ -668,42 +676,49 @@ namespace TheFarmOfUs
                 cone = "Não foi possível efeutar a conexão, tente mais tarde";
             }
 
-            cmd.CommandText = String.Format(@"SELECT Quantidade
+            if(cone == "")
+            {
+                cmd.CommandText = String.Format(@"SELECT Quantidade
                                                FROM Gado
                                                WHERE Animal = '{0}';", animal);
 
-            quantidadebd = (int)cmd.ExecuteScalar();
+                quantidadebd = (int)cmd.ExecuteScalar();
 
-            if (deseja == "colocar")
-            {
-                novaqtd = quantidadebd + quantidade;
+                if (deseja == "colocar")
+                {
+                    novaqtd = quantidadebd + quantidade;
 
-                cmd.CommandText = String.Format(@"UPDATE Gado 
+                    cmd.CommandText = String.Format(@"UPDATE Gado 
                                              SET Quantidade = {0}
                                              WHERE Animal = '{1}'", novaqtd, animal);
-                MessageBox.Show("Realizado com sucesso. A quantidade atual de" + animal + "(s) é de " + novaqtd);
-            }
-
-            else
-            {
-                if (quantidade > quantidadebd)
-                {
-                    MessageBox.Show("Você quer tirar mais do que o permitido, a quantidade atual no estoque é de " + quantidadebd + " " + animal + "(s).");
+                    MessageBox.Show("Realizado com sucesso. A quantidade atual de" + animal + "(s) é de " + novaqtd);
                 }
 
                 else
                 {
-                    novaqtd = quantidadebd - quantidade;
-                    cmd.CommandText = String.Format(@"UPDATE Gado 
+                    if (quantidade > quantidadebd)
+                    {
+                        MessageBox.Show("Você quer tirar mais do que o permitido, a quantidade atual no estoque é de " + quantidadebd + " " + animal + "(s).");
+                    }
+
+                    else
+                    {
+                        novaqtd = quantidadebd - quantidade;
+                        cmd.CommandText = String.Format(@"UPDATE Gado 
                                              SET Quantidade = {0}
                                              WHERE Animal = '{1}'", novaqtd, animal);
-                    
-                    MessageBox.Show("Realizado com sucesso. A quantidade atual de" + animal + "(s) é de " + novaqtd);
+
+                        MessageBox.Show("Realizado com sucesso. A quantidade atual de" + animal + "(s) é de " + novaqtd);
+                    }
                 }
+                cmd.ExecuteNonQuery();
             }
-            
-            cmd.ExecuteNonQuery();
+
+            else
+            {
+                MessageBox.Show(cone);
+            }
             cmd.Connection.Close();
-        } //FEITO
+        } //FEITO  //COLOCADO O IF DE CONEXÃO
     }
 } 

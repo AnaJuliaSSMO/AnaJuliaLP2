@@ -60,7 +60,7 @@ namespace TheFarmOfUs
 
             Logar.RealizarLogin(user,pass);
 
-            if(Logar.entrou == "s")
+            if(Logar.entrou == "s" || Logar.entrou == "semconexao")
             {
                 usuario.Clear();
                 senha.Clear();

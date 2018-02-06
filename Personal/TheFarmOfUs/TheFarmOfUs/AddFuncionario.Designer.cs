@@ -51,7 +51,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 9);
+            this.label1.Location = new System.Drawing.Point(254, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 22);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 47);
+            this.label2.Location = new System.Drawing.Point(20, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 22);
             this.label2.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 103);
+            this.label3.Location = new System.Drawing.Point(22, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 22);
             this.label3.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 195);
+            this.label4.Location = new System.Drawing.Point(22, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 22);
             this.label4.TabIndex = 3;
@@ -90,7 +90,7 @@
             // cpf
             // 
             this.cpf.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpf.Location = new System.Drawing.Point(74, 96);
+            this.cpf.Location = new System.Drawing.Point(82, 101);
             this.cpf.Mask = "000,000,000-00";
             this.cpf.Name = "cpf";
             this.cpf.Size = new System.Drawing.Size(148, 29);
@@ -99,7 +99,7 @@
             // add
             // 
             this.add.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(131, 361);
+            this.add.Location = new System.Drawing.Point(139, 366);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(325, 39);
             this.add.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 150);
+            this.label5.Location = new System.Drawing.Point(22, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 22);
             this.label5.TabIndex = 6;
@@ -120,7 +120,7 @@
             // nasc
             // 
             this.nasc.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nasc.Location = new System.Drawing.Point(194, 143);
+            this.nasc.Location = new System.Drawing.Point(202, 148);
             this.nasc.Mask = "00/00/0000";
             this.nasc.Name = "nasc";
             this.nasc.Size = new System.Drawing.Size(111, 29);
@@ -135,7 +135,7 @@
             "Agricultura",
             "Contabilidade",
             "Pecuaria"});
-            this.setores.Location = new System.Drawing.Point(76, 192);
+            this.setores.Location = new System.Drawing.Point(84, 197);
             this.setores.Name = "setores";
             this.setores.Size = new System.Drawing.Size(229, 30);
             this.setores.TabIndex = 9;
@@ -143,7 +143,7 @@
             // nometxt
             // 
             this.nometxt.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nometxt.Location = new System.Drawing.Point(157, 44);
+            this.nometxt.Location = new System.Drawing.Point(165, 49);
             this.nometxt.Name = "nometxt";
             this.nometxt.Size = new System.Drawing.Size(387, 29);
             this.nometxt.TabIndex = 10;
@@ -151,7 +151,7 @@
             // cance
             // 
             this.cance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cance.Location = new System.Drawing.Point(131, 411);
+            this.cance.Location = new System.Drawing.Point(139, 416);
             this.cance.Name = "cance";
             this.cance.Size = new System.Drawing.Size(325, 39);
             this.cance.TabIndex = 12;
@@ -163,7 +163,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 321);
+            this.label6.Location = new System.Drawing.Point(78, 326);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(423, 22);
             this.label6.TabIndex = 7;
@@ -172,7 +172,7 @@
             // data
             // 
             this.data.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data.Location = new System.Drawing.Point(133, 236);
+            this.data.Location = new System.Drawing.Point(141, 241);
             this.data.Mask = "00/00/0000";
             this.data.Name = "data";
             this.data.Size = new System.Drawing.Size(111, 29);
@@ -184,7 +184,7 @@
             this.label7.AutoSize = true;
             this.label7.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 243);
+            this.label7.Location = new System.Drawing.Point(22, 248);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 22);
             this.label7.TabIndex = 13;
@@ -193,7 +193,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(314, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(332, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(237, 239);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 461);
+            this.ClientSize = new System.Drawing.Size(593, 470);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.data);
             this.Controls.Add(this.label7);

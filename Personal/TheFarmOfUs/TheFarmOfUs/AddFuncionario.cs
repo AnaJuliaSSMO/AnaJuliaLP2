@@ -31,9 +31,9 @@ namespace TheFarmOfUs
             nometxt.Clear();
             nasc.Clear();
             setores.ResetText();
-            data.Clear();
-        }
-
+            data.Clear(); 
+       }
+        
         private void cance_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo cancelar operação?", "Tem certeza de sua escolha?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)

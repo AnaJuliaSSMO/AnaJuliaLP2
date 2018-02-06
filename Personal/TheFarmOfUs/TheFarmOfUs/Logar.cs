@@ -28,6 +28,7 @@ namespace TheFarmOfUs
             catch (SqlException)
             {
                 cone = "Não foi possível efeutar a conexão, tente mais tarde";
+                entrou = "semconexao";
             }
 
             if (cone == "")
