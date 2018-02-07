@@ -22,25 +22,46 @@ namespace TheFarmOfUs
 
         private void acrescentar_Click(object sender, EventArgs e)
         {
-            string deseja = "colocar";
-            int qtdd = int.Parse(qtd.Text);
-            string animal = animais.SelectedItem.ToString();
+            txt.Text = "";
+            txt1.Text = "";
 
-            CompraVendaRetiradaSaldo.AtualizaAnimais(qtdd, animal, deseja);
-            
-            qtd.Text = "Insira a quantidade";
-            animais.ResetText();
+            if (animais.Text != null && qtd.Text != "Insira a quantidade")
+            {
+                string deseja = "colocar";
+                int qtdd = int.Parse(qtd.Text);
+                string animal = animais.SelectedItem.ToString();
+
+                CompraVendaRetiradaSaldo.AtualizaAnimais(qtdd, animal, deseja);
+
+                qtd.Text = "Insira a quantidade";
+                animais.ResetText();
+            }
+
+            if(animais.Text == "") { txt.Text = "Preenchimento de campo obrigatório"; }
+
+            if (qtd.Text == "Insira a quantidade") { txt1.Text = "Preenchimento de campo obrigatório"; }
         }
 
         private void retirar_Click(object sender, EventArgs e)
         {
-            string deseja = "retirar";
-            int retirar = int.Parse(qtd.Text);
-            string animal = animais.SelectedItem.ToString();
+            txt.Text = "";
+            txt1.Text = "";
 
-            CompraVendaRetiradaSaldo.AtualizaAnimais(retirar, animal, deseja);
-            qtd.Text = "Insira a quantidade";
-            animais.ResetText();
+            if (animais.Text != null && qtd.Text != "Insira a quantidade")
+            {
+                string deseja = "retirar";
+                int qtdd = int.Parse(qtd.Text);
+                string animal = animais.SelectedItem.ToString();
+
+                CompraVendaRetiradaSaldo.AtualizaAnimais(qtdd, animal, deseja);
+
+                qtd.Text = "Insira a quantidade";
+                animais.ResetText();
+            }
+
+            if (animais.Text == "") { txt.Text = "Preenchimento de campo obrigatório"; }
+
+            if (qtd.Text == "Insira a quantidade") { txt1.Text = "Preenchimento de campo obrigatório"; }
         }
         
         private void cancelar_Click(object sender, EventArgs e)

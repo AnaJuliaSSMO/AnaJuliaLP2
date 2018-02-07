@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministraSalario));
             this.label1 = new System.Windows.Forms.Label();
             this.salario = new System.Windows.Forms.TextBox();
             this.setores = new System.Windows.Forms.ComboBox();
@@ -41,6 +40,7 @@
             this.check = new System.Windows.Forms.Button();
             this.alt = new System.Windows.Forms.Button();
             this.sair = new System.Windows.Forms.Button();
+            this.txt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +57,7 @@
             // salario
             // 
             this.salario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salario.Location = new System.Drawing.Point(144, 89);
+            this.salario.Location = new System.Drawing.Point(142, 116);
             this.salario.Name = "salario";
             this.salario.Size = new System.Drawing.Size(192, 29);
             this.salario.TabIndex = 15;
@@ -80,7 +80,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(45, 96);
+            this.label6.Location = new System.Drawing.Point(43, 123);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 22);
             this.label6.TabIndex = 13;
@@ -155,7 +155,7 @@
             // alt
             // 
             this.alt.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alt.Location = new System.Drawing.Point(144, 124);
+            this.alt.Location = new System.Drawing.Point(142, 151);
             this.alt.Name = "alt";
             this.alt.Size = new System.Drawing.Size(102, 44);
             this.alt.TabIndex = 21;
@@ -174,13 +174,22 @@
             this.sair.UseVisualStyleBackColor = true;
             this.sair.Click += new System.EventHandler(this.sair_Click);
             // 
+            // txt
+            // 
+            this.txt.AutoSize = true;
+            this.txt.ForeColor = System.Drawing.Color.Red;
+            this.txt.Location = new System.Drawing.Point(46, 89);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(0, 13);
+            this.txt.TabIndex = 23;
+            // 
             // AdministraSalario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(401, 442);
+            this.Controls.Add(this.txt);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.alt);
             this.Controls.Add(this.check);
@@ -218,5 +227,6 @@
         private System.Windows.Forms.Button check;
         private System.Windows.Forms.Button alt;
         private System.Windows.Forms.Button sair;
+        private System.Windows.Forms.Label txt;
     }
 }

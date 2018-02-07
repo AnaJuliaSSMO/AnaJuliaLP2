@@ -39,12 +39,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt = new System.Windows.Forms.Label();
+            this.txt1 = new System.Windows.Forms.Label();
+            this.txt2 = new System.Windows.Forms.Label();
+            this.txt3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cance
             // 
             this.cance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cance.Location = new System.Drawing.Point(119, 282);
+            this.cance.Location = new System.Drawing.Point(128, 301);
             this.cance.Name = "cance";
             this.cance.Size = new System.Drawing.Size(325, 39);
             this.cance.TabIndex = 25;
@@ -55,7 +59,7 @@
             // nometxt
             // 
             this.nometxt.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nometxt.Location = new System.Drawing.Point(163, 105);
+            this.nometxt.Location = new System.Drawing.Point(163, 87);
             this.nometxt.Name = "nometxt";
             this.nometxt.Size = new System.Drawing.Size(387, 29);
             this.nometxt.TabIndex = 23;
@@ -68,7 +72,7 @@
             "Agricultura",
             "Contabilidade",
             "Pecuaria"});
-            this.setores.Location = new System.Drawing.Point(82, 189);
+            this.setores.Location = new System.Drawing.Point(82, 196);
             this.setores.Name = "setores";
             this.setores.Size = new System.Drawing.Size(229, 30);
             this.setores.TabIndex = 22;
@@ -96,7 +100,7 @@
             // att
             // 
             this.att.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.att.Location = new System.Drawing.Point(119, 232);
+            this.att.Location = new System.Drawing.Point(128, 251);
             this.att.Name = "att";
             this.att.Size = new System.Drawing.Size(325, 39);
             this.att.TabIndex = 18;
@@ -107,17 +111,18 @@
             // cpf
             // 
             this.cpf.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpf.Location = new System.Drawing.Point(82, 58);
+            this.cpf.Location = new System.Drawing.Point(72, 29);
             this.cpf.Mask = "000,000,000-00";
             this.cpf.Name = "cpf";
             this.cpf.Size = new System.Drawing.Size(148, 29);
             this.cpf.TabIndex = 17;
+            this.cpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpf_MaskInputRejected);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 192);
+            this.label4.Location = new System.Drawing.Point(20, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 22);
             this.label4.TabIndex = 16;
@@ -127,7 +132,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 65);
+            this.label3.Location = new System.Drawing.Point(18, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 22);
             this.label3.TabIndex = 15;
@@ -137,7 +142,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 108);
+            this.label2.Location = new System.Drawing.Point(18, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 22);
             this.label2.TabIndex = 14;
@@ -153,11 +158,51 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Insira o(a):\r\n";
             // 
+            // txt
+            // 
+            this.txt.AutoSize = true;
+            this.txt.ForeColor = System.Drawing.Color.Red;
+            this.txt.Location = new System.Drawing.Point(21, 69);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(0, 13);
+            this.txt.TabIndex = 26;
+            // 
+            // txt1
+            // 
+            this.txt1.AutoSize = true;
+            this.txt1.ForeColor = System.Drawing.Color.Red;
+            this.txt1.Location = new System.Drawing.Point(21, 121);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(0, 13);
+            this.txt1.TabIndex = 27;
+            // 
+            // txt2
+            // 
+            this.txt2.AutoSize = true;
+            this.txt2.ForeColor = System.Drawing.Color.Red;
+            this.txt2.Location = new System.Drawing.Point(21, 169);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(0, 13);
+            this.txt2.TabIndex = 28;
+            // 
+            // txt3
+            // 
+            this.txt3.AutoSize = true;
+            this.txt3.ForeColor = System.Drawing.Color.Red;
+            this.txt3.Location = new System.Drawing.Point(25, 232);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(0, 13);
+            this.txt3.TabIndex = 29;
+            // 
             // AttFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 333);
+            this.ClientSize = new System.Drawing.Size(562, 365);
+            this.Controls.Add(this.txt3);
+            this.Controls.Add(this.txt2);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txt);
             this.Controls.Add(this.cance);
             this.Controls.Add(this.nometxt);
             this.Controls.Add(this.setores);
@@ -190,5 +235,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt;
+        private System.Windows.Forms.Label txt1;
+        private System.Windows.Forms.Label txt2;
+        private System.Windows.Forms.Label txt3;
     }
 }

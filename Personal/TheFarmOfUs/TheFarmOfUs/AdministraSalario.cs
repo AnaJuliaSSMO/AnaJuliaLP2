@@ -24,13 +24,15 @@ namespace TheFarmOfUs
 
         private void alt_Click(object sender, EventArgs e)
         {
-            string setor = setores.SelectedItem.ToString();
-            double sal = double.Parse(salario.Text);
+            txt.Text = "";
+            if (setores.Text != null && salario.Text != "00,00")
+            {
+                RelacaoFuncionarios.AlteraSalarioSetores(setores.Text, double.Parse(salario.Text));
+                setores.ResetText();
+                salario.Text = "00,00";
+            }
 
-            RelacaoFuncionarios.AlteraSalarioSetores(setor, sal);
-
-            setores.ResetText();
-            salario.Text = "00,00";
+            if (setores.Text == null || setores.Text == "") { txt.Text = "Preenchimento de campo obrigatório"; }
         }
 
         private void check_Click(object sender, EventArgs e)

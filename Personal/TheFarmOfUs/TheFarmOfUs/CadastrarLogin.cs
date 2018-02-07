@@ -20,38 +20,56 @@ namespace TheFarmOfUs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nome = nomelog.Text;
-            string usuario = username.Text;
-            string cpf = CPF.Text;
-            string senha = senhalog.Text;
-            string conf = confirmsen.Text;
+            txt.Text = "";
+            txt1.Text = "";
+            txt2.Text = "";
+            txt3.Text = "";
+            txt4.Text = "";
 
-            CadastrarNovoLogin.CadastroLogin(nome,usuario,cpf,senha,conf);
-            if(CadastrarNovoLogin.existecpf == "s")
+            if (nomelog.Text != "" && CPF.Text != "   .   .   -" && username.Text != "" && senhalog.Text != "" && confirmsen.Text != "")
             {
-                CPF.Clear();
+                string nome = nomelog.Text;
+                string usuario = username.Text;
+                string cpf = CPF.Text;
+                string senha = senhalog.Text;
+                string conf = confirmsen.Text;
+
+                CadastrarNovoLogin.CadastroLogin(nome, usuario, cpf, senha, conf);
+                if (CadastrarNovoLogin.existecpf == "s")
+                {
+                    CPF.Clear();
+                }
+
+                if (CadastrarNovoLogin.existeuser == "s")
+                {
+                    username.Clear();
+                }
+
+                if (CadastrarNovoLogin.existesenha == "s")
+                {
+                    senhalog.Clear();
+                    confirmsen.Clear();
+                }
+
+                if (CadastrarNovoLogin.existeuser == "" && CadastrarNovoLogin.existecpf == "")
+                {
+                    username.Clear();
+                    nomelog.Clear();
+                    senhalog.Clear();
+                    confirmsen.Clear();
+                    CPF.Clear();
+                }
             }
 
-            if(CadastrarNovoLogin.existeuser == "s")
-            {
-                username.Clear();
-            }
+            if (nomelog.Text == "") { txt.Text = "Preenchimento de campo obrigatório"; }
 
-            if (CadastrarNovoLogin.existesenha == "s")
-            {
-                senhalog.Clear();
-                confirmsen.Clear();
-            }
+            if (CPF.Text == "   .   .   -") { txt2.Text = "Preenchimento de campo obrigatório"; }
 
+            if (username.Text == "") { txt1.Text = "Preenchimento de campo obrigatório"; }
 
-            if (CadastrarNovoLogin.existeuser == "" && CadastrarNovoLogin.existecpf == "")
-            {
-                username.Clear();
-                nomelog.Clear();
-                senhalog.Clear();
-                confirmsen.Clear();
-                CPF.Clear();
-            }
+            if (senhalog.Text == "") { txt3.Text = "Preenchimento de campo obrigatório"; }
+
+            if (confirmsen.Text == "") { txt4.Text = "Preenchimento de campo obrigatório"; }
         }
 
         private void fechar_Click(object sender, EventArgs e)

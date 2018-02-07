@@ -19,13 +19,23 @@ namespace TheFarmOfUs
 
         private void att_Click(object sender, EventArgs e)
         {
-            string nome = nom.Text;
-            int quant = int.Parse(qtd.Text);
+            txt.Text = "";
+            txt1.Text = "";
 
-            CompraVendaRetiradaSaldo.AttSacas(nome, quant);
+            if (nom.Text != null && qtd.Text != "Insira a quantidade")
+            {
+                string nome = nom.Text;
+                int quant = int.Parse(qtd.Text);
 
-            nom.ResetText();
-            qtd.Text = "Insira a quantidade";
+                CompraVendaRetiradaSaldo.AttSacas(nome, quant);
+
+                nom.ResetText();
+                qtd.Text = "Insira a quantidade";
+            }
+
+            if (nom.Text == "") { txt.Text = "Preenchimento de campo obrigatório"; }
+
+            if (qtd.Text == "Insira a quantidade") { txt1.Text = "Preenchimento de campo obrigatório"; }
         }
 
         private void cancelar_Click(object sender, EventArgs e)

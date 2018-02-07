@@ -34,12 +34,14 @@
             this.cancelar = new System.Windows.Forms.Button();
             this.retirar = new System.Windows.Forms.Button();
             this.acrescentar = new System.Windows.Forms.Button();
+            this.txt = new System.Windows.Forms.Label();
+            this.txt1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // qtd
             // 
             this.qtd.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qtd.Location = new System.Drawing.Point(91, 116);
+            this.qtd.Location = new System.Drawing.Point(89, 129);
             this.qtd.Name = "qtd";
             this.qtd.Size = new System.Drawing.Size(310, 29);
             this.qtd.TabIndex = 21;
@@ -79,7 +81,7 @@
             // cancelar
             // 
             this.cancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelar.Location = new System.Drawing.Point(114, 219);
+            this.cancelar.Location = new System.Drawing.Point(114, 241);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(247, 33);
             this.cancelar.TabIndex = 24;
@@ -90,7 +92,7 @@
             // retirar
             // 
             this.retirar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.retirar.Location = new System.Drawing.Point(272, 166);
+            this.retirar.Location = new System.Drawing.Point(272, 188);
             this.retirar.Name = "retirar";
             this.retirar.Size = new System.Drawing.Size(125, 33);
             this.retirar.TabIndex = 23;
@@ -101,7 +103,7 @@
             // acrescentar
             // 
             this.acrescentar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acrescentar.Location = new System.Drawing.Point(89, 166);
+            this.acrescentar.Location = new System.Drawing.Point(89, 188);
             this.acrescentar.Name = "acrescentar";
             this.acrescentar.Size = new System.Drawing.Size(125, 33);
             this.acrescentar.TabIndex = 22;
@@ -109,11 +111,31 @@
             this.acrescentar.UseVisualStyleBackColor = true;
             this.acrescentar.Click += new System.EventHandler(this.acrescentar_Click);
             // 
+            // txt
+            // 
+            this.txt.AutoSize = true;
+            this.txt.ForeColor = System.Drawing.Color.Red;
+            this.txt.Location = new System.Drawing.Point(88, 101);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(0, 13);
+            this.txt.TabIndex = 25;
+            // 
+            // txt1
+            // 
+            this.txt1.AutoSize = true;
+            this.txt1.ForeColor = System.Drawing.Color.Red;
+            this.txt1.Location = new System.Drawing.Point(88, 161);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(0, 13);
+            this.txt1.TabIndex = 26;
+            // 
             // AttQtdAnimais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 264);
+            this.ClientSize = new System.Drawing.Size(493, 315);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txt);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.retirar);
             this.Controls.Add(this.acrescentar);
@@ -137,5 +159,7 @@
         private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Button retirar;
         private System.Windows.Forms.Button acrescentar;
+        private System.Windows.Forms.Label txt;
+        private System.Windows.Forms.Label txt1;
     }
 }

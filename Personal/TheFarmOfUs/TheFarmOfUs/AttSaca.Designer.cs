@@ -33,12 +33,14 @@
             this.qtd = new System.Windows.Forms.TextBox();
             this.nom = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt = new System.Windows.Forms.Label();
+            this.txt1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cancelar
             // 
             this.cancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelar.Location = new System.Drawing.Point(41, 150);
+            this.cancelar.Location = new System.Drawing.Point(41, 195);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(247, 33);
             this.cancelar.TabIndex = 50;
@@ -49,7 +51,7 @@
             // att
             // 
             this.att.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.att.Location = new System.Drawing.Point(108, 111);
+            this.att.Location = new System.Drawing.Point(108, 156);
             this.att.Name = "att";
             this.att.Size = new System.Drawing.Size(125, 33);
             this.att.TabIndex = 49;
@@ -60,7 +62,7 @@
             // qtd
             // 
             this.qtd.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qtd.Location = new System.Drawing.Point(12, 76);
+            this.qtd.Location = new System.Drawing.Point(12, 96);
             this.qtd.Name = "qtd";
             this.qtd.Size = new System.Drawing.Size(310, 29);
             this.qtd.TabIndex = 48;
@@ -93,11 +95,31 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "O que deseja atualizar?\r\n";
             // 
+            // txt
+            // 
+            this.txt.AutoSize = true;
+            this.txt.ForeColor = System.Drawing.Color.Red;
+            this.txt.Location = new System.Drawing.Point(12, 69);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(0, 13);
+            this.txt.TabIndex = 51;
+            // 
+            // txt1
+            // 
+            this.txt1.AutoSize = true;
+            this.txt1.ForeColor = System.Drawing.Color.Red;
+            this.txt1.Location = new System.Drawing.Point(12, 128);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(0, 13);
+            this.txt1.TabIndex = 52;
+            // 
             // AttSaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 190);
+            this.ClientSize = new System.Drawing.Size(341, 265);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txt);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.att);
             this.Controls.Add(this.qtd);
@@ -118,5 +140,7 @@
         private System.Windows.Forms.TextBox qtd;
         private System.Windows.Forms.ComboBox nom;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt;
+        private System.Windows.Forms.Label txt1;
     }
 }

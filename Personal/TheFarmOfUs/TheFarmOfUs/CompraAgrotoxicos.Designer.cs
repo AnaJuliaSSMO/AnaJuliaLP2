@@ -39,6 +39,10 @@
             this.valor = new System.Windows.Forms.TextBox();
             this.cancelar = new System.Windows.Forms.Button();
             this.quercomprar = new System.Windows.Forms.Button();
+            this.txt = new System.Windows.Forms.Label();
+            this.txt1 = new System.Windows.Forms.Label();
+            this.txt2 = new System.Windows.Forms.Label();
+            this.txt3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // destino
@@ -53,7 +57,7 @@
             "Batata",
             "Couve",
             "Café"});
-            this.destino.Location = new System.Drawing.Point(55, 182);
+            this.destino.Location = new System.Drawing.Point(44, 178);
             this.destino.Name = "destino";
             this.destino.Size = new System.Drawing.Size(310, 30);
             this.destino.TabIndex = 47;
@@ -62,7 +66,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(80, 157);
+            this.label6.Location = new System.Drawing.Point(69, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(259, 22);
             this.label6.TabIndex = 46;
@@ -72,7 +76,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 86);
+            this.label5.Location = new System.Drawing.Point(40, 77);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(341, 22);
             this.label5.TabIndex = 45;
@@ -81,7 +85,7 @@
             // qtd
             // 
             this.qtd.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qtd.Location = new System.Drawing.Point(54, 111);
+            this.qtd.Location = new System.Drawing.Point(44, 102);
             this.qtd.Name = "qtd";
             this.qtd.Size = new System.Drawing.Size(310, 29);
             this.qtd.TabIndex = 44;
@@ -90,7 +94,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(154, 224);
+            this.label4.Location = new System.Drawing.Point(143, 228);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 22);
             this.label4.TabIndex = 43;
@@ -100,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(153, 16);
+            this.label3.Location = new System.Drawing.Point(143, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 22);
             this.label3.TabIndex = 42;
@@ -109,7 +113,7 @@
             // nomedesejado
             // 
             this.nomedesejado.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomedesejado.Location = new System.Drawing.Point(54, 41);
+            this.nomedesejado.Location = new System.Drawing.Point(44, 31);
             this.nomedesejado.Name = "nomedesejado";
             this.nomedesejado.Size = new System.Drawing.Size(310, 29);
             this.nomedesejado.TabIndex = 41;
@@ -118,7 +122,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 252);
+            this.label2.Location = new System.Drawing.Point(5, 259);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 22);
             this.label2.TabIndex = 40;
@@ -127,7 +131,7 @@
             // valor
             // 
             this.valor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valor.Location = new System.Drawing.Point(55, 252);
+            this.valor.Location = new System.Drawing.Point(44, 256);
             this.valor.Name = "valor";
             this.valor.Size = new System.Drawing.Size(310, 29);
             this.valor.TabIndex = 39;
@@ -136,7 +140,7 @@
             // cancelar
             // 
             this.cancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelar.Location = new System.Drawing.Point(114, 333);
+            this.cancelar.Location = new System.Drawing.Point(110, 343);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(186, 33);
             this.cancelar.TabIndex = 36;
@@ -147,7 +151,7 @@
             // quercomprar
             // 
             this.quercomprar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quercomprar.Location = new System.Drawing.Point(155, 294);
+            this.quercomprar.Location = new System.Drawing.Point(151, 304);
             this.quercomprar.Name = "quercomprar";
             this.quercomprar.Size = new System.Drawing.Size(99, 33);
             this.quercomprar.TabIndex = 35;
@@ -155,11 +159,51 @@
             this.quercomprar.UseVisualStyleBackColor = true;
             this.quercomprar.Click += new System.EventHandler(this.quercomprar_Click);
             // 
+            // txt
+            // 
+            this.txt.AutoSize = true;
+            this.txt.ForeColor = System.Drawing.Color.Red;
+            this.txt.Location = new System.Drawing.Point(46, 63);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(0, 13);
+            this.txt.TabIndex = 48;
+            // 
+            // txt1
+            // 
+            this.txt1.AutoSize = true;
+            this.txt1.ForeColor = System.Drawing.Color.Red;
+            this.txt1.Location = new System.Drawing.Point(46, 134);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(0, 13);
+            this.txt1.TabIndex = 49;
+            // 
+            // txt2
+            // 
+            this.txt2.AutoSize = true;
+            this.txt2.ForeColor = System.Drawing.Color.Red;
+            this.txt2.Location = new System.Drawing.Point(46, 211);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(0, 13);
+            this.txt2.TabIndex = 50;
+            // 
+            // txt3
+            // 
+            this.txt3.AutoSize = true;
+            this.txt3.ForeColor = System.Drawing.Color.Red;
+            this.txt3.Location = new System.Drawing.Point(46, 291);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(0, 13);
+            this.txt3.TabIndex = 51;
+            // 
             // CompraAgrotoxicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 377);
+            this.ClientSize = new System.Drawing.Size(409, 388);
+            this.Controls.Add(this.txt3);
+            this.Controls.Add(this.txt2);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txt);
             this.Controls.Add(this.destino);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -193,5 +237,9 @@
         private System.Windows.Forms.TextBox valor;
         private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Button quercomprar;
+        private System.Windows.Forms.Label txt;
+        private System.Windows.Forms.Label txt1;
+        private System.Windows.Forms.Label txt2;
+        private System.Windows.Forms.Label txt3;
     }
 }

@@ -19,29 +19,45 @@ namespace TheFarmOfUs
 
         private void quercomprar_Click(object sender, EventArgs e)
         {
-            string agro = nomedesejado.Text;
-            int quantidade = int.Parse(qtd.Text);
-            double valorunitario = double.Parse(valor.Text);
-            string plantadestino = destino.SelectedItem.ToString();
-            double valorcompra = quantidade * valorunitario;
-            
-            if (MessageBox.Show("O valor de sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            txt.Text = "";
+            txt1.Text = "";
+            txt2.Text = "";
+            txt3.Text = "";
+
+            if (nomedesejado.Text != "" && qtd.Text != "" && valor.Text != "00,00" && destino.Text != "")
             {
-                CompraVendaRetiradaSaldo.CompraAgro(agro, quantidade, valorcompra, plantadestino);
+                string agro = nomedesejado.Text;
+                int quantidade = int.Parse(qtd.Text);
+                double valorunitario = double.Parse(valor.Text);
+                string plantadestino = destino.SelectedItem.ToString();
+                double valorcompra = quantidade * valorunitario;
 
-                if(CompraVendaRetiradaSaldo.ok == "s")
+                if (MessageBox.Show("O valor de sua compra foi: R$ " + valorcompra + ".\nDeseja continuar?", "Valor total foi de:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                 {
-                    nomedesejado.ResetText();
-                    qtd.Clear();
-                    valor.Text = "00,00";
-                    destino.ResetText();
-                }
+                    CompraVendaRetiradaSaldo.CompraAgro(agro, quantidade, valorcompra, plantadestino);
 
-                else
-                {
-                    valor.Text = "00,00";
+                    if (CompraVendaRetiradaSaldo.ok == "s")
+                    {
+                        nomedesejado.ResetText();
+                        qtd.Clear();
+                        valor.Text = "00,00";
+                        destino.ResetText();
+                    }
+
+                    else
+                    {
+                        valor.Text = "00,00";
+                    }
                 }
             }
+            if (nomedesejado.Text == "") { txt.Text = "Preenchimento de campo obrigatório"; }
+
+            if (qtd.Text == "") { txt1.Text = "Preenchimento de campo obrigatório"; }
+
+            if (valor.Text == "") { txt3.Text = "Preenchimento de campo obrigatório"; }
+
+            if (destino.Text == "00,00") { txt2.Text = "Preenchimento de campo obrigatório"; }
+
         }
 
         private void cancelar_Click(object sender, EventArgs e)
